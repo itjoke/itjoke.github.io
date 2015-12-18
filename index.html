@@ -194,6 +194,85 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-墙内数据库设计" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/18/墙内数据库设计/" class="article-date">
+  	<time datetime="2015-12-18T01:11:55.000Z" itemprop="datePublished">2015-12-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/18/墙内数据库设计/">墙内数据库设计</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="阅读">阅读</h2><p><img src="/img/read.png" alt="这是一张图片"></p>
+<h2 id="客户">客户</h2><p><img src="/img/customer.png" alt="这是一张图片"></p>
+<p><img src="/img/user2.png" alt="这是一张图片"></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dispatch/">dispatch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/user/">user</a></li></ul>
+	</div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+    
+        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+        <script>
+        var yiliaConfig = {
+        fancybox: true,
+        mathjax: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false
+        }
+        </script>
+        
+
+  
     <article id="post-数据库设计" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1020,85 +1099,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">byte</span>[] b1 = params.toString().getBytes();</span><br><span class="line"><span class="keyword">byte</span>[] b3 = Cryptos.aesEncrypt(b1, <span class="string">"1%7jhs#Zjasd&amp;tr*"</span>.toString()</span><br><span class="line">		.getBytes());</span><br><span class="line">RequestParams params2 = <span class="keyword">new</span> RequestParams();</span><br><span class="line">params2.put(<span class="string">"vals"</span>, Base64.encode(b3));</span><br><span class="line">AsyncHttpClient asyncHttpClient = <span class="keyword">new</span> AsyncHttpClient();</span><br><span class="line">asyncHttpClient.post(mContext, url, params2, handler);</span><br></pre></td></tr></table></figure>
-
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dispatch/">dispatch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/user/">user</a></li></ul>
-	</div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-        var yiliaConfig = {
-        fancybox: true,
-        mathjax: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        open_in_new: false
-        }
-        </script>
-        
-
-  
-    <article id="post-墙内数据库设计" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/14/墙内数据库设计/" class="article-date">
-  	<time datetime="2015-12-14T02:56:39.000Z" itemprop="datePublished">2015-12-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/14/墙内数据库设计/">墙内数据库设计</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="阅读">阅读</h2><p><img src="/img/read.png" alt="这是一张图片"></p>
-<h2 id="客户">客户</h2><p><img src="/img/customer.png" alt="这是一张图片"></p>
-<p><img src="/img/user2.png" alt="这是一张图片"></p>
 
       
       
