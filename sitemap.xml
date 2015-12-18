@@ -3,17 +3,22 @@
 
     <sitemap>
         <loc>http://itjoke.com/post-sitemap.xml</loc>
-        <lastmod>2015-12-18T03:26:38.000Z</lastmod>
+        <lastmod>2015-12-18T04:56:52.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://itjoke.com/page-sitemap.xml</loc>
-        <lastmod>2015-12-18T03:19:10.000Z</lastmod>
+        <lastmod>2015-12-18T04:55:42.000Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>http://itjoke.com/category-sitemap.xml</loc>
+        <lastmod>2015-12-18T04:56:52.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://itjoke.com/tag-sitemap.xml</loc>
-        <lastmod>2015-11-20T04:47:45.000Z</lastmod>
+        <lastmod>2015-12-03T07:14:44.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>
