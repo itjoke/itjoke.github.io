@@ -2,20 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://itjoke.com/tags/%E8%9E%8D%E4%BA%91/</loc>
-        <lastmod>2015-11-20T04:45:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/IM/</loc>
-        <lastmod>2015-11-20T04:45:42.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/%E5%BE%AE%E5%8D%9A/</loc>
         <lastmod>2015-11-20T04:47:45.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,41 +18,6 @@
     <url>
         <loc>http://itjoke.com/tags/%E5%85%B3%E6%B3%A8/</loc>
         <lastmod>2015-11-20T04:47:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E5%90%8D%E7%89%87/</loc>
-        <lastmod>2015-11-25T02:10:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/OCR/</loc>
-        <lastmod>2015-11-25T02:10:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E5%BC%80%E6%BA%90/</loc>
-        <lastmod>2015-11-25T02:10:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/tesseract/</loc>
-        <lastmod>2015-11-25T02:10:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/NameCardRec/</loc>
-        <lastmod>2015-11-25T02:10:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -171,21 +122,21 @@
 
     <url>
         <loc>http://itjoke.com/tags/mysql/</loc>
-        <lastmod>2015-12-18T02:39:36.000Z</lastmod>
+        <lastmod>2015-12-18T03:26:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://itjoke.com/tags/user/</loc>
-        <lastmod>2015-12-18T02:39:36.000Z</lastmod>
+        <lastmod>2015-12-18T03:26:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://itjoke.com/tags/dispatch/</loc>
-        <lastmod>2015-12-18T02:39:36.000Z</lastmod>
+        <lastmod>2015-12-18T03:26:38.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
