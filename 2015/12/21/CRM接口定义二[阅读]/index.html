@@ -66,12 +66,6 @@
 
 
 请求参数
-time
-当前时间
-date
-
-
-请求参数
 title
 公告标题
 string
@@ -83,10 +77,12 @@ content
 string
 
 
-返回值">
+返回值
+result
+1 操作成功   0  操作失">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CRM APP接口定义二[阅读]">
-<meta property="og:url" content="http://itjoke.com/2015/12/18/CRM接口定义二[阅读]/index.html">
+<meta property="og:url" content="http://itjoke.com/2015/12/21/CRM接口定义二[阅读]/index.html">
 <meta property="og:site_name" content="五朝元老">
 <meta property="og:description" content="123456公司公告发布公司公告获取公司黑板公司新闻文章活动
 
@@ -103,12 +99,6 @@ string
 
 
 请求参数
-time
-当前时间
-date
-
-
-请求参数
 title
 公告标题
 string
@@ -120,8 +110,10 @@ content
 string
 
 
-返回值">
-<meta property="og:updated_time" content="2015-12-18T04:56:39.000Z">
+返回值
+result
+1 操作成功   0  操作失">
+<meta property="og:updated_time" content="2015-12-21T02:58:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CRM APP接口定义二[阅读]">
 <meta name="twitter:description" content="123456公司公告发布公司公告获取公司黑板公司新闻文章活动
@@ -139,12 +131,6 @@ string
 
 
 请求参数
-time
-当前时间
-date
-
-
-请求参数
 title
 公告标题
 string
@@ -156,7 +142,9 @@ content
 string
 
 
-返回值">
+返回值
+result
+1 操作成功   0  操作失">
 
 
 
@@ -338,8 +326,8 @@ string
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-18T12:56:39+08:00" content="2015-12-18">
-              2015-12-18
+            <time itemprop="dateCreated" datetime="2015-12-21T10:58:01+08:00" content="2015-12-21">
+              2015-12-21
             </time>
           </span>
 
@@ -364,8 +352,8 @@ string
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/18/CRM接口定义二[阅读]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/CRM接口定义二[阅读]/" itemprop="commentsCount"></span>
+                <a href="/2015/12/21/CRM接口定义二[阅读]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/CRM接口定义二[阅读]/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -397,12 +385,6 @@ string
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">time</td>
-<td style="text-align:center">当前时间</td>
-<td>date</td>
-</tr>
 <tr>
 <td style="text-align:left">请求参数</td>
 <td style="text-align:right">title</td>
@@ -469,7 +451,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,total:39,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="3:公告搜索">3:公告搜索</h3><p><strong>接口说明</strong> :公告搜索</p>
 <table>
 <thead>
@@ -483,15 +465,9 @@ string
 <tbody>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">page</td>
-<td style="text-align:center">当前页</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">pagenum</td>
-<td style="text-align:center">一页包含的数据条数</td>
-<td>int</td>
+<td style="text-align:right">key</td>
+<td style="text-align:center">搜索关键字</td>
+<td>string</td>
 </tr>
 <tr>
 <td style="text-align:left">返回值</td>
@@ -502,14 +478,14 @@ string
 <tr>
 <td style="text-align:left"></td>
 <td style="text-align:right">data</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">返回结果列表</td>
 <td>json</td>
 </tr>
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:黑板信息列表">4:黑板信息列表</h3><p><strong>接口说明</strong> :获取公司最新公告</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4:黑板信息列表">4:黑板信息列表</h3><p><strong>接口说明</strong> :获取黑板信息列表</p>
 <table>
 <thead>
 <tr>
@@ -547,7 +523,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,total:39,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="5:黑板信息评论获取">5:黑板信息评论获取</h3><p><strong>接口说明</strong> :黑板信息评论</p>
 <table>
 <thead>
@@ -586,7 +562,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,total:39,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="6:黑板信息发表评论">6:黑板信息发表评论</h3><p><strong>接口说明</strong> :黑板信息发表评论</p>
 <table>
 <thead>
@@ -600,15 +576,21 @@ string
 <tbody>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">page</td>
-<td style="text-align:center">当前页</td>
+<td style="text-align:right">postid</td>
+<td style="text-align:center">主贴id</td>
 <td>int</td>
 </tr>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">pagenum</td>
-<td style="text-align:center">一页包含的数据条数</td>
+<td style="text-align:right">commentid</td>
+<td style="text-align:center">评论id</td>
 <td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">cotent</td>
+<td style="text-align:center">评论内容</td>
+<td>string</td>
 </tr>
 <tr>
 <td style="text-align:left">返回值</td>
@@ -625,7 +607,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="7:黑板信息点赞">7:黑板信息点赞</h3><p><strong>接口说明</strong> :黑板信息点赞</p>
 <table>
 <thead>
@@ -639,14 +621,14 @@ string
 <tbody>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">page</td>
-<td style="text-align:center">当前页</td>
+<td style="text-align:right">postid</td>
+<td style="text-align:center">主贴id</td>
 <td>int</td>
 </tr>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">pagenum</td>
-<td style="text-align:center">一页包含的数据条数</td>
+<td style="text-align:right">commentid</td>
+<td style="text-align:center">评论的id</td>
 <td>int</td>
 </tr>
 <tr>
@@ -664,52 +646,13 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7:黑板信息点赞-1">7:黑板信息点赞</h3><p><strong>接口说明</strong> :黑板信息点赞</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/blackboard/comment/favour</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">page</td>
-<td style="text-align:center">当前页</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">pagenum</td>
-<td style="text-align:center">一页包含的数据条数</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="8:黑板信息删除（只有发布者可以删除）">8:黑板信息删除（只有发布者可以删除）</h3><p><strong>接口说明</strong> :黑板信息删除</p>
 <table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/blackboard/comment/favour</th>
+<th style="text-align:right">/api/v1/blackboard/comment/del</th>
 <th style="text-align:center"></th>
 <th>类型</th>
 </tr>
@@ -717,14 +660,14 @@ string
 <tbody>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">page</td>
-<td style="text-align:center">当前页</td>
+<td style="text-align:right">postid</td>
+<td style="text-align:center">主贴id</td>
 <td>int</td>
 </tr>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">pagenum</td>
-<td style="text-align:center">一页包含的数据条数</td>
+<td style="text-align:right">commentid</td>
+<td style="text-align:center">评论id</td>
 <td>int</td>
 </tr>
 <tr>
@@ -742,7 +685,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="9:获取新闻列表">9:获取新闻列表</h3><p><strong>接口说明</strong> :获取新闻列表</p>
 <table>
 <thead>
@@ -781,7 +724,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,total:39,data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="10:获取文章列表">10:获取文章列表</h3><p><strong>接口说明</strong> :获取文章列表</p>
 <table>
 <thead>
@@ -820,7 +763,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,total:39,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="11:获取活动列表">11:获取活动列表</h3><p><strong>接口说明</strong> :获取文章列表</p>
 <table>
 <thead>
@@ -859,7 +802,7 @@ string
 </tbody>
 </table>
 <p> <strong>内容暂定</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;userId:137,token:"</span>JDKSNDSK*HDHH<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure></span>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,total:39,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure></span>
       
     </div>
 
@@ -880,16 +823,16 @@ string
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/18/CRM接口定义一[登录注册]/" rel="next" title="CRM APP接口定义一[登录注册验证码]">
-                <i class="fa fa-chevron-left"></i> CRM APP接口定义一[登录注册验证码]
+              <a href="/2015/12/18/基于MyBatis的多租户实现/" rel="next" title="基于MyBatis的多租户实现">
+                <i class="fa fa-chevron-left"></i> 基于MyBatis的多租户实现
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/18/数据库设计/" rel="prev" title="数据库设计">
-                数据库设计 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/21/CRM工作计划/" rel="prev" title="CRM工作计划">
+                CRM工作计划 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -917,8 +860,8 @@ string
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/18/CRM接口定义二[阅读]/"
-           data-title="CRM APP接口定义二[阅读]" data-url="http://itjoke.com/2015/12/18/CRM接口定义二[阅读]/">
+      <div class="ds-thread" data-thread-key="2015/12/21/CRM接口定义二[阅读]/"
+           data-title="CRM APP接口定义二[阅读]" data-url="http://itjoke.com/2015/12/21/CRM接口定义二[阅读]/">
       </div>
     
   </div>
@@ -969,14 +912,14 @@ string
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -1008,7 +951,7 @@ string
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#[CRM_APP接口定义二阅读]"><span class="nav-number">1.</span> <span class="nav-text">[CRM APP接口定义二阅读]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:公司公告发布[只有管理员可以操作]"><span class="nav-number">1.1.</span> <span class="nav-text">1:公司公告发布[只有管理员可以操作]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:获取公司最新公告"><span class="nav-number">1.2.</span> <span class="nav-text">2:获取公司最新公告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:公告搜索"><span class="nav-number">1.3.</span> <span class="nav-text">3:公告搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:黑板信息列表"><span class="nav-number">1.4.</span> <span class="nav-text">4:黑板信息列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5:黑板信息评论获取"><span class="nav-number">1.5.</span> <span class="nav-text">5:黑板信息评论获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6:黑板信息发表评论"><span class="nav-number">1.6.</span> <span class="nav-text">6:黑板信息发表评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:黑板信息点赞"><span class="nav-number">1.7.</span> <span class="nav-text">7:黑板信息点赞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:黑板信息点赞-1"><span class="nav-number">1.8.</span> <span class="nav-text">7:黑板信息点赞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8:黑板信息删除（只有发布者可以删除）"><span class="nav-number">1.9.</span> <span class="nav-text">8:黑板信息删除（只有发布者可以删除）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9:获取新闻列表"><span class="nav-number">1.10.</span> <span class="nav-text">9:获取新闻列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10:获取文章列表"><span class="nav-number">1.11.</span> <span class="nav-text">10:获取文章列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11:获取活动列表"><span class="nav-number">1.12.</span> <span class="nav-text">11:获取活动列表</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#[CRM_APP接口定义二阅读]"><span class="nav-number">1.</span> <span class="nav-text">[CRM APP接口定义二阅读]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:公司公告发布[只有管理员可以操作]"><span class="nav-number">1.1.</span> <span class="nav-text">1:公司公告发布[只有管理员可以操作]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:获取公司最新公告"><span class="nav-number">1.2.</span> <span class="nav-text">2:获取公司最新公告</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:公告搜索"><span class="nav-number">1.3.</span> <span class="nav-text">3:公告搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:黑板信息列表"><span class="nav-number">1.4.</span> <span class="nav-text">4:黑板信息列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5:黑板信息评论获取"><span class="nav-number">1.5.</span> <span class="nav-text">5:黑板信息评论获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6:黑板信息发表评论"><span class="nav-number">1.6.</span> <span class="nav-text">6:黑板信息发表评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:黑板信息点赞"><span class="nav-number">1.7.</span> <span class="nav-text">7:黑板信息点赞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8:黑板信息删除（只有发布者可以删除）"><span class="nav-number">1.8.</span> <span class="nav-text">8:黑板信息删除（只有发布者可以删除）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9:获取新闻列表"><span class="nav-number">1.9.</span> <span class="nav-text">9:获取新闻列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10:获取文章列表"><span class="nav-number">1.10.</span> <span class="nav-text">10:获取文章列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11:获取活动列表"><span class="nav-number">1.11.</span> <span class="nav-text">11:获取活动列表</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
