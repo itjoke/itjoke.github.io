@@ -87,7 +87,7 @@ result
 返回值
 result
 1">
-<meta property="og:updated_time" content="2015-12-24T01:59:19.000Z">
+<meta property="og:updated_time" content="2015-12-24T02:00:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CRM APP接口定义四[消息]">
 <meta name="twitter:description" content="1234获取融云token添加好友接受或者拒绝好友请求获取好友列表
@@ -287,7 +287,7 @@ result
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-24T09:59:19+08:00" content="2015-12-24">
+            <time itemprop="dateCreated" datetime="2015-12-24T10:00:40+08:00" content="2015-12-24">
               2015-12-24
             </time>
           </span>
@@ -461,13 +461,95 @@ result
 </table>
 <p> <strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5．IM搜索好友">5．IM搜索好友</h3><p> 请求地址      |    /api/v1/rongCloud/findUserForAdd |   |  类型 |<br>| :——– | ——–:| :–: |   |<br>| 请求参数  | condition |  查找条件   |  string |<br>| 请求参数  | orgid |  组织id   |  int |<br>| 返回值      |    result | 1 操作成功   0  操作失败  | int  |<br>|       |    data |   | json  |</p>
+<h3 id="5．IM搜索好友">5．IM搜索好友</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/findUserForAdd</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">condition</td>
+<td style="text-align:center">查找条件</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
 <p> <strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="6．删除好友">6．删除好友</h3><p>请求地址      |    /api/v1/rongCloud/delFriend |   |  类型 |<br>| :——– | ——–:| :–: |   |<br>| 请求参数  | friendid |  要删除的人的Id   |  int |<br>| 请求参数  | orgid |  组织id   |  string |<br>| 返回值      |    result | 1 操作成功   0  操作失败  | int  |<br>|       |    data |   | json  |</p>
 <p> <strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7．历史消息记录">7．历史消息记录</h3><p>请求地址      |    /api/v1/rongCloud/historyMessage |   |  类型 |<br>| :——– | ——–:| :–: |   |<br>| 请求参数  | targetid |  目标用户id   |  int |<br>| 请求参数  | pageNo |  页码   |  int |<br>| 请求参数  | pageSize |  每页条数   |  int |<br>| 请求参数  | orgid |  组织id   |  string |<br>| 返回值      |    result | 1 操作成功   0  操作失败  | int  |<br>|       |    data |   | json  |</p>
+<h3 id="7．历史消息记录">7．历史消息记录</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/historyMessage</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">targetid</td>
+<td style="text-align:center">目标用户id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">pageNo</td>
+<td style="text-align:center">页码</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">pageSize</td>
+<td style="text-align:center">每页条数</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
 <p> <strong>例子</strong><br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">result</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">data</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">messageList</span>": <span class="value">[</span><br><span class="line">        &#123;</span><br><span class="line">          "<span class="attribute">channelType</span>": <span class="value"><span class="string">"PERSON"</span></span>,</span><br><span class="line">          "<span class="attribute">msgTimestamp</span>": <span class="value"><span class="string">"1438158176906"</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserId</span>": <span class="value"><span class="string">"1746"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserId</span>": <span class="value"><span class="string">"53"</span></span>,</span><br><span class="line">          "<span class="attribute">receiveAt</span>": <span class="value"><span class="number">1438158178000</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserNickname</span>": <span class="value"><span class="string">"测试1"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserNickName</span>": <span class="value"><span class="string">"测试2"</span></span>,</span><br><span class="line">          "<span class="attribute">id</span>": <span class="value"><span class="number">3422</span></span>,</span><br><span class="line">          "<span class="attribute">content</span>": <span class="value"><span class="string">"说啥呢"</span></span>,</span><br><span class="line">          "<span class="attribute">timestamp</span>": <span class="value"><span class="string">"1438158176926,1438158176906"</span></span>,</span><br><span class="line">          "<span class="attribute">objectName</span>": <span class="value"><span class="string">"RC:VcMsg"</span></span><br><span class="line">        </span>&#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          "<span class="attribute">channelType</span>": <span class="value"><span class="string">"PERSON"</span></span>,</span><br><span class="line">          "<span class="attribute">msgTimestamp</span>": <span class="value"><span class="string">"1438151612937"</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserId</span>": <span class="value"><span class="string">"1746"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserId</span>": <span class="value"><span class="string">"53"</span></span>,</span><br><span class="line">          "<span class="attribute">receiveAt</span>": <span class="value"><span class="number">1438151612000</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserNickname</span>": <span class="value"><span class="string">"测试1"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserNickName</span>": <span class="value"><span class="string">"测试3"</span></span>,</span><br><span class="line">          "<span class="attribute">id</span>": <span class="value"><span class="number">3420</span></span>,</span><br><span class="line">          "<span class="attribute">content</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">          "<span class="attribute">timestamp</span>": <span class="value"><span class="string">"1438151612956,1438151612937"</span></span>,</span><br><span class="line">          "<span class="attribute">objectName</span>": <span class="value"><span class="string">"RC:TxtMsg"</span></span><br><span class="line">        </span>&#125;</span><br><span class="line">      ]</span>,</span><br><span class="line">      "<span class="attribute">date</span>": <span class="value"><span class="string">"2015-07-29"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
 </span>
       
