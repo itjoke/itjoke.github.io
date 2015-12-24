@@ -252,7 +252,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-24T10:00:40+08:00" content="2015-12-24">
+            <time itemprop="dateCreated" datetime="2015-12-24T10:06:55+08:00" content="2015-12-24">
               2015-12-24
             </time>
           </span>
@@ -286,7 +286,7 @@
         
           <span itemprop="articleBody">
             
-              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">获取融云token</span><br><span class="line">添加好友</span><br><span class="line">接受或者拒绝好友请求</span><br><span class="line">获取好友列表</span><br></pre></td></tr></table></figure>
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取融云token</span><br><span class="line">添加好友</span><br><span class="line">接受或者拒绝好友请求</span><br><span class="line">获取好友列表</span><br><span class="line">IM搜索好友</span><br><span class="line">删除好友</span><br><span class="line">历史消息记录</span><br></pre></td></tr></table></figure>
 <h3 id="1:获取融云token">1:获取融云token</h3><p><strong>接口说明</strong> :获取融云token<br>若当前用户启用聊天时，没有从服务器得到自己的token时，调用此接口获取token（这个*暂时不用）（用户一注册即为他生成了融云token，登陆成功后，在用户信息里）</p>
 <table>
 <thead>
@@ -467,7 +467,42 @@
 </table>
 <p> <strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6．删除好友">6．删除好友</h3><p>请求地址      |    /api/v1/rongCloud/delFriend |   |  类型 |<br>| :——– | ——–:| :–: |   |<br>| 请求参数  | friendid |  要删除的人的Id   |  int |<br>| 请求参数  | orgid |  组织id   |  string |<br>| 返回值      |    result | 1 操作成功   0  操作失败  | int  |<br>|       |    data |   | json  |</p>
+<h3 id="6．删除好友">6．删除好友</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/delFriend</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">friendid</td>
+<td style="text-align:center">要删除的人的Id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
 <p> <strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="7．历史消息记录">7．历史消息记录</h3><table>
