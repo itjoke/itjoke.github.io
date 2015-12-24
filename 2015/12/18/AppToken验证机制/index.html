@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MyBatis,hibernate,saas,多租户," />
+  <meta name="keywords" content="app,json,token," />
 
 
 
@@ -51,16 +51,22 @@
 
 
 
-<meta name="description">
+<meta name="description" content="1：token 验证token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。
+设计app api的时候都会遇到安全性验证的问题，有以下几种情况1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。不能防外挂，重复提交的问题。
+2：请求参数加密在客户端对提交的请求参数做对称加密">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于MyBatis的多租户实现">
-<meta property="og:url" content="http://itjoke.com/2015/12/18/基于MyBatis的多租户实现/index.html">
+<meta property="og:title" content="App Api验证机制">
+<meta property="og:url" content="http://itjoke.com/2015/12/18/AppToken验证机制/index.html">
 <meta property="og:site_name" content="五朝元老">
-<meta property="og:description">
-<meta property="og:updated_time" content="2015-12-18T05:13:09.000Z">
+<meta property="og:description" content="1：token 验证token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。
+设计app api的时候都会遇到安全性验证的问题，有以下几种情况1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。不能防外挂，重复提交的问题。
+2：请求参数加密在客户端对提交的请求参数做对称加密">
+<meta property="og:updated_time" content="2015-12-18T05:16:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于MyBatis的多租户实现">
-<meta name="twitter:description">
+<meta name="twitter:title" content="App Api验证机制">
+<meta name="twitter:description" content="1：token 验证token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。
+设计app api的时候都会遇到安全性验证的问题，有以下几种情况1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。不能防外挂，重复提交的问题。
+2：请求参数加密在客户端对提交的请求参数做对称加密">
 
 
 
@@ -72,7 +78,7 @@
   };
 </script>
 
-  <title> 基于MyBatis的多租户实现 | 五朝元老 </title>
+  <title> App Api验证机制 | 五朝元老 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +239,7 @@
             
             
               
-                基于MyBatis的多租户实现
+                App Api验证机制
               
             
           </h1>
@@ -242,34 +248,19 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-18T13:13:09+08:00" content="2015-12-18">
+            <time itemprop="dateCreated" datetime="2015-12-18T13:16:48+08:00" content="2015-12-18">
               2015-12-18
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/saas/" itemprop="url" rel="index">
-                    <span itemprop="name">saas</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/18/基于MyBatis的多租户实现/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/基于MyBatis的多租户实现/" itemprop="commentsCount"></span>
+                <a href="/2015/12/18/AppToken验证机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/AppToken验证机制/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,7 +279,12 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><p>1：token 验证<br>token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。</p>
+<p>设计app api的时候都会遇到安全性验证的问题，有以下几种情况<br>1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。<br>不能防外挂，重复提交的问题。</p>
+<p>2：请求参数加密<br>在客户端对提交的请求参数做对称加密，服务器做解密校验。<br>风险在于如果客户端被破解，加密key被暴露，防范机制就失效了。<br>有的是在客户端做了一个加密库，提供多种加密方式，每次随机构建，增加破解难度。</p>
+<h3 id="原型讨论（设计图需要调整部分）">原型讨论（设计图需要调整部分）</h3><p>创建工作-输入框上提<br>客户个人信息-显示错误<br>客户详情编辑-错误</p>
+<p>客户个人信息下端的 弹出框（查重，分配）</p>
+</span>
       
     </div>
 
@@ -296,13 +292,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MyBatis/" rel="tag">#MyBatis</a>
+            <a href="/tags/app/" rel="tag">#app</a>
           
-            <a href="/tags/hibernate/" rel="tag">#hibernate</a>
+            <a href="/tags/json/" rel="tag">#json</a>
           
-            <a href="/tags/saas/" rel="tag">#saas</a>
-          
-            <a href="/tags/多租户/" rel="tag">#多租户</a>
+            <a href="/tags/token/" rel="tag">#token</a>
           
         </div>
       
@@ -311,16 +305,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/18/CRM数据库设计/" rel="next" title="CRM数据库设计">
-                <i class="fa fa-chevron-left"></i> CRM数据库设计
+              <a href="/2015/12/18/基于MyBatis的多租户实现/" rel="next" title="基于MyBatis的多租户实现">
+                <i class="fa fa-chevron-left"></i> 基于MyBatis的多租户实现
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/18/AppToken验证机制/" rel="prev" title="App Api验证机制">
-                App Api验证机制 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/21/CRM接口定义二[阅读]/" rel="prev" title="CRM APP接口定义二[阅读]">
+                CRM APP接口定义二[阅读] <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -348,8 +342,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/18/基于MyBatis的多租户实现/"
-           data-title="基于MyBatis的多租户实现" data-url="http://itjoke.com/2015/12/18/基于MyBatis的多租户实现/">
+      <div class="ds-thread" data-thread-key="2015/12/18/AppToken验证机制/"
+           data-title="App Api验证机制" data-url="http://itjoke.com/2015/12/18/AppToken验证机制/">
       </div>
     
   </div>
@@ -439,7 +433,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原型讨论（设计图需要调整部分）"><span class="nav-number">1.</span> <span class="nav-text">原型讨论（设计图需要调整部分）</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

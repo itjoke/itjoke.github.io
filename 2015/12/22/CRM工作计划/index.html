@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="app,json,token," />
+  <meta name="keywords" content="工作计划," />
 
 
 
@@ -51,22 +51,94 @@
 
 
 
-<meta name="description" content="1：token 验证token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。
-设计app api的时候都会遇到安全性验证的问题，有以下几种情况1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。不能防外挂，重复提交的问题。
-2：请求参数加密在客户端对提交的请求参数做对称加密">
+<meta name="description" content="工作计划-启动时间12.14第一阶段时间点(元旦前）
+
+
+任务安排
+时间
+描述
+负责人
+
+
+
+
+注册验证码后端接口
+12.14-12.19
+需要注意的是，这里的注册是需要分库的，一个企业用户一个数据库（demo代码我已经给出） ；短信验证需要接入
+闫
+
+
+android登录注册+消息（墙外）
+12.21-12.31
+IM接融云
+杜
+
+
+圈子+我的（墙外）-后端
+12.21-12.31
+
+闫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="App Api验证机制">
-<meta property="og:url" content="http://itjoke.com/2015/12/15/AppToken验证机制/index.html">
+<meta property="og:title" content="CRM工作计划">
+<meta property="og:url" content="http://itjoke.com/2015/12/22/CRM工作计划/index.html">
 <meta property="og:site_name" content="五朝元老">
-<meta property="og:description" content="1：token 验证token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。
-设计app api的时候都会遇到安全性验证的问题，有以下几种情况1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。不能防外挂，重复提交的问题。
-2：请求参数加密在客户端对提交的请求参数做对称加密">
-<meta property="og:updated_time" content="2015-12-15T08:35:06.000Z">
+<meta property="og:description" content="工作计划-启动时间12.14第一阶段时间点(元旦前）
+
+
+任务安排
+时间
+描述
+负责人
+
+
+
+
+注册验证码后端接口
+12.14-12.19
+需要注意的是，这里的注册是需要分库的，一个企业用户一个数据库（demo代码我已经给出） ；短信验证需要接入
+闫
+
+
+android登录注册+消息（墙外）
+12.21-12.31
+IM接融云
+杜
+
+
+圈子+我的（墙外）-后端
+12.21-12.31
+
+闫">
+<meta property="og:updated_time" content="2015-12-22T07:34:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="App Api验证机制">
-<meta name="twitter:description" content="1：token 验证token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。
-设计app api的时候都会遇到安全性验证的问题，有以下几种情况1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。不能防外挂，重复提交的问题。
-2：请求参数加密在客户端对提交的请求参数做对称加密">
+<meta name="twitter:title" content="CRM工作计划">
+<meta name="twitter:description" content="工作计划-启动时间12.14第一阶段时间点(元旦前）
+
+
+任务安排
+时间
+描述
+负责人
+
+
+
+
+注册验证码后端接口
+12.14-12.19
+需要注意的是，这里的注册是需要分库的，一个企业用户一个数据库（demo代码我已经给出） ；短信验证需要接入
+闫
+
+
+android登录注册+消息（墙外）
+12.21-12.31
+IM接融云
+杜
+
+
+圈子+我的（墙外）-后端
+12.21-12.31
+
+闫">
 
 
 
@@ -78,7 +150,7 @@
   };
 </script>
 
-  <title> App Api验证机制 | 五朝元老 </title>
+  <title> CRM工作计划 | 五朝元老 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +311,7 @@
             
             
               
-                App Api验证机制
+                CRM工作计划
               
             
           </h1>
@@ -248,19 +320,34 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-15T16:35:06+08:00" content="2015-12-15">
-              2015-12-15
+            <time itemprop="dateCreated" datetime="2015-12-22T15:34:28+08:00" content="2015-12-22">
+              2015-12-22
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CRM/" itemprop="url" rel="index">
+                    <span itemprop="name">CRM</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/15/AppToken验证机制/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/15/AppToken验证机制/" itemprop="commentsCount"></span>
+                <a href="/2015/12/22/CRM工作计划/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/22/CRM工作计划/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -279,11 +366,78 @@
       
 
       
-        <span itemprop="articleBody"><p>1：token 验证<br>token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。</p>
-<p>设计app api的时候都会遇到安全性验证的问题，有以下几种情况<br>1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。<br>不能防外挂，重复提交的问题。</p>
-<p>2：请求参数加密<br>在客户端对提交的请求参数做对称加密，服务器做解密校验。<br>风险在于如果客户端被破解，加密key被暴露，防范机制就失效了。<br>有的是在客户端做了一个加密库，提供多种加密方式，每次随机构建，增加破解难度。</p>
-<h3 id="原型讨论（设计图需要调整部分）">原型讨论（设计图需要调整部分）</h3><p>创建工作-输入框上提<br>客户个人信息-显示错误<br>客户详情编辑-错误</p>
-<p>客户个人信息下端的 弹出框（查重，分配）</p>
+        <span itemprop="articleBody"><h2 id="工作计划-启动时间12-14">工作计划-启动时间12.14</h2><h3 id="第一阶段时间点(元旦前）">第一阶段时间点(元旦前）</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">任务安排</th>
+<th style="text-align:right">时间</th>
+<th style="text-align:center">描述</th>
+<th>负责人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">注册验证码后端接口</td>
+<td style="text-align:right">12.14-12.19</td>
+<td style="text-align:center">需要注意的是，这里的注册是需要分库的，<br>一个企业用户一个数据库（demo代码我已经给出） ；短信验证需要接入</td>
+<td>闫</td>
+</tr>
+<tr>
+<td style="text-align:left">android登录注册+消息（墙外）</td>
+<td style="text-align:right">12.21-12.31</td>
+<td style="text-align:center">IM接融云</td>
+<td>杜</td>
+</tr>
+<tr>
+<td style="text-align:left">圈子+我的（墙外）-后端</td>
+<td style="text-align:right">12.21-12.31</td>
+<td style="text-align:center"></td>
+<td>闫</td>
+</tr>
+</tbody>
+</table>
+<h3 id="第二阶段时间点(春节前)">第二阶段时间点(春节前)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">任务安排</th>
+<th style="text-align:right">时间</th>
+<th style="text-align:center">描述</th>
+<th>负责人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">圈子（墙外）-android</td>
+<td style="text-align:right">1.4-1.11</td>
+<td style="text-align:center">参考其他sns客户端实现方式</td>
+<td>杜</td>
+</tr>
+<tr>
+<td style="text-align:left">我的（墙外）-android</td>
+<td style="text-align:right">1.4-1.11</td>
+<td style="text-align:center">参考其他sns客户端实现方式</td>
+<td>蒋</td>
+</tr>
+<tr>
+<td style="text-align:left">阅读+我的（墙内）-后端</td>
+<td style="text-align:right">1.4-春节前</td>
+<td style="text-align:center">后端主要做阅读相关<br>阅读的后端数据需要写爬虫抓取，<br>阅读黑板实现实现参考feed，涉及到redis的应用 <br>前期暂时做微博和linkin</td>
+<td>闫</td>
+</tr>
+<tr>
+<td style="text-align:left">阅读（墙内）-android</td>
+<td style="text-align:right">1.12-1.春节前</td>
+<td style="text-align:center">参考其他sns客户端实现方式</td>
+<td>杜</td>
+</tr>
+<tr>
+<td style="text-align:left">我的（墙内）-android</td>
+<td style="text-align:right">1.12-1.春节前</td>
+<td style="text-align:center">完成部分</td>
+<td>蒋</td>
+</tr>
+</tbody>
+</table>
 </span>
       
     </div>
@@ -292,11 +446,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/app/" rel="tag">#app</a>
-          
-            <a href="/tags/json/" rel="tag">#json</a>
-          
-            <a href="/tags/token/" rel="tag">#token</a>
+            <a href="/tags/工作计划/" rel="tag">#工作计划</a>
           
         </div>
       
@@ -305,16 +455,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/04/CRM接口定义三[我的]/" rel="next" title="CRM APP接口定义三[我的]">
-                <i class="fa fa-chevron-left"></i> CRM APP接口定义三[我的]
+              <a href="/2015/12/21/CRM接口定义二[阅读]/" rel="next" title="CRM APP接口定义二[阅读]">
+                <i class="fa fa-chevron-left"></i> CRM APP接口定义二[阅读]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/18/CRM接口定义一[登录注册]/" rel="prev" title="CRM APP接口定义一[登录注册验证码]">
-                CRM APP接口定义一[登录注册验证码] <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/24/CRM APP接口定义四[消息]/" rel="prev" title="CRM APP接口定义四[消息]">
+                CRM APP接口定义四[消息] <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -342,8 +492,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/15/AppToken验证机制/"
-           data-title="App Api验证机制" data-url="http://itjoke.com/2015/12/15/AppToken验证机制/">
+      <div class="ds-thread" data-thread-key="2015/12/22/CRM工作计划/"
+           data-title="CRM工作计划" data-url="http://itjoke.com/2015/12/22/CRM工作计划/">
       </div>
     
   </div>
@@ -387,7 +537,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -401,7 +551,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -433,7 +583,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原型讨论（设计图需要调整部分）"><span class="nav-number">1.</span> <span class="nav-text">原型讨论（设计图需要调整部分）</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作计划-启动时间12-14"><span class="nav-number">1.</span> <span class="nav-text">工作计划-启动时间12.14</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一阶段时间点(元旦前）"><span class="nav-number">1.1.</span> <span class="nav-text">第一阶段时间点(元旦前）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二阶段时间点(春节前)"><span class="nav-number">1.2.</span> <span class="nav-text">第二阶段时间点(春节前)</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
