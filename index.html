@@ -252,7 +252,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-07T13:02:10+08:00" content="2016-01-07">
+            <time itemprop="dateCreated" datetime="2016-01-07T13:06:02+08:00" content="2016-01-07">
               2016-01-07
             </time>
           </span>
@@ -286,7 +286,7 @@
         
           <span itemprop="articleBody">
             
-              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">（圈子）</span><br><span class="line">圈子信息列表-带最多<span class="number">5</span>条评论</span><br><span class="line">圈子信息评论全部获取</span><br><span class="line">圈子信息发表评论</span><br><span class="line">圈子信息点赞</span><br><span class="line">圈子信息删除（只有发布者可以删除）</span><br><span class="line"></span><br><span class="line">（我的-上传头像的功能暂时保留）</span><br><span class="line">获取我的个人信息</span><br><span class="line">修改我的个人信息</span><br><span class="line">我加入的组织列表</span><br><span class="line">创建组织</span><br><span class="line"></span><br><span class="line">（联系人-墙外）</span><br><span class="line">添加联系人</span><br><span class="line">获取联系人列表</span><br><span class="line">查找联系人</span><br><span class="line"></span><br><span class="line">发送联系人邀请</span><br><span class="line">接受同事邀请</span><br><span class="line">审批处理[只有管理员可以操作]</span><br></pre></td></tr></table></figure>
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">（圈子）</span><br><span class="line">圈子信息列表-带最多<span class="number">5</span>条评论</span><br><span class="line">圈子信息评论全部获取</span><br><span class="line">圈子信息发表评论</span><br><span class="line">圈子信息点赞</span><br><span class="line">圈子信息删除（只有发布者可以删除）</span><br><span class="line"></span><br><span class="line">（我的-上传头像的功能暂时保留）</span><br><span class="line">获取我的个人信息</span><br><span class="line">修改我的个人信息</span><br><span class="line">我加入的组织列表</span><br><span class="line">创建组织</span><br><span class="line"></span><br><span class="line">（联系人-墙外）</span><br><span class="line">添加联系人</span><br><span class="line">获取联系人列表</span><br><span class="line">查找联系人</span><br><span class="line"></span><br><span class="line">发送联系人邀请</span><br><span class="line">接受联系人邀请</span><br><span class="line">审批处理[只有管理员可以操作]</span><br></pre></td></tr></table></figure>
 <h3 id="1:圈子信息列表">1:圈子信息列表</h3><p><strong>接口说明</strong> :获取圈子信息列表-带5条评论</p>
 <table>
 <thead>
@@ -771,7 +771,68 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="13:发送联系人邀请">13:发送联系人邀请</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/contact/invite</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">fid</td>
+<td style="text-align:center">被邀请人id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="14:接受联系人邀请">14:接受联系人邀请</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/contact/invite/accept</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">fid</td>
+<td style="text-align:center">邀请人id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
             
           </span>
         
