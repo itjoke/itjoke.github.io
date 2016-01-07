@@ -79,27 +79,6 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/tags/CRM/</loc>
-        <lastmod>2016-01-07T05:06:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/APP/</loc>
-        <lastmod>2016-01-07T05:06:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E6%8E%A5%E5%8F%A3/</loc>
-        <lastmod>2016-01-07T05:06:28.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/MyBatis/</loc>
         <lastmod>2016-01-07T05:30:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -123,6 +102,27 @@
     <url>
         <loc>http://itjoke.com/tags/saas/</loc>
         <lastmod>2016-01-07T05:30:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/CRM/</loc>
+        <lastmod>2016-01-07T05:53:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/APP/</loc>
+        <lastmod>2016-01-07T05:53:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/%E6%8E%A5%E5%8F%A3/</loc>
+        <lastmod>2016-01-07T05:53:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
