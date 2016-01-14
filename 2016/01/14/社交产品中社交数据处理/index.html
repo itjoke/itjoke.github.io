@@ -69,7 +69,7 @@
 
 计数使用redis 异步同步到mysql
 此方案的问题在于如果redis崩溃（重启会从mysql恢复">
-<meta property="og:updated_time" content="2016-01-14T08:53:52.000Z">
+<meta property="og:updated_time" content="2016-01-14T08:55:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="社交产品中社交数据处理">
 <meta name="twitter:description" content="社交产品中的点赞数，评论数，粉丝数，转发数
@@ -260,7 +260,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-14T16:53:52+08:00" content="2016-01-14">
+            <time itemprop="dateCreated" datetime="2016-01-14T16:55:04+08:00" content="2016-01-14">
               2016-01-14
             </time>
           </span>
@@ -313,7 +313,7 @@
 <p>由于这类似数据操作会比较频繁，如果一直update数据库，数据库会扛不住。<br>一般是会做操作合并，比如点赞数，是积累到多条之后一次性的update到数据库中。<br>前提是这类数据的实时性没有那么高，做一个缓冲对列表，然后积累到一定条数触发数据库update。</p>
 </blockquote>
 <p>计数使用redis 异步同步到mysql</p>
-<p>此方案的问题在于如果redis崩溃（重启会从mysql恢复数据），会丢失一部分点赞数据（这类数据并没那么重要）。<br>这类方案适合我们的产品中，但并不适合真正的微博，因为微博他的信息太多，没一条都存到内存会导致内存占用很大。<br>我们的产品发帖信息并不是特别多（主要是公司黑板），该解决方案是合理的。</p>
+<p>此方案的问题在于如果redis崩溃（重启会从mysql恢复数据），会丢失一部分点赞数据（这类数据并没那么重要）。<br>这类方案适合我们的产品中，但并不适合真正的微博，因为微博他的信息太多，每一条都存到内存会导致内存占用很大。<br>我们的产品发帖信息并不是特别多（主要是公司黑板），该解决方案是合理的。</p>
 <ul>
 <li><strong>联系人信息更新原理同上</strong></li>
 </ul>
