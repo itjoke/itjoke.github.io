@@ -241,6 +241,119 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/14/社交产品中社交数据处理/" itemprop="url">
+                  社交产品中社交数据处理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-14T16:53:52+08:00" content="2016-01-14">
+              2016-01-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CRM/" itemprop="url" rel="index">
+                    <span itemprop="name">CRM</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/14/社交产品中社交数据处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/14/社交产品中社交数据处理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <ul>
+<li><strong>社交产品中的点赞数，评论数，粉丝数，转发数</strong></li>
+</ul>
+<blockquote>
+<p>由于这类似数据操作会比较频繁，如果一直update数据库，数据库会扛不住。<br>一般是会做操作合并，比如点赞数，是积累到多条之后一次性的update到数据库中。<br>前提是这类数据的实时性没有那么高，做一个缓冲对列表，然后积累到一定条数触发数据库update。</p>
+</blockquote>
+<p>计数使用redis 异步同步到mysql</p>
+<p>此方案的问题在于如果redis崩溃（重启会从mysql恢复数据），会丢失一部分点赞数据（这类数据并没那么重要）。<br>这类方案适合我们的产品中，但并不适合真正的微博，因为微博他的信息太多，没一条都存到内存会导致内存占用很大。<br>我们的产品发帖信息并不是特别多（主要是公司黑板），该解决方案是合理的。</p>
+<ul>
+<li><strong>联系人信息更新原理同上</strong></li>
+</ul>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/14/CRM接口定义五[联系人]/" itemprop="url">
                   CRM APP接口定义五[墙外联系人]
                 </a>
@@ -3051,98 +3164,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/18/AppToken验证机制/" itemprop="url">
-                  App Api验证机制
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-18T13:16:48+08:00" content="2015-12-18">
-              2015-12-18
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/18/AppToken验证机制/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/AppToken验证机制/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>1：token 验证<br>token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。</p>
-<p>设计app api的时候都会遇到安全性验证的问题，有以下几种情况<br>1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。<br>不能防外挂，重复提交的问题。</p>
-<p>2：请求参数加密<br>在客户端对提交的请求参数做对称加密，服务器做解密校验。<br>风险在于如果客户端被破解，加密key被暴露，防范机制就失效了。<br>有的是在客户端做了一个加密库，提供多种加密方式，每次随机构建，增加破解难度。</p>
-<h3 id="原型讨论（设计图需要调整部分）">原型讨论（设计图需要调整部分）</h3><p>创建工作-输入框上提<br>客户个人信息-显示错误<br>客户详情编辑-错误</p>
-<p>客户个人信息下端的 弹出框（查重，分配）</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -3189,7 +3210,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -3203,7 +3224,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

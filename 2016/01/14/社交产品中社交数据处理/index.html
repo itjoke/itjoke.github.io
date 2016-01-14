@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MyBatis,hibernate,saas,多租户," />
+  <meta name="keywords" content="社交," />
 
 
 
@@ -51,16 +51,34 @@
 
 
 
-<meta name="description" content="12345678910111213141516public class DataSourceHolder &amp;#123;    //线程本地环境    private static final ThreadLocal&amp;lt;String&amp;gt; dataSources = new ThreadLocal&amp;lt;String&amp;gt;();    //设置数据源    public static voi">
+<meta name="description" content="社交产品中的点赞数，评论数，粉丝数，转发数
+
+
+由于这类似数据操作会比较频繁，如果一直update数据库，数据库会扛不住。一般是会做操作合并，比如点赞数，是积累到多条之后一次性的update到数据库中。前提是这类数据的实时性没有那么高，做一个缓冲对列表，然后积累到一定条数触发数据库update。
+
+计数使用redis 异步同步到mysql
+此方案的问题在于如果redis崩溃（重启会从mysql恢复">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于MyBatis的多租户实现">
-<meta property="og:url" content="http://itjoke.com/2016/01/07/基于MyBatis的多租户实现/index.html">
+<meta property="og:title" content="社交产品中社交数据处理">
+<meta property="og:url" content="http://itjoke.com/2016/01/14/社交产品中社交数据处理/index.html">
 <meta property="og:site_name" content="五朝元老">
-<meta property="og:description" content="12345678910111213141516public class DataSourceHolder &amp;#123;    //线程本地环境    private static final ThreadLocal&amp;lt;String&amp;gt; dataSources = new ThreadLocal&amp;lt;String&amp;gt;();    //设置数据源    public static voi">
-<meta property="og:updated_time" content="2016-01-07T05:30:09.000Z">
+<meta property="og:description" content="社交产品中的点赞数，评论数，粉丝数，转发数
+
+
+由于这类似数据操作会比较频繁，如果一直update数据库，数据库会扛不住。一般是会做操作合并，比如点赞数，是积累到多条之后一次性的update到数据库中。前提是这类数据的实时性没有那么高，做一个缓冲对列表，然后积累到一定条数触发数据库update。
+
+计数使用redis 异步同步到mysql
+此方案的问题在于如果redis崩溃（重启会从mysql恢复">
+<meta property="og:updated_time" content="2016-01-14T08:53:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于MyBatis的多租户实现">
-<meta name="twitter:description" content="12345678910111213141516public class DataSourceHolder &amp;#123;    //线程本地环境    private static final ThreadLocal&amp;lt;String&amp;gt; dataSources = new ThreadLocal&amp;lt;String&amp;gt;();    //设置数据源    public static voi">
+<meta name="twitter:title" content="社交产品中社交数据处理">
+<meta name="twitter:description" content="社交产品中的点赞数，评论数，粉丝数，转发数
+
+
+由于这类似数据操作会比较频繁，如果一直update数据库，数据库会扛不住。一般是会做操作合并，比如点赞数，是积累到多条之后一次性的update到数据库中。前提是这类数据的实时性没有那么高，做一个缓冲对列表，然后积累到一定条数触发数据库update。
+
+计数使用redis 异步同步到mysql
+此方案的问题在于如果redis崩溃（重启会从mysql恢复">
 
 
 
@@ -72,7 +90,7 @@
   };
 </script>
 
-  <title> 基于MyBatis的多租户实现 | 五朝元老 </title>
+  <title> 社交产品中社交数据处理 | 五朝元老 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +251,7 @@
             
             
               
-                基于MyBatis的多租户实现
+                社交产品中社交数据处理
               
             
           </h1>
@@ -242,8 +260,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-07T13:30:09+08:00" content="2016-01-07">
-              2016-01-07
+            <time itemprop="dateCreated" datetime="2016-01-14T16:53:52+08:00" content="2016-01-14">
+              2016-01-14
             </time>
           </span>
 
@@ -252,8 +270,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/saas/" itemprop="url" rel="index">
-                    <span itemprop="name">saas</span>
+                  <a href="/categories/CRM/" itemprop="url" rel="index">
+                    <span itemprop="name">CRM</span>
                   </a>
                 </span>
 
@@ -268,8 +286,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/07/基于MyBatis的多租户实现/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/基于MyBatis的多租户实现/" itemprop="commentsCount"></span>
+                <a href="/2016/01/14/社交产品中社交数据处理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/14/社交产品中社交数据处理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -288,8 +306,18 @@
       
 
       
-        <span itemprop="articleBody"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceHolder</span> </span>&#123;</span><br><span class="line">    <span class="comment">//线程本地环境</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadLocal&lt;String&gt; dataSources = <span class="keyword">new</span> ThreadLocal&lt;String&gt;();</span><br><span class="line">    <span class="comment">//设置数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setDataSource</span><span class="params">(String customerType)</span> </span>&#123;</span><br><span class="line">        dataSources.set(customerType);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (String) dataSources.get();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//清除数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">clearDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        dataSources.remove();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DynamicDataSource</span> <span class="keyword">extends</span> <span class="title">AbstractRoutingDataSource</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, DataSource&gt; crmDataSources = <span class="keyword">new</span> ConcurrentHashMap&lt;String, DataSource&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> Object <span class="title">determineCurrentLookupKey</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> DataSourceHolder.getDataSource();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> DataSource <span class="title">determineTargetDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String userId = DataSourceHolder.getDataSource();</span><br><span class="line">        <span class="keyword">if</span>(StringUtils.isEmpty(userId))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">super</span>.determineTargetDataSource();</span><br><span class="line">        &#125;</span><br><span class="line">        DataSource dataSource = <span class="keyword">this</span>.crmDataSources.get(userId);</span><br><span class="line">        <span class="keyword">if</span>(dataSource==<span class="keyword">null</span>)&#123;</span><br><span class="line">            DruidDataSource druidDataSource = <span class="keyword">new</span> DruidDataSource();</span><br><span class="line">            druidDataSource.setDriverClassName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">            druidDataSource.setPassword(<span class="string">"root"</span>);</span><br><span class="line">            druidDataSource.setUsername(<span class="string">"root"</span>);</span><br><span class="line">            druidDataSource.setUrl(<span class="string">"jdbc:mysql://localhost:3306/crm"</span>+userId+<span class="string">"?useUnicode=true&amp;amp;characterEncoding=utf8"</span>);</span><br><span class="line">            <span class="keyword">this</span>.crmDataSources.put(userId,druidDataSource);</span><br><span class="line">            dataSource = druidDataSource;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dataSource;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+        <span itemprop="articleBody"><ul>
+<li><strong>社交产品中的点赞数，评论数，粉丝数，转发数</strong></li>
+</ul>
+<blockquote>
+<p>由于这类似数据操作会比较频繁，如果一直update数据库，数据库会扛不住。<br>一般是会做操作合并，比如点赞数，是积累到多条之后一次性的update到数据库中。<br>前提是这类数据的实时性没有那么高，做一个缓冲对列表，然后积累到一定条数触发数据库update。</p>
+</blockquote>
+<p>计数使用redis 异步同步到mysql</p>
+<p>此方案的问题在于如果redis崩溃（重启会从mysql恢复数据），会丢失一部分点赞数据（这类数据并没那么重要）。<br>这类方案适合我们的产品中，但并不适合真正的微博，因为微博他的信息太多，没一条都存到内存会导致内存占用很大。<br>我们的产品发帖信息并不是特别多（主要是公司黑板），该解决方案是合理的。</p>
+<ul>
+<li><strong>联系人信息更新原理同上</strong></li>
+</ul>
+</span>
       
     </div>
 
@@ -297,13 +325,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MyBatis/" rel="tag">#MyBatis</a>
-          
-            <a href="/tags/hibernate/" rel="tag">#hibernate</a>
-          
-            <a href="/tags/saas/" rel="tag">#saas</a>
-          
-            <a href="/tags/多租户/" rel="tag">#多租户</a>
+            <a href="/tags/社交/" rel="tag">#社交</a>
           
         </div>
       
@@ -312,17 +334,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/31/ZOOKEEPER基础知识/" rel="next" title="ZOOKEEPER基础知识">
-                <i class="fa fa-chevron-left"></i> ZOOKEEPER基础知识
+              <a href="/2016/01/14/CRM接口定义五[联系人]/" rel="next" title="CRM APP接口定义五[墙外联系人]">
+                <i class="fa fa-chevron-left"></i> CRM APP接口定义五[墙外联系人]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/07/CRM接口定义二[阅读]/" rel="prev" title="CRM APP接口定义二[阅读]">
-                CRM APP接口定义二[阅读] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -349,8 +367,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/07/基于MyBatis的多租户实现/"
-           data-title="基于MyBatis的多租户实现" data-url="http://itjoke.com/2016/01/07/基于MyBatis的多租户实现/">
+      <div class="ds-thread" data-thread-key="2016/01/14/社交产品中社交数据处理/"
+           data-title="社交产品中社交数据处理" data-url="http://itjoke.com/2016/01/14/社交产品中社交数据处理/">
       </div>
     
   </div>
