@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://itjoke.com/2016/01/15/CRM%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%E4%B8%80%5B%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%5D/</loc>
+        <lastmod>2016-01-15T07:59:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://itjoke.com/2016/01/14/%E7%A4%BE%E4%BA%A4%E4%BA%A7%E5%93%81%E4%B8%AD%E7%A4%BE%E4%BA%A4%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
         <lastmod>2016-01-14T08:56:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,14 +57,6 @@
     <url>
         <loc>http://itjoke.com/2015/12/31/ZOOKEEPER%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
         <lastmod>2015-12-31T02:49:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/2015/12/30/CRM%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89%E4%B8%80%5B%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C%5D/</loc>
-        <lastmod>2015-12-30T02:33:46.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
