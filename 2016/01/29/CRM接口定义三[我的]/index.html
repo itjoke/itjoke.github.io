@@ -59,7 +59,7 @@
 请求地">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CRM APP接口定义三[圈子-我的]">
-<meta property="og:url" content="http://itjoke.com/2015/12/28/CRM接口定义三[我的]/index.html">
+<meta property="og:url" content="http://itjoke.com/2016/01/29/CRM接口定义三[我的]/index.html">
 <meta property="og:site_name" content="五朝元老">
 <meta property="og:description" content="1234567891011121314151617（圈子）圈子信息列表-带最多5条评论圈子信息评论全部获取圈子信息发表评论圈子信息点赞圈子信息删除（只有发布者可以删除）（我的-上传头像的功能暂时保留）获取我的个人信息修改我的个人信息我加入的组织列表创建组织（联系人-暂不做）发送同事邀请接受同事邀请审批处理[只有管理员可以操作]
 1:圈子信息列表接口说明 :获取圈子信息列表-带5条评论
@@ -67,7 +67,7 @@
 
 
 请求地">
-<meta property="og:updated_time" content="2015-12-28T10:03:01.000Z">
+<meta property="og:updated_time" content="2016-01-29T08:22:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CRM APP接口定义三[圈子-我的]">
 <meta name="twitter:description" content="1234567891011121314151617（圈子）圈子信息列表-带最多5条评论圈子信息评论全部获取圈子信息发表评论圈子信息点赞圈子信息删除（只有发布者可以删除）（我的-上传头像的功能暂时保留）获取我的个人信息修改我的个人信息我加入的组织列表创建组织（联系人-暂不做）发送同事邀请接受同事邀请审批处理[只有管理员可以操作]
@@ -257,8 +257,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-28T18:03:01+08:00" content="2015-12-28">
-              2015-12-28
+            <time itemprop="dateCreated" datetime="2016-01-29T16:22:42+08:00" content="2016-01-29">
+              2016-01-29
             </time>
           </span>
 
@@ -268,8 +268,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/28/CRM接口定义三[我的]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/28/CRM接口定义三[我的]/" itemprop="commentsCount"></span>
+                <a href="/2016/01/29/CRM接口定义三[我的]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/29/CRM接口定义三[我的]/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -412,12 +412,12 @@
 </table>
 <p> <strong>内容暂定</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:圈子信息点赞">4:圈子信息点赞</h3><p><strong>接口说明</strong> :圈子信息点赞</p>
+<h3 id="4:发表圈子信息">4:发表圈子信息</h3><p><strong>接口说明</strong> :发表圈子信息</p>
 <table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/circle/comment/favour</th>
+<th style="text-align:right">/api/v1/circle/new</th>
 <th style="text-align:center"></th>
 <th>类型</th>
 </tr>
@@ -425,15 +425,15 @@
 <tbody>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">postid</td>
-<td style="text-align:center">主贴id</td>
-<td>int</td>
+<td style="text-align:right">title</td>
+<td style="text-align:center">公告标题</td>
+<td>string</td>
 </tr>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">commentid</td>
-<td style="text-align:center">评论的id</td>
-<td>int</td>
+<td style="text-align:right">content</td>
+<td style="text-align:center">公告内容</td>
+<td>string</td>
 </tr>
 <tr>
 <td style="text-align:left">返回值</td>
@@ -449,9 +449,10 @@
 </tr>
 </tbody>
 </table>
-<p> <strong>内容暂定</strong></p>
+<p> <strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5:圈子信息删除（只有发布者可以删除）">5:圈子信息删除（只有发布者可以删除）</h3><p><strong>接口说明</strong> :圈子信息删除</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">### 5:圈子信息点赞</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">*</span><span class="keyword">*</span>接口说明<span class="keyword">*</span><span class="keyword">*</span> :圈子信息点赞</span><br><span class="line"></span><br><span class="line">|<span class="string"> 请求地址      </span>|<span class="string">    /api/v1/circle/comment/favour </span>|<span class="string">   </span>|<span class="string">  类型 </span>|</span><br><span class="line">|<span class="string"> :-------- </span>|<span class="string"> --------:</span>|<span class="string"> :--: </span>|<span class="string">   </span>|</span><br><span class="line">|<span class="string"> 请求参数  </span>|<span class="string"> postid </span>|<span class="string">  主贴id   </span>|<span class="string">  int </span>|</span><br><span class="line">|<span class="string"> 请求参数  </span>|<span class="string"> commentid </span>|<span class="string">  评论的id   </span>|<span class="string">  int </span>|</span><br><span class="line">|<span class="string"> 返回值      </span>|<span class="string">    result </span>|<span class="string"> 1 操作成功   0  操作失败  </span>|<span class="string"> int  </span>|</span><br><span class="line">|<span class="string">       </span>|<span class="string">    data </span>|<span class="string">   </span>|<span class="string"> json  </span>|</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="keyword">*</span><span class="keyword">*</span>内容暂定<span class="keyword">*</span><span class="keyword">*</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">``` json</span><br><span class="line">&#123;<span class="string">"result"</span>:0,<span class="string">"data"</span>:<span class="string">"&#123;&#125;"</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6:圈子信息删除（只有发布者可以删除）">6:圈子信息删除（只有发布者可以删除）</h3><p><strong>接口说明</strong> :圈子信息删除</p>
 <table>
 <thead>
 <tr>
@@ -490,7 +491,7 @@
 </table>
 <p> <strong>内容暂定</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6:获取墙外我的个人信息">6:获取墙外我的个人信息</h3><p><strong>接口说明</strong> :获取墙外我的个人信息(请求参数默认带uid)</p>
+<h3 id="7:获取墙外我的个人信息">7:获取墙外我的个人信息</h3><p><strong>接口说明</strong> :获取墙外我的个人信息(请求参数默认带uid)</p>
 <table>
 <thead>
 <tr>
@@ -516,7 +517,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7:修改墙外我的个人信息">7:修改墙外我的个人信息</h3><p><strong>接口说明</strong> :修改墙外我的个人信息(请求参数默认带uid)</p>
+<h3 id="8:修改墙外我的个人信息">8:修改墙外我的个人信息</h3><p><strong>接口说明</strong> :修改墙外我的个人信息(请求参数默认带uid)</p>
 <table>
 <thead>
 <tr>
@@ -549,7 +550,7 @@
 </table>
 <p>请求参数为接口6返回的对象格式（剔除未修改的参数）<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">editval</span>":<span class="value"><span class="string">"&#123;&#123;"</span>username<span class="string">","</span>修改名字<span class="number">1</span><span class="string">"&#125;,&#123;"</span>性别<span class="string">","</span><span class="number">1</span><span class="string">"&#125;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure></p>
 <p>返回值<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="8:我加入的组织列表">8:我加入的组织列表</h3><p>结合userinfo表中的comidlist和organization表信息生成返回值</p>
+<h3 id="9:我加入的组织列表">9:我加入的组织列表</h3><p>结合userinfo表中的comidlist和organization表信息生成返回值</p>
 <table>
 <thead>
 <tr>
@@ -575,7 +576,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9:创建组织【重点】">9:创建组织【重点】</h3><table>
+<h3 id="10:创建组织【重点】">10:创建组织【重点】</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
@@ -632,17 +633,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/25/分布式算法介绍/" rel="next" title="分布式算法介绍">
-                <i class="fa fa-chevron-left"></i> 分布式算法介绍
+              <a href="/2016/01/29/CRM接口定义二[阅读]/" rel="next" title="CRM APP接口定义二[阅读]">
+                <i class="fa fa-chevron-left"></i> CRM APP接口定义二[阅读]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/31/ZOOKEEPER基础知识/" rel="prev" title="ZOOKEEPER基础知识">
-                ZOOKEEPER基础知识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -669,8 +666,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/12/28/CRM接口定义三[我的]/"
-           data-title="CRM APP接口定义三[圈子-我的]" data-url="http://itjoke.com/2015/12/28/CRM接口定义三[我的]/">
+      <div class="ds-thread" data-thread-key="2016/01/29/CRM接口定义三[我的]/"
+           data-title="CRM APP接口定义三[圈子-我的]" data-url="http://itjoke.com/2016/01/29/CRM接口定义三[我的]/">
       </div>
     
   </div>
@@ -760,7 +757,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:圈子信息列表"><span class="nav-number">1.</span> <span class="nav-text">1:圈子信息列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:圈子信息评论获取"><span class="nav-number">2.</span> <span class="nav-text">2:圈子信息评论获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:圈子信息发表评论"><span class="nav-number">3.</span> <span class="nav-text">3:圈子信息发表评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:圈子信息点赞"><span class="nav-number">4.</span> <span class="nav-text">4:圈子信息点赞</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5:圈子信息删除（只有发布者可以删除）"><span class="nav-number">5.</span> <span class="nav-text">5:圈子信息删除（只有发布者可以删除）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6:获取墙外我的个人信息"><span class="nav-number">6.</span> <span class="nav-text">6:获取墙外我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:修改墙外我的个人信息"><span class="nav-number">7.</span> <span class="nav-text">7:修改墙外我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8:我加入的组织列表"><span class="nav-number">8.</span> <span class="nav-text">8:我加入的组织列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9:创建组织【重点】"><span class="nav-number">9.</span> <span class="nav-text">9:创建组织【重点】</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:圈子信息列表"><span class="nav-number">1.</span> <span class="nav-text">1:圈子信息列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:圈子信息评论获取"><span class="nav-number">2.</span> <span class="nav-text">2:圈子信息评论获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:圈子信息发表评论"><span class="nav-number">3.</span> <span class="nav-text">3:圈子信息发表评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:发表圈子信息"><span class="nav-number">4.</span> <span class="nav-text">4:发表圈子信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6:圈子信息删除（只有发布者可以删除）"><span class="nav-number">5.</span> <span class="nav-text">6:圈子信息删除（只有发布者可以删除）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:获取墙外我的个人信息"><span class="nav-number">6.</span> <span class="nav-text">7:获取墙外我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8:修改墙外我的个人信息"><span class="nav-number">7.</span> <span class="nav-text">8:修改墙外我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9:我加入的组织列表"><span class="nav-number">8.</span> <span class="nav-text">9:我加入的组织列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10:创建组织【重点】"><span class="nav-number">9.</span> <span class="nav-text">10:创建组织【重点】</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
