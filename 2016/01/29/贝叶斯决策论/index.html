@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LaTex,模式识别," />
+  <meta name="keywords" content="LaTex,大数据,概率与统计,模式识别," />
 
 
 
@@ -51,31 +51,46 @@
 
 
 
-<meta name="description" content="博弈论
+<meta name="description" content="先验概率 
 
-$$P(ω_j|x) = 
-\frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
+是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·
 
-$$">
+ 后验概率 
+
+条件概率
+
+ 示例 
+
+举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：⑴ 第一次摸到红球（记作A）的概率；⑵ 第二次摸到红球（记作B）的概率；⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。解：⑴ P(A)=3/5，这就是验前概率；⑵ P">
 <meta property="og:type" content="article">
-<meta property="og:title" content="贝叶斯决策轮">
+<meta property="og:title" content="贝叶斯决策论">
 <meta property="og:url" content="http://itjoke.com/2016/01/29/贝叶斯决策论/index.html">
 <meta property="og:site_name" content="五朝元老">
-<meta property="og:description" content="博弈论
+<meta property="og:description" content="先验概率 
 
-$$P(ω_j|x) = 
-\frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
+是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·
 
-$$">
-<meta property="og:updated_time" content="2016-01-29T06:59:45.000Z">
+ 后验概率 
+
+条件概率
+
+ 示例 
+
+举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：⑴ 第一次摸到红球（记作A）的概率；⑵ 第二次摸到红球（记作B）的概率；⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。解：⑴ P(A)=3/5，这就是验前概率；⑵ P">
+<meta property="og:updated_time" content="2016-01-29T07:31:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="贝叶斯决策轮">
-<meta name="twitter:description" content="博弈论
+<meta name="twitter:title" content="贝叶斯决策论">
+<meta name="twitter:description" content="先验概率 
 
-$$P(ω_j|x) = 
-\frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
+是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·
 
-$$">
+ 后验概率 
+
+条件概率
+
+ 示例 
+
+举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：⑴ 第一次摸到红球（记作A）的概率；⑵ 第二次摸到红球（记作B）的概率；⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。解：⑴ P(A)=3/5，这就是验前概率；⑵ P">
 
 
 
@@ -87,7 +102,7 @@ $$">
   };
 </script>
 
-  <title> 贝叶斯决策轮 | 五朝元老 </title>
+  <title> 贝叶斯决策论 | 五朝元老 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -248,7 +263,7 @@ $$">
             
             
               
-                贝叶斯决策轮
+                贝叶斯决策论
               
             
           </h1>
@@ -257,7 +272,7 @@ $$">
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-29T14:59:45+08:00" content="2016-01-29">
+            <time itemprop="dateCreated" datetime="2016-01-29T15:31:16+08:00" content="2016-01-29">
               2016-01-29
             </time>
           </span>
@@ -288,13 +303,26 @@ $$">
       
 
       
-        <span itemprop="articleBody"><p>博弈论</p>
-
+        <span itemprop="articleBody"><p><strong> 先验概率 </strong></p>
+<blockquote>
+<p>是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·</p>
+</blockquote>
+<p><strong> 后验概率 </strong></p>
+<blockquote>
+<p>条件概率</p>
+</blockquote>
+<p><strong> 示例 </strong></p>
+<blockquote>
+<p>举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：<br>⑴ 第一次摸到红球（记作A）的概率；<br>⑵ 第二次摸到红球（记作B）的概率；<br>⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。<br>解：<br>⑴ P(A)=3/5，这就是验前概率；<br>⑵ P(B)=P(A)P(B|A)+P(A逆)P(B|A逆)=3/5<br>⑶ P(A|B)=P(A)P(B|A)/P(B)=1/2，这就是后验概率。</p>
+</blockquote>
+<p><strong> 概率分布函数 </strong><br>$$ P(ω_j)$$<br><strong> 概率密度函数 </strong><br>$$p(x|ω)$$<br><strong> 联合概率密度函数 </strong></p>
+<p><strong> 贝叶斯公式 </strong><br>
 $$P(ω_j|x) = 
 \frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
 
+posterior=\frac{likelihood x prior}{evidence}\qquad
 $$
-
+</p>
 </span>
       
     </div>
@@ -304,6 +332,10 @@ $$
         <div class="post-tags">
           
             <a href="/tags/LaTex/" rel="tag">#LaTex</a>
+          
+            <a href="/tags/大数据/" rel="tag">#大数据</a>
+          
+            <a href="/tags/概率与统计/" rel="tag">#概率与统计</a>
           
             <a href="/tags/模式识别/" rel="tag">#模式识别</a>
           
@@ -348,7 +380,7 @@ $$
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/01/29/贝叶斯决策论/"
-           data-title="贝叶斯决策轮" data-url="http://itjoke.com/2016/01/29/贝叶斯决策论/">
+           data-title="贝叶斯决策论" data-url="http://itjoke.com/2016/01/29/贝叶斯决策论/">
       </div>
     
   </div>
@@ -406,7 +438,7 @@ $$
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

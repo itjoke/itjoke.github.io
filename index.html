@@ -218,6 +218,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -242,7 +251,7 @@
               
                 
                 <a class="post-title-link" href="/2016/01/29/贝叶斯决策论/" itemprop="url">
-                  贝叶斯决策轮
+                  贝叶斯决策论
                 </a>
               
             
@@ -252,7 +261,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-29T14:59:45+08:00" content="2016-01-29">
+            <time itemprop="dateCreated" datetime="2016-01-29T15:31:16+08:00" content="2016-01-29">
               2016-01-29
             </time>
           </span>
@@ -286,13 +295,26 @@
         
           <span itemprop="articleBody">
             
-              <p>博弈论</p>
-
+              <p><strong> 先验概率 </strong></p>
+<blockquote>
+<p>是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·</p>
+</blockquote>
+<p><strong> 后验概率 </strong></p>
+<blockquote>
+<p>条件概率</p>
+</blockquote>
+<p><strong> 示例 </strong></p>
+<blockquote>
+<p>举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：<br>⑴ 第一次摸到红球（记作A）的概率；<br>⑵ 第二次摸到红球（记作B）的概率；<br>⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。<br>解：<br>⑴ P(A)=3/5，这就是验前概率；<br>⑵ P(B)=P(A)P(B|A)+P(A逆)P(B|A逆)=3/5<br>⑶ P(A|B)=P(A)P(B|A)/P(B)=1/2，这就是后验概率。</p>
+</blockquote>
+<p><strong> 概率分布函数 </strong><br>$$ P(ω_j)$$<br><strong> 概率密度函数 </strong><br>$$p(x|ω)$$<br><strong> 联合概率密度函数 </strong></p>
+<p><strong> 贝叶斯公式 </strong><br>
 $$P(ω_j|x) = 
 \frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
 
+posterior=\frac{likelihood x prior}{evidence}\qquad
 $$
-
+</p>
 
             
           </span>
@@ -2658,7 +2680,7 @@ $$
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">24</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
