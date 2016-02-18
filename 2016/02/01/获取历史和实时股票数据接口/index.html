@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LaTex,大数据,概率与统计,模式识别," />
+  <meta name="keywords" content="股票," />
 
 
 
@@ -51,46 +51,19 @@
 
 
 
-<meta name="description" content="先验概率 
-
-是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·
-
- 后验概率 
-
-条件概率
-
- 示例 
-
-举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：⑴ 第一次摸到红球（记作A）的概率；⑵ 第二次摸到红球（记作B）的概率；⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。解：⑴ P(A)=3/5，这就是验前概率；⑵ P">
+<meta name="description" content="http://www.cnblogs.com/seacryfly/articles/stock.html
+http://lutaf.com/152.htm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="贝叶斯决策论">
-<meta property="og:url" content="http://itjoke.com/2016/01/29/贝叶斯决策论/index.html">
+<meta property="og:title" content="获取历史和实时股票数据接口">
+<meta property="og:url" content="http://itjoke.com/2016/02/01/获取历史和实时股票数据接口/index.html">
 <meta property="og:site_name" content="五朝元老">
-<meta property="og:description" content="先验概率 
-
-是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·
-
- 后验概率 
-
-条件概率
-
- 示例 
-
-举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：⑴ 第一次摸到红球（记作A）的概率；⑵ 第二次摸到红球（记作B）的概率；⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。解：⑴ P(A)=3/5，这就是验前概率；⑵ P">
-<meta property="og:updated_time" content="2016-01-29T08:34:12.000Z">
+<meta property="og:description" content="http://www.cnblogs.com/seacryfly/articles/stock.html
+http://lutaf.com/152.htm">
+<meta property="og:updated_time" content="2016-01-31T16:36:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="贝叶斯决策论">
-<meta name="twitter:description" content="先验概率 
-
-是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·
-
- 后验概率 
-
-条件概率
-
- 示例 
-
-举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：⑴ 第一次摸到红球（记作A）的概率；⑵ 第二次摸到红球（记作B）的概率；⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。解：⑴ P(A)=3/5，这就是验前概率；⑵ P">
+<meta name="twitter:title" content="获取历史和实时股票数据接口">
+<meta name="twitter:description" content="http://www.cnblogs.com/seacryfly/articles/stock.html
+http://lutaf.com/152.htm">
 
 
 
@@ -102,7 +75,7 @@
   };
 </script>
 
-  <title> 贝叶斯决策论 | 五朝元老 </title>
+  <title> 获取历史和实时股票数据接口 | 五朝元老 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,7 +236,7 @@
             
             
               
-                贝叶斯决策论
+                获取历史和实时股票数据接口
               
             
           </h1>
@@ -272,8 +245,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-29T16:34:12+08:00" content="2016-01-29">
-              2016-01-29
+            <time itemprop="dateCreated" datetime="2016-02-01T00:36:15+08:00" content="2016-02-01">
+              2016-02-01
             </time>
           </span>
 
@@ -283,8 +256,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/29/贝叶斯决策论/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/29/贝叶斯决策论/" itemprop="commentsCount"></span>
+                <a href="/2016/02/01/获取历史和实时股票数据接口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/01/获取历史和实时股票数据接口/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -303,38 +276,8 @@
       
 
       
-        <span itemprop="articleBody"><p><strong> 先验概率 </strong></p>
-<blockquote>
-<p>是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·</p>
-</blockquote>
-<p><strong> 后验概率 </strong></p>
-<blockquote>
-<p>条件概率</p>
-</blockquote>
-<p><strong> 示例 </strong></p>
-<blockquote>
-<p>举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：<br>⑴ 第一次摸到红球（记作A）的概率；<br>⑵ 第二次摸到红球（记作B）的概率；<br>⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。<br>解：<br>⑴ P(A)=3/5，这就是验前概率；<br>⑵ P(B)=P(A)P(B|A)+P(A逆)P(B|A逆)=3/5<br>⑶ P(A|B)=P(A)P(B|A)/P(B)=1/2，这就是后验概率。</p>
-</blockquote>
-<p><strong> 概率分布函数 </strong><br>$$ P(ω_j)$$<br><strong> 概率密度函数 </strong><br>$$p(x|ω)$$</p>
-<blockquote>
-<p>在数学中，连续型随机变量的概率密度函数（在不至于混淆时可以简称为密度函数）是一个描述这个随机变量的输出值，在某个确定的取值点附近的可能性的函数。probability density function，简称PDF。<br><strong> 联合概率密度函数 </strong></p>
-</blockquote>
-<p><strong> 贝叶斯公式 </strong></p>
-<blockquote>
-<p>贝叶斯定理由英国数学家贝叶斯 ( Thomas Bayes 1702-1761 ) 发展，用来描述两个条件概率之间的关系，比如 P(A|B) 和 P(B|A)。按照乘法法则：P(A∩B) = P(A)<em>P(B|A)=P(B)</em>P(A|B)，可以立刻导出。如上公式也可变形为：P(B|A) = P(A|B)<em>P(B) / P(A)。<br>例如：一座别墅在过去的 20 年里一共发生过 2 次被盗，别墅的主人有一条狗，狗平均每周晚上叫 3 次，在盗贼入侵时狗叫的概率被估计为 0.9，问题是：在狗叫的时候发生入侵的概率是多少？<br>我们假设 A 事件为狗在晚上叫，B 为盗贼入侵，则以天为单位统计，P(A) = 3/7，P(B) = 2/(20</em>365) = 2/7300，P(A|B) = 0.9，按照公式很容易得出结果：P(B|A) = 0.9<em>(2/7300) / (3/7) = 0.00058<br>另一个例子，现分别有 A、B 两个容器，在容器 A 里分别有 7 个红球和 3 个白球，在容器 B 里有 1 个红球和 9 个白球，现已知从这两个容器里任意抽出了一个球，且是红球，问这个红球是来自容器 A 的概率是多少?<br>假设已经抽出红球为事件 B，从容器 A 里抽出球为事件 A，则有：P(B) = 8/20，P(A) = 1/2，P(B|A) = 7/10，按照公式，则有：P(A|B) = (7/10)</em>(1/2) / (8/20) = 0.875</p>
-</blockquote>
-
-$$P(ω_j|x) = 
-\frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
-
-posterior=\frac{likelihood * prior}{evidence}\qquad
-$$
-
-<p><strong> 朴素贝叶斯分类器 </strong></p>
-<blockquote>
-<p><a href="http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html</a></p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String code;<span class="comment">//股票的代码，上证股票以sh开头，深证股票以sz开头</span></span><br><span class="line"><span class="keyword">private</span> Date date;<span class="comment">//交易日期</span></span><br><span class="line"><span class="keyword">private</span> Double open;<span class="comment">//开盘价</span></span><br><span class="line"><span class="keyword">private</span> Double high;<span class="comment">//最高价</span></span><br><span class="line"><span class="keyword">private</span> Double low;<span class="comment">//最低价</span></span><br><span class="line"><span class="keyword">private</span> Double close;<span class="comment">//收盘价</span></span><br><span class="line"><span class="keyword">private</span> Double change;<span class="comment">//涨跌幅，复权之后的真实涨跌幅，保证准确</span></span><br><span class="line"><span class="keyword">private</span> Double volume;<span class="comment">//成交量</span></span><br><span class="line"><span class="keyword">private</span> Double money;<span class="comment">//成交额</span></span><br><span class="line"><span class="keyword">private</span> Double traded_market_value;<span class="comment">//流通市值</span></span><br><span class="line"><span class="keyword">private</span> Double market_value;<span class="comment">//总市值</span></span><br><span class="line"><span class="keyword">private</span> Double turnover;<span class="comment">//换手率，成交量/流通股本</span></span><br><span class="line"><span class="keyword">private</span> Double adjust_price;<span class="comment">//后复权价，复权开始时间为股票上市日，精确到小数点后10位</span></span><br><span class="line"><span class="keyword">private</span> Double report_type;<span class="comment">//最近一期财务报告实际发布的日期</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> Double report_date;<span class="comment">//最近一期财务报告的类型，3-31对应一季报，6-30对应半年报，9-30对应三季报，12-31对应年报</span></span><br><span class="line"><span class="keyword">private</span> Double PE_TTM;<span class="comment">//最近12个月市盈率，股价 / 最近12个月归属母公司的每股收益TTM</span></span><br><span class="line"><span class="keyword">private</span> Double PS_TTM;<span class="comment">//最近12个月市销率， 股价 / 最近12个月每股营业收入</span></span><br><span class="line"><span class="keyword">private</span> Double PC_TTM;<span class="comment">//最近12个月市现率， 股价 / 最近12个月每股经营现金流</span></span><br><span class="line"><span class="keyword">private</span> Double PB;<span class="comment">//市净率，股价 / 最近期财报每股净资产</span></span><br></pre></td></tr></table></figure>
+        <span itemprop="articleBody"><p><a href="http://www.cnblogs.com/seacryfly/articles/stock.html" target="_blank" rel="external">http://www.cnblogs.com/seacryfly/articles/stock.html</a></p>
+<p><a href="http://lutaf.com/152.htm" target="_blank" rel="external">http://lutaf.com/152.htm</a></p>
 </span>
       
     </div>
@@ -343,13 +286,7 @@ $$
       
         <div class="post-tags">
           
-            <a href="/tags/LaTex/" rel="tag">#LaTex</a>
-          
-            <a href="/tags/大数据/" rel="tag">#大数据</a>
-          
-            <a href="/tags/概率与统计/" rel="tag">#概率与统计</a>
-          
-            <a href="/tags/模式识别/" rel="tag">#模式识别</a>
+            <a href="/tags/股票/" rel="tag">#股票</a>
           
         </div>
       
@@ -365,6 +302,10 @@ $$
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/01/贝叶斯决策论/" rel="prev" title="贝叶斯决策论">
+                贝叶斯决策论 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -391,8 +332,8 @@ $$
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/29/贝叶斯决策论/"
-           data-title="贝叶斯决策论" data-url="http://itjoke.com/2016/01/29/贝叶斯决策论/">
+      <div class="ds-thread" data-thread-key="2016/02/01/获取历史和实时股票数据接口/"
+           data-title="获取历史和实时股票数据接口" data-url="http://itjoke.com/2016/02/01/获取历史和实时股票数据接口/">
       </div>
     
   </div>
@@ -436,7 +377,7 @@ $$
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -450,7 +391,7 @@ $$
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-count">29</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
