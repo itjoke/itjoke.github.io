@@ -241,114 +241,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/19/CRM数据库设计/" itemprop="url">
-                  CRM数据库设计
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-19T13:20:14+08:00" content="2016-02-19">
-              2016-02-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CRM/" itemprop="url" rel="index">
-                    <span itemprop="name">CRM</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/19/CRM数据库设计/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/19/CRM数据库设计/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="墙外用户表">墙外用户表</h2><p><img src="/images/userdb.jpg" alt="这是一张图片"></p>
-<p>墙外没有社交信息字段<br>墙内和墙外 我的信息不全</p>
-<h2 id="阅读">阅读</h2><p><img src="/images/read.png" alt="这是一张图片"></p>
-<h2 id="客户">客户</h2><p><img src="/images/customer.png" alt="这是一张图片"></p>
-<p><img src="/images/user2.png" alt="这是一张图片"></p>
-<p>1：墙外的数据库叫userdb，墙内的叫crm_* 从1开始<br>2：opost点赞列表-需要做redis缓存，在用户点赞的时候需要同时操作redis和数据库，保证数据一致。获取点赞列表时直接从redis里取数据返回。<br>3：favlist 列表里就包含了 id，名字和头像的url。存储到redis缓存中<br>4：墙内我的添加同事为好友的ui没画<br>5：</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/02/19/CRM工作计划/" itemprop="url">
                   CRM工作计划
                 </a>
@@ -360,7 +252,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-19T12:57:39+08:00" content="2016-02-19">
+            <time itemprop="dateCreated" datetime="2016-02-19T14:38:15+08:00" content="2016-02-19">
               2016-02-19
             </time>
           </span>
@@ -557,8 +449,125 @@
 </tr>
 </tbody>
 </table>
-<h2 id="第四阶段时间点(4-18-墙内)">第四阶段时间点(4.18-墙内)</h2><p>| 墙内工作      |     |  | . |</p>
+<p>细化-3周时间</p>
+<blockquote>
+<p>第一周<br>墙外-我的 [dawei]<br>墙外-圈子 上传图片<br>墙内-阅读 上传图片<br>墙内-客户</p>
+<p>第二周<br>名片扫描-工作[dawei]<br>墙内-我的[dawei]</p>
+</blockquote>
+<p>墙内-消息<br>墙内-客户</p>
+<blockquote>
+<p>第三周<br>墙内-客户</p>
+</blockquote>
+<h2 id="第四阶段时间点(4-18-墙内)">第四阶段时间点(4.18-墙内)</h2><p>| 墙内工作      |     |  | . |<br>| 服务器代码重构      |     |  | . |</p>
 <p>##目前存在的问题<br>1:点赞需要重构-需要加入缓存<br>2:好友里的个人信息需要重构<br>3:圈子里的权限问题<br>4:后台爬虫任务<br>5:消息通知</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/19/CRM数据库设计/" itemprop="url">
+                  CRM数据库设计
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-02-19T13:20:14+08:00" content="2016-02-19">
+              2016-02-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CRM/" itemprop="url" rel="index">
+                    <span itemprop="name">CRM</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/19/CRM数据库设计/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/19/CRM数据库设计/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h2 id="墙外用户表">墙外用户表</h2><p><img src="/images/userdb.jpg" alt="这是一张图片"></p>
+<p>墙外没有社交信息字段<br>墙内和墙外 我的信息不全</p>
+<h2 id="阅读">阅读</h2><p><img src="/images/read.png" alt="这是一张图片"></p>
+<h2 id="客户">客户</h2><p><img src="/images/customer.png" alt="这是一张图片"></p>
+<p><img src="/images/user2.png" alt="这是一张图片"></p>
+<p>1：墙外的数据库叫userdb，墙内的叫crm_* 从1开始<br>2：opost点赞列表-需要做redis缓存，在用户点赞的时候需要同时操作redis和数据库，保证数据一致。获取点赞列表时直接从redis里取数据返回。<br>3：favlist 列表里就包含了 id，名字和头像的url。存储到redis缓存中<br>4：墙内我的添加同事为好友的ui没画<br>5：</p>
 
             
           </span>
