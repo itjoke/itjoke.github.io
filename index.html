@@ -241,539 +241,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/23/CRM接口定义七[组织-我的]/" itemprop="url">
-                  CRM接口定义七[组织-我的]
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T13:35:59+08:00" content="2016-02-23">
-              2016-02-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/23/CRM接口定义七[组织-我的]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/CRM接口定义七[组织-我的]/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">获取[我的]信息</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="1:获取[我的]信息">1:获取[我的]信息</h3><blockquote>
-<p>照片，姓名，部门，上级</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/protal</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">用户id</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2:获取[我的]详细信息">2:获取[我的]详细信息</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/protal/info</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">用户id</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3:保存[我的]详细信息">3:保存[我的]详细信息</h3><blockquote>
-<p>包括头像url</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/protal/info/save</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">editval</td>
-<td style="text-align:center">修改信息字段</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:获取同事通讯录">4:获取同事通讯录</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/colleague/list</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5:删除同事">5:删除同事</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/colleague/del</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">同事编号</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6:查看同事详情">6:查看同事详情</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/colleague/detail</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">同事编号</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7:指定上级">7:指定上级</h3><blockquote>
-<p>上级只能指定一个</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/org/colleague/leader</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">同事编号</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="8:搜索同事">8:搜索同事</h3><blockquote>
-<p>以下接口参考联系人<br>用户名搜索暂不实现</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/colleague/search</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">mobile</td>
-<td style="text-align:center">手机号</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">name</td>
-<td style="text-align:center">用户名</td>
-<td>string</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9:添加同事为好友">9:添加同事为好友</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/colleague/friend/add</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">fid</td>
-<td style="text-align:center">用户id</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="10:新同事添加请求处理">10:新同事添加请求处理</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/colleague/add/do</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">fid</td>
-<td style="text-align:center">用户id</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">action</td>
-<td style="text-align:center">是否接受</td>
-<td>bool</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="11:新同事状态列表">11:新同事状态列表</h3><p>包括添加其他好友和被其他用户添加为好友状态</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/colleague/new/list</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/23/获取历史和实时股票数据接口/" itemprop="url">
-                  获取历史和实时股票数据接口
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T12:40:37+08:00" content="2016-02-23">
-              2016-02-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/23/获取历史和实时股票数据接口/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/获取历史和实时股票数据接口/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p><a href="http://www.cnblogs.com/seacryfly/articles/stock.html" target="_blank" rel="external">http://www.cnblogs.com/seacryfly/articles/stock.html</a></p>
-<p><a href="http://lutaf.com/152.htm" target="_blank" rel="external">http://lutaf.com/152.htm</a></p>
-<p><a href="http://tushare.waditu.com/trading.html#id8" target="_blank" rel="external">tushare</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/02/23/CRM接口定义二[阅读]/" itemprop="url">
                   CRM APP接口定义二[阅读]
                 </a>
@@ -785,7 +252,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T12:39:59+08:00" content="2016-02-23">
+            <time itemprop="dateCreated" datetime="2016-02-23T16:34:09+08:00" content="2016-02-23">
               2016-02-23
             </time>
           </span>
@@ -1295,6 +762,12 @@
 <td>string</td>
 </tr>
 <tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">picurl</td>
+<td style="text-align:center">图片url</td>
+<td>string</td>
+</tr>
+<tr>
 <td style="text-align:left">返回值</td>
 <td style="text-align:right">result</td>
 <td style="text-align:center">1 操作成功   0  操作失败</td>
@@ -1351,108 +824,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/02/23/CRM接口定义八[组织-工作]/" itemprop="url">
-                  CRM接口定义八[组织-工作]
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T12:27:57+08:00" content="2016-02-23">
-              2016-02-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CRM/" itemprop="url" rel="index">
-                    <span itemprop="name">CRM</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/23/CRM接口定义八[组织-工作]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/CRM接口定义八[组织-工作]/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/02/23/CRM接口定义五[联系人]/" itemprop="url">
                   CRM APP接口定义五[圈子-平台联系人]
                 </a>
@@ -1464,7 +835,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T12:26:46+08:00" content="2016-02-23">
+            <time itemprop="dateCreated" datetime="2016-02-23T16:33:59+08:00" content="2016-02-23">
               2016-02-23
             </time>
           </span>
@@ -2109,6 +1480,760 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="17:圈子信息发布">17:圈子信息发布</h3><p><strong>接口说明</strong> :公司公告发布</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/circle/new</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">title</td>
+<td style="text-align:center">公告标题</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">content</td>
+<td style="text-align:center">公告内容</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">picurl</td>
+<td style="text-align:center">图片url</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/23/CRM接口定义八[组织-工作]/" itemprop="url">
+                  CRM接口定义八[组织-工作]
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-02-23T14:55:52+08:00" content="2016-02-23">
+              2016-02-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/CRM/" itemprop="url" rel="index">
+                    <span itemprop="name">CRM</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/CRM接口定义八[组织-工作]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/CRM接口定义八[组织-工作]/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">工作列表</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="[CRM_APP接口定义八工作]">[CRM APP接口定义八工作]</h2><h3 id="1:获取工作列表">1:获取工作列表</h3><p><strong>接口说明</strong> :获取工作列表</p>
+<blockquote>
+<p>时间戳<br>| 请求地址      |    /api/v1/work/list |   |  类型 |<br>| :——– | ——–:| :–: |   |<br>| 请求参数  | type |  工作类型(我的工作，下属的工作，参与的工作，全部工作)   |  string |<br>| 请求参数  | time |  时间戳  |  string |</p>
+</blockquote>
+<p>| 返回值      |    result | 1 操作成功   0  操作失败  | int  |<br>|       |    data |   | json  |</p>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2:删除某条工作信息">2:删除某条工作信息</h3><p><strong>接口说明</strong> :获取工作列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/work/del</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">工作编号</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3:删除某条工作信息">3:删除某条工作信息</h3><p><strong>接口说明</strong> :获取工作列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/work/del</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">工作编号</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/23/CRM接口定义七[组织-我的]/" itemprop="url">
+                  CRM接口定义七[组织-我的]
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-02-23T13:56:40+08:00" content="2016-02-23">
+              2016-02-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/CRM接口定义七[组织-我的]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/CRM接口定义七[组织-我的]/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">获取[我的]信息</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="1:获取[我的]信息">1:获取[我的]信息</h3><blockquote>
+<p>照片，姓名，部门，上级</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/protal</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">用户id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2:获取[我的]详细信息">2:获取[我的]详细信息</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/protal/info</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">用户id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3:保存[我的]详细信息">3:保存[我的]详细信息</h3><blockquote>
+<p>包括头像url</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/protal/info/save</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">editval</td>
+<td style="text-align:center">修改信息字段</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4:获取同事通讯录">4:获取同事通讯录</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/colleague/list</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5:删除同事">5:删除同事</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/colleague/del</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">同事编号</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6:查看同事详情">6:查看同事详情</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/colleague/detail</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">同事编号</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7:指定上级">7:指定上级</h3><blockquote>
+<p>上级只能指定一个</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/org/colleague/leader</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">同事编号</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8:搜索同事">8:搜索同事</h3><blockquote>
+<p>以下接口参考联系人<br>用户名搜索暂不实现</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/colleague/search</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">mobile</td>
+<td style="text-align:center">手机号</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">name</td>
+<td style="text-align:center">用户名</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9:添加同事为好友">9:添加同事为好友</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/colleague/friend/add</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">fid</td>
+<td style="text-align:center">用户id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10:新同事添加请求处理">10:新同事添加请求处理</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/colleague/add/do</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">fid</td>
+<td style="text-align:center">用户id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">action</td>
+<td style="text-align:center">是否接受</td>
+<td>bool</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11:新同事状态列表">11:新同事状态列表</h3><p>包括添加其他好友和被其他用户添加为好友状态</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/colleague/new/list</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/23/获取历史和实时股票数据接口/" itemprop="url">
+                  获取历史和实时股票数据接口
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-02-23T12:40:37+08:00" content="2016-02-23">
+              2016-02-23
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/23/获取历史和实时股票数据接口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/获取历史和实时股票数据接口/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p><a href="http://www.cnblogs.com/seacryfly/articles/stock.html" target="_blank" rel="external">http://www.cnblogs.com/seacryfly/articles/stock.html</a></p>
+<p><a href="http://lutaf.com/152.htm" target="_blank" rel="external">http://lutaf.com/152.htm</a></p>
+<p><a href="http://tushare.waditu.com/trading.html#id8" target="_blank" rel="external">tushare</a></p>
 
             
           </span>
