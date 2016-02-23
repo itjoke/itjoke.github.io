@@ -241,6 +241,453 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/24/CRM APP接口定义四[消息]/" itemprop="url">
+                  CRM APP接口定义四[消息]
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-24T10:06:55+08:00" content="2015-12-24">
+              2015-12-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/24/CRM APP接口定义四[消息]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/24/CRM APP接口定义四[消息]/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">获取融云token</span><br><span class="line">添加好友</span><br><span class="line">接受或者拒绝好友请求</span><br><span class="line">获取好友列表</span><br><span class="line">IM搜索好友</span><br><span class="line">删除好友</span><br><span class="line">历史消息记录</span><br></pre></td></tr></table></figure>
+<h3 id="1:获取融云token">1:获取融云token</h3><p><strong>接口说明</strong> :获取融云token<br>若当前用户启用聊天时，没有从服务器得到自己的token时，调用此接口获取token（这个*暂时不用）（用户一注册即为他生成了融云token，登陆成功后，在用户信息里）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/getToken</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2．添加好友">2．添加好友</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/addFriends</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">friendid</td>
+<td style="text-align:center">好友Id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3．接受或者拒绝好友请求">3．接受或者拒绝好友请求</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/reRequest</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">friendid</td>
+<td style="text-align:center">接受某id的请求</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">status</td>
+<td style="text-align:center">操作，1接受，2拒绝</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4．获取好友列表">4．获取好友列表</h3><p>当前登陆用户获取好友列表时调用</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/friendsList</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5．IM搜索好友">5．IM搜索好友</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/findUserForAdd</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">condition</td>
+<td style="text-align:center">查找条件</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6．删除好友">6．删除好友</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/delFriend</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">friendid</td>
+<td style="text-align:center">要删除的人的Id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">1</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;"</span>token<span class="string">": "</span>nasdaaasd<span class="string">"&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7．历史消息记录">7．历史消息记录</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/rongCloud/historyMessage</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">targetid</td>
+<td style="text-align:center">目标用户id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">pageNo</td>
+<td style="text-align:center">页码</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">pageSize</td>
+<td style="text-align:center">每页条数</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">orgid</td>
+<td style="text-align:center">组织id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>例子</strong><br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">result</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">data</span>": <span class="value">[</span><br><span class="line">    &#123;</span><br><span class="line">      "<span class="attribute">messageList</span>": <span class="value">[</span><br><span class="line">        &#123;</span><br><span class="line">          "<span class="attribute">channelType</span>": <span class="value"><span class="string">"PERSON"</span></span>,</span><br><span class="line">          "<span class="attribute">msgTimestamp</span>": <span class="value"><span class="string">"1438158176906"</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserId</span>": <span class="value"><span class="string">"1746"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserId</span>": <span class="value"><span class="string">"53"</span></span>,</span><br><span class="line">          "<span class="attribute">receiveAt</span>": <span class="value"><span class="number">1438158178000</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserNickname</span>": <span class="value"><span class="string">"测试1"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserNickName</span>": <span class="value"><span class="string">"测试2"</span></span>,</span><br><span class="line">          "<span class="attribute">id</span>": <span class="value"><span class="number">3422</span></span>,</span><br><span class="line">          "<span class="attribute">content</span>": <span class="value"><span class="string">"说啥呢"</span></span>,</span><br><span class="line">          "<span class="attribute">timestamp</span>": <span class="value"><span class="string">"1438158176926,1438158176906"</span></span>,</span><br><span class="line">          "<span class="attribute">objectName</span>": <span class="value"><span class="string">"RC:VcMsg"</span></span><br><span class="line">        </span>&#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          "<span class="attribute">channelType</span>": <span class="value"><span class="string">"PERSON"</span></span>,</span><br><span class="line">          "<span class="attribute">msgTimestamp</span>": <span class="value"><span class="string">"1438151612937"</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserId</span>": <span class="value"><span class="string">"1746"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserId</span>": <span class="value"><span class="string">"53"</span></span>,</span><br><span class="line">          "<span class="attribute">receiveAt</span>": <span class="value"><span class="number">1438151612000</span></span>,</span><br><span class="line">          "<span class="attribute">fromUserNickname</span>": <span class="value"><span class="string">"测试1"</span></span>,</span><br><span class="line">          "<span class="attribute">toUserNickName</span>": <span class="value"><span class="string">"测试3"</span></span>,</span><br><span class="line">          "<span class="attribute">id</span>": <span class="value"><span class="number">3420</span></span>,</span><br><span class="line">          "<span class="attribute">content</span>": <span class="value"><span class="string">""</span></span>,</span><br><span class="line">          "<span class="attribute">timestamp</span>": <span class="value"><span class="string">"1438151612956,1438151612937"</span></span>,</span><br><span class="line">          "<span class="attribute">objectName</span>": <span class="value"><span class="string">"RC:TxtMsg"</span></span><br><span class="line">        </span>&#125;</span><br><span class="line">      ]</span>,</span><br><span class="line">      "<span class="attribute">date</span>": <span class="value"><span class="string">"2015-07-29"</span></span><br><span class="line">    </span>&#125;</span><br><span class="line">  ]</span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/18/AppToken验证机制/" itemprop="url">
+                  App Api验证机制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-18T13:16:48+08:00" content="2015-12-18">
+              2015-12-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/18/AppToken验证机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/AppToken验证机制/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>1：token 验证<br>token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。</p>
+<p>设计app api的时候都会遇到安全性验证的问题，有以下几种情况<br>1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。<br>不能防外挂，重复提交的问题。</p>
+<p>2：请求参数加密<br>在客户端对提交的请求参数做对称加密，服务器做解密校验。<br>风险在于如果客户端被破解，加密key被暴露，防范机制就失效了。<br>有的是在客户端做了一个加密库，提供多种加密方式，每次随机构建，增加破解难度。</p>
+<h3 id="原型讨论（设计图需要调整部分）">原型讨论（设计图需要调整部分）</h3><p>创建工作-输入框上提<br>客户个人信息-显示错误<br>客户详情编辑-错误</p>
+<p>客户个人信息下端的 弹出框（查重，分配）</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/03/CRM原型设计讨论/" itemprop="url">
                   原型设计讨论
                 </a>
@@ -427,21 +874,21 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">23</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
