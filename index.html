@@ -218,6 +218,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -252,7 +261,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T10:31:47+08:00" content="2016-02-23">
+            <time itemprop="dateCreated" datetime="2016-02-23T11:30:49+08:00" content="2016-02-23">
               2016-02-23
             </time>
           </span>
@@ -304,8 +313,14 @@
 <tbody>
 <tr>
 <td style="text-align:left">请求参数</td>
-<td style="text-align:right">t</td>
+<td style="text-align:right">time</td>
 <td style="text-align:center">指定时间</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">type</td>
+<td style="text-align:center">类型（全部客户，我的客户，我参与的客户，我下级的客户）</td>
 <td>String</td>
 </tr>
 <tr>
@@ -445,7 +460,48 @@
 </table>
 <p><strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:绑定客户社交账号">4:绑定客户社交账号</h3><blockquote>
+<h3 id="4:删除客户">4:删除客户</h3><blockquote>
+<p>id唯一标识用户</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/del</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">tel</td>
+<td style="text-align:center">电话</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">did</td>
+<td style="text-align:center">被删除的用户的数据id</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5:绑定客户社交账号">5:绑定客户社交账号</h3><blockquote>
 <p>绑定多个社交账号typeaccount  {“type”:”weibo”,”account”:”xxxx@sina.com”}</p>
 </blockquote>
 <table>
@@ -480,7 +536,7 @@
 </table>
 <p><strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5:客户查重">5:客户查重</h3><blockquote>
+<h3 id="6:客户查重">6:客户查重</h3><blockquote>
 <p>手机号唯一标识用户，查询同一手机号下关联的多少用户数据，可能有多条。返回的数据需要有销售人员信息。</p>
 </blockquote>
 <table>
@@ -515,7 +571,7 @@
 </table>
 <p><strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6:客户锁定">6:客户锁定</h3><blockquote>
+<h3 id="7:客户锁定">7:客户锁定</h3><blockquote>
 <p>已手机好为唯一标识，也就是说可能会锁定多条数据。锁定就是分配用户给最开始的用户创建者。</p>
 </blockquote>
 <table>
@@ -550,7 +606,7 @@
 </table>
 <p><strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7:客户分配">7:客户分配</h3><blockquote>
+<h3 id="8:客户分配">8:客户分配</h3><blockquote>
 <p>调用此接口前需要先调用查重获取该用户目前有多少销售在使用。分配后和锁定功能相同。</p>
 </blockquote>
 <table>
