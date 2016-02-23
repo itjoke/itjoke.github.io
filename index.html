@@ -252,7 +252,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T13:24:23+08:00" content="2016-02-23">
+            <time itemprop="dateCreated" datetime="2016-02-23T13:35:59+08:00" content="2016-02-23">
               2016-02-23
             </time>
           </span>
@@ -578,7 +578,44 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,"data":"&#123;&#125;"&#125;</span><br><span class="line"></span><br><span class="line">### 10:新同事添加请求处理</span><br><span class="line"></span><br><span class="line">| 请求地址      |    /api/v1/colleague/add/do |   |  类型 |</span><br><span class="line">| :-------- | --------:| :--: |   |</span><br><span class="line">| 请求参数  | fid |  用户id   |  int |</span><br><span class="line">| 请求参数  | action |  是否接受   |  bool |</span><br><span class="line">| 返回值      |    result | 1 操作成功   0  操作失败  | int  |</span><br><span class="line">|       |    data |   | json  |</span><br><span class="line"></span><br><span class="line">``` json</span><br><span class="line">&#123;"result":0,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10:新同事添加请求处理">10:新同事添加请求处理</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/colleague/add/do</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">fid</td>
+<td style="text-align:center">用户id</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">action</td>
+<td style="text-align:center">是否接受</td>
+<td>bool</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="11:新同事状态列表">11:新同事状态列表</h3><p>包括添加其他好友和被其他用户添加为好友状态</p>
 <table>
 <thead>
