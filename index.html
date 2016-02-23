@@ -252,7 +252,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T13:19:56+08:00" content="2016-02-23">
+            <time itemprop="dateCreated" datetime="2016-02-23T13:24:23+08:00" content="2016-02-23">
               2016-02-23
             </time>
           </span>
@@ -387,7 +387,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3:获取同事通讯录">3:获取同事通讯录</h3><table>
+<h3 id="4:获取同事通讯录">4:获取同事通讯录</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
@@ -412,7 +412,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:删除同事">4:删除同事</h3><table>
+<h3 id="5:删除同事">5:删除同事</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
@@ -443,7 +443,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5:查看同事详情">5:查看同事详情</h3><table>
+<h3 id="6:查看同事详情">6:查看同事详情</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
@@ -474,7 +474,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6:指定上级">6:指定上级</h3><blockquote>
+<h3 id="7:指定上级">7:指定上级</h3><blockquote>
 <p>上级只能指定一个</p>
 </blockquote>
 <table>
@@ -508,7 +508,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;jsonObjectToString&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7:搜索同事">7:搜索同事</h3><blockquote>
+<h3 id="8:搜索同事">8:搜索同事</h3><blockquote>
 <p>以下接口参考联系人<br>用户名搜索暂不实现</p>
 </blockquote>
 <table>
@@ -548,7 +548,7 @@
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="8:添加同事为好友">8:添加同事为好友</h3><table>
+<h3 id="9:添加同事为好友">9:添加同事为好友</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
@@ -578,8 +578,8 @@
 </tr>
 </tbody>
 </table>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,"data":"&#123;&#125;"&#125;</span><br><span class="line"></span><br><span class="line">### 9:新同事添加请求处理</span><br><span class="line"></span><br><span class="line">| 请求地址      |    /api/v1/colleague/add/do |   |  类型 |</span><br><span class="line">| :-------- | --------:| :--: |   |</span><br><span class="line">| 请求参数  | fid |  用户id   |  int |</span><br><span class="line">| 请求参数  | action |  是否接受   |  bool |</span><br><span class="line">| 返回值      |    result | 1 操作成功   0  操作失败  | int  |</span><br><span class="line">|       |    data |   | json  |</span><br><span class="line"></span><br><span class="line">``` json</span><br><span class="line">&#123;"result":0,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="10:新同事状态列表">10:新同事状态列表</h3><p>包括添加其他好友和被其他用户添加为好友状态</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;"result":0,"data":"&#123;&#125;"&#125;</span><br><span class="line"></span><br><span class="line">### 10:新同事添加请求处理</span><br><span class="line"></span><br><span class="line">| 请求地址      |    /api/v1/colleague/add/do |   |  类型 |</span><br><span class="line">| :-------- | --------:| :--: |   |</span><br><span class="line">| 请求参数  | fid |  用户id   |  int |</span><br><span class="line">| 请求参数  | action |  是否接受   |  bool |</span><br><span class="line">| 返回值      |    result | 1 操作成功   0  操作失败  | int  |</span><br><span class="line">|       |    data |   | json  |</span><br><span class="line"></span><br><span class="line">``` json</span><br><span class="line">&#123;"result":0,"data":"&#123;&#125;"&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11:新同事状态列表">11:新同事状态列表</h3><p>包括添加其他好友和被其他用户添加为好友状态</p>
 <table>
 <thead>
 <tr>
