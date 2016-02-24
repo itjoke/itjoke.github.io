@@ -241,6 +241,676 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/24/CRM接口定义六[客户]/" itemprop="url">
+                  CRM接口定义六[客户]
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-02-24T11:12:16+08:00" content="2016-02-24">
+              2016-02-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/24/CRM接口定义六[客户]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/CRM接口定义六[客户]/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">获取客户列表</span><br><span class="line">获取单个客户信息</span><br><span class="line">编辑客户信息</span><br><span class="line">添加新客户</span><br><span class="line">删除客户</span><br><span class="line">绑定客户社交账号</span><br><span class="line">客户查重</span><br><span class="line">客户锁定</span><br><span class="line">客户分配</span><br><span class="line">客户深度信息</span><br><span class="line">客户个人信息</span><br><span class="line">客户个人信息编辑保存</span><br><span class="line">客户评估信息</span><br><span class="line">客户评估信息编辑保存</span><br><span class="line">客户设置</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="CRM_APP接口定义六[客户]">CRM APP接口定义六[客户]</h2><h3 id="1:获取客户列表">1:获取客户列表</h3><p><strong>接口说明</strong> :获取客户列表</p>
+<blockquote>
+<p>该接口返回的是指定时间内所添加修改的用户数据</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/list</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">time</td>
+<td style="text-align:center">指定时间</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">type</td>
+<td style="text-align:center">类型（全部客户，我的客户，我参与的客户，我下级的客户）</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2:获取单个客户信息">2:获取单个客户信息</h3><p><strong>接口说明</strong> :获取单个客户信息</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/detail</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">客户数据id</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3:编辑客户信息">3:编辑客户信息</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/edit</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">客户数据id</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">editval</td>
+<td style="text-align:center">编辑字段信息集合对象</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4:添加新客户">4:添加新客户</h3><blockquote>
+<p>手机唯一标识用户</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/new</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">name</td>
+<td style="text-align:center">姓名</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">company</td>
+<td style="text-align:center">公司名</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">title</td>
+<td style="text-align:center">职位</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">dept</td>
+<td style="text-align:center">部门</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">mobile</td>
+<td style="text-align:center">手机</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">tel</td>
+<td style="text-align:center">电话</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">mail</td>
+<td style="text-align:center">邮件</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">address</td>
+<td style="text-align:center">地址</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">website</td>
+<td style="text-align:center">网址</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">remark</td>
+<td style="text-align:center">备注</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5:删除客户">5:删除客户</h3><blockquote>
+<p>id唯一标识用户</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/del</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">tel</td>
+<td style="text-align:center">电话</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">did</td>
+<td style="text-align:center">被删除的用户的数据id</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6:绑定客户社交账号">6:绑定客户社交账号</h3><blockquote>
+<p>绑定多个社交账号typeaccount  {“type”:”weibo”,”account”:”xxxx@sina.com”}</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/sns/edit</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">typeaccount</td>
+<td style="text-align:center">社交账号类型集合</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7:客户查重">7:客户查重</h3><blockquote>
+<p>手机号唯一标识用户，查询同一手机号下关联的多少用户数据，可能有多条。返回的数据需要有销售人员信息。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/check/duplicate</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">tel</td>
+<td style="text-align:center">手机号</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8:客户锁定">8:客户锁定</h3><blockquote>
+<p>已手机好为唯一标识，也就是说可能会锁定多条数据。锁定就是分配用户给最开始的用户创建者。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/lock</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">tel</td>
+<td style="text-align:center">手机号</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9:客户分配">9:客户分配</h3><blockquote>
+<p>调用此接口前需要先调用查重获取该用户目前有多少销售在使用。分配后和锁定功能相同。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/distribution</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">tel</td>
+<td style="text-align:center">手机号</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">duid</td>
+<td style="text-align:center">分发给某个销售，该销售的uid</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="10:客户深度信息">10:客户深度信息</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/depth</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">editval</td>
+<td style="text-align:center">修改对象值</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11:客户个人信息">11:客户个人信息</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/personal</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">客户编号</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="12:客户个人信息编辑保存">12:客户个人信息编辑保存</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/personal/save</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">editval</td>
+<td style="text-align:center">修改对象值</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="13:客户评估信息">13:客户评估信息</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/evaluation</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">客户编号</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="14:客户评估信息编辑保存">14:客户评估信息编辑保存</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/evaluation/save</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">editval</td>
+<td style="text-align:center">修改对象值</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="14:客户设置">14:客户设置</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/setting</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">客户编号</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/23/CRM接口定义五[联系人]/" itemprop="url">
                   CRM APP接口定义五[圈子-平台联系人]
                 </a>
@@ -2806,670 +3476,6 @@
 </table>
 <p><strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  "<span class="attribute">result</span>": <span class="value"><span class="number">1</span></span>,</span><br><span class="line">  "<span class="attribute">date</span>": <span class="value"><span class="string">"&#123;mobile:18611579686,identifyCode:252159&#125;"</span></span><br><span class="line"></span>&#125;</span><br></pre></td></tr></table></figure>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/23/CRM接口定义六[客户]/" itemprop="url">
-                  CRM接口定义六[客户]
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T12:17:33+08:00" content="2016-02-23">
-              2016-02-23
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/23/CRM接口定义六[客户]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/CRM接口定义六[客户]/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">获取客户列表</span><br><span class="line">获取单个客户信息</span><br><span class="line">编辑客户信息</span><br><span class="line">添加新客户</span><br><span class="line">删除客户</span><br><span class="line">绑定客户社交账号</span><br><span class="line">客户查重</span><br><span class="line">客户锁定</span><br><span class="line">客户分配</span><br><span class="line">客户深度信息</span><br><span class="line">客户个人信息</span><br><span class="line">客户个人信息编辑保存</span><br><span class="line">客户评估信息</span><br><span class="line">客户评估信息编辑保存</span><br><span class="line">客户设置</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="CRM_APP接口定义六[客户]">CRM APP接口定义六[客户]</h2><h3 id="1:获取客户列表">1:获取客户列表</h3><p><strong>接口说明</strong> :获取客户列表</p>
-<blockquote>
-<p>该接口返回的是指定时间内所添加修改的用户数据</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/list</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">time</td>
-<td style="text-align:center">指定时间</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">type</td>
-<td style="text-align:center">类型（全部客户，我的客户，我参与的客户，我下级的客户）</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2:获取单个客户信息">2:获取单个客户信息</h3><p><strong>接口说明</strong> :获取单个客户信息</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/detail</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">客户数据id</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3:编辑客户信息">3:编辑客户信息</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/edit</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">editval</td>
-<td style="text-align:center">编辑字段信息集合对象</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:添加新客户">4:添加新客户</h3><blockquote>
-<p>手机唯一标识用户</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/new</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">name</td>
-<td style="text-align:center">姓名</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">company</td>
-<td style="text-align:center">公司名</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">title</td>
-<td style="text-align:center">职位</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">dept</td>
-<td style="text-align:center">部门</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">mobile</td>
-<td style="text-align:center">手机</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">tel</td>
-<td style="text-align:center">电话</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">mail</td>
-<td style="text-align:center">邮件</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">address</td>
-<td style="text-align:center">地址</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">website</td>
-<td style="text-align:center">网址</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">remark</td>
-<td style="text-align:center">备注</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="5:删除客户">5:删除客户</h3><blockquote>
-<p>id唯一标识用户</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/del</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">tel</td>
-<td style="text-align:center">电话</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">did</td>
-<td style="text-align:center">被删除的用户的数据id</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="6:绑定客户社交账号">6:绑定客户社交账号</h3><blockquote>
-<p>绑定多个社交账号typeaccount  {“type”:”weibo”,”account”:”xxxx@sina.com”}</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/sns/edit</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">typeaccount</td>
-<td style="text-align:center">社交账号类型集合</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="7:客户查重">7:客户查重</h3><blockquote>
-<p>手机号唯一标识用户，查询同一手机号下关联的多少用户数据，可能有多条。返回的数据需要有销售人员信息。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/check/duplicate</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">tel</td>
-<td style="text-align:center">手机号</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="8:客户锁定">8:客户锁定</h3><blockquote>
-<p>已手机好为唯一标识，也就是说可能会锁定多条数据。锁定就是分配用户给最开始的用户创建者。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/lock</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">tel</td>
-<td style="text-align:center">手机号</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="9:客户分配">9:客户分配</h3><blockquote>
-<p>调用此接口前需要先调用查重获取该用户目前有多少销售在使用。分配后和锁定功能相同。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/distribution</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">tel</td>
-<td style="text-align:center">手机号</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">duid</td>
-<td style="text-align:center">分发给某个销售，该销售的uid</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="10:客户深度信息">10:客户深度信息</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/depth</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">editval</td>
-<td style="text-align:center">修改对象值</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="11:客户个人信息">11:客户个人信息</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/personal</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">客户编号</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="12:客户个人信息编辑保存">12:客户个人信息编辑保存</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/personal/save</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">editval</td>
-<td style="text-align:center">修改对象值</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="13:客户评估信息">13:客户评估信息</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/evaluation</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">客户编号</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="14:客户评估信息编辑保存">14:客户评估信息编辑保存</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/evaluation/save</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">editval</td>
-<td style="text-align:center">修改对象值</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="14:客户设置">14:客户设置</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">请求地址</th>
-<th style="text-align:right">/api/v1/customer/setting</th>
-<th style="text-align:center"></th>
-<th>类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">请求参数</td>
-<td style="text-align:right">id</td>
-<td style="text-align:center">客户编号</td>
-<td>String</td>
-</tr>
-<tr>
-<td style="text-align:left">返回值</td>
-<td style="text-align:right">result</td>
-<td style="text-align:center">1 操作成功   0  操作失败</td>
-<td>int</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:right">data</td>
-<td style="text-align:center"></td>
-<td>json</td>
-</tr>
-</tbody>
-</table>
-<p><strong>例子</strong></p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 
             
           </span>
