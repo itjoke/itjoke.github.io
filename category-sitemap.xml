@@ -14,13 +14,6 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/categories/CRM/</loc>
-        <lastmod>2016-02-23T08:48:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/categories/%E5%BE%AE%E4%BF%A1/</loc>
         <lastmod>2016-02-24T05:52:49.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -44,6 +37,13 @@
     <url>
         <loc>http://itjoke.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
         <lastmod>2016-02-29T03:01:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/categories/CRM/</loc>
+        <lastmod>2016-03-03T03:01:59.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

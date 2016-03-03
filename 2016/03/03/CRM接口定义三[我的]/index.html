@@ -80,7 +80,7 @@ json
 1&amp;#123;&quot;result&quot;:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CRM APP接口定义三[我的]">
-<meta property="og:url" content="http://itjoke.com/2016/02/23/CRM接口定义三[我的]/index.html">
+<meta property="og:url" content="http://itjoke.com/2016/03/03/CRM接口定义三[我的]/index.html">
 <meta property="og:site_name" content="五朝元老">
 <meta property="og:description" content="123456789获取我的个人信息修改我的个人信息我加入的组织列表创建组织发送同事邀请接受同事邀请审批处理[只有管理员可以操作]
 1:获取我的个人信息接口说明 :获取墙外我的个人信息(请求参数默认带uid)
@@ -109,7 +109,7 @@ json
 
 
 1&amp;#123;&quot;result&quot;:">
-<meta property="og:updated_time" content="2016-02-23T04:25:56.000Z">
+<meta property="og:updated_time" content="2016-03-03T03:01:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CRM APP接口定义三[我的]">
 <meta name="twitter:description" content="123456789获取我的个人信息修改我的个人信息我加入的组织列表创建组织发送同事邀请接受同事邀请审批处理[只有管理员可以操作]
@@ -320,8 +320,8 @@ json
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-02-23T12:25:56+08:00" content="2016-02-23">
-              2016-02-23
+            <time itemprop="dateCreated" datetime="2016-03-03T11:01:59+08:00" content="2016-03-03">
+              2016-03-03
             </time>
           </span>
 
@@ -346,8 +346,8 @@ json
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/23/CRM接口定义三[我的]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/23/CRM接口定义三[我的]/" itemprop="commentsCount"></span>
+                <a href="/2016/03/03/CRM接口定义三[我的]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/CRM接口定义三[我的]/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -452,7 +452,38 @@ json
 </tbody>
 </table>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="4:创建组织【重点】">4:创建组织【重点】</h3><table>
+<h3 id="4:申请加入组织">4:申请加入组织</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/organization/apply</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">oid</td>
+<td style="text-align:center">组织（公司）id</td>
+<td>string</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5:创建组织【重点】">5:创建组织【重点】</h3><table>
 <thead>
 <tr>
 <th style="text-align:left">请求地址</th>
@@ -466,13 +497,13 @@ json
 <td style="text-align:left">请求参数</td>
 <td style="text-align:right">name</td>
 <td style="text-align:center">组织（公司）名称</td>
-<td>int</td>
+<td>string</td>
 </tr>
 <tr>
 <td style="text-align:left">请求参数</td>
 <td style="text-align:right">desc</td>
 <td style="text-align:center">组织（公司）描述</td>
-<td>int</td>
+<td>string</td>
 </tr>
 <tr>
 <td style="text-align:left">返回值</td>
@@ -509,17 +540,13 @@ json
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/23/CRM接口定义一[登录注册验证码]/" rel="next" title="CRM APP接口定义一[登录注册验证码]">
-                <i class="fa fa-chevron-left"></i> CRM APP接口定义一[登录注册验证码]
+              <a href="/2016/03/03/CRM接口定义六[客户]/" rel="next" title="CRM接口定义六[客户]">
+                <i class="fa fa-chevron-left"></i> CRM接口定义六[客户]
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/23/获取历史和实时股票数据接口/" rel="prev" title="获取历史和实时股票数据接口">
-                获取历史和实时股票数据接口 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -546,8 +573,8 @@ json
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/23/CRM接口定义三[我的]/"
-           data-title="CRM APP接口定义三[我的]" data-url="http://itjoke.com/2016/02/23/CRM接口定义三[我的]/">
+      <div class="ds-thread" data-thread-key="2016/03/03/CRM接口定义三[我的]/"
+           data-title="CRM APP接口定义三[我的]" data-url="http://itjoke.com/2016/03/03/CRM接口定义三[我的]/">
       </div>
     
   </div>
@@ -637,7 +664,7 @@ json
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:获取我的个人信息"><span class="nav-number">1.</span> <span class="nav-text">1:获取我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:修改我的个人信息"><span class="nav-number">2.</span> <span class="nav-text">2:修改我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:我加入的组织列表"><span class="nav-number">3.</span> <span class="nav-text">3:我加入的组织列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:创建组织【重点】"><span class="nav-number">4.</span> <span class="nav-text">4:创建组织【重点】</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:获取我的个人信息"><span class="nav-number">1.</span> <span class="nav-text">1:获取我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:修改我的个人信息"><span class="nav-number">2.</span> <span class="nav-text">2:修改我的个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:我加入的组织列表"><span class="nav-number">3.</span> <span class="nav-text">3:我加入的组织列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:申请加入组织"><span class="nav-number">4.</span> <span class="nav-text">4:申请加入组织</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5:创建组织【重点】"><span class="nav-number">5.</span> <span class="nav-text">5:创建组织【重点】</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
