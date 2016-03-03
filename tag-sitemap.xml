@@ -177,34 +177,6 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/tags/python/</loc>
-        <lastmod>2016-02-20T04:38:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/andas/</loc>
-        <lastmod>2016-02-20T04:38:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/sqlalchemy/</loc>
-        <lastmod>2016-02-20T04:38:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
-        <lastmod>2016-02-20T04:38:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/%E8%82%A1%E7%A5%A8/</loc>
         <lastmod>2016-02-23T04:40:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -219,29 +191,99 @@
     </url>
 
     <url>
+        <loc>http://itjoke.com/tags/Laravel/</loc>
+        <lastmod>2016-02-25T02:10:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/PHP/</loc>
+        <lastmod>2016-02-25T02:10:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/python/</loc>
+        <lastmod>2016-02-29T02:59:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/pandas/</loc>
+        <lastmod>2016-02-29T02:59:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/sqlalchemy/</loc>
+        <lastmod>2016-02-29T02:59:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+        <lastmod>2016-02-29T02:59:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/spark/</loc>
+        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/java/</loc>
+        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/dataform/</loc>
+        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://itjoke.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://itjoke.com/tags/APP/</loc>
-        <lastmod>2016-02-24T08:07:53.000Z</lastmod>
+        <lastmod>2016-03-03T02:42:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://itjoke.com/tags/CRM/</loc>
-        <lastmod>2016-02-24T08:07:53.000Z</lastmod>
+        <lastmod>2016-03-03T02:42:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://itjoke.com/tags/%E6%8E%A5%E5%8F%A3/</loc>
-        <lastmod>2016-02-24T08:07:53.000Z</lastmod>
+        <lastmod>2016-03-03T02:42:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://itjoke.com/tags/%E5%AE%A2%E6%88%B7/</loc>
-        <lastmod>2016-02-24T08:07:53.000Z</lastmod>
+        <lastmod>2016-03-03T02:42:08.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
