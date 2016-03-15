@@ -64,7 +64,7 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
 /api">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CRM接口定义六[客户]">
-<meta property="og:url" content="http://itjoke.com/2016/03/03/CRM接口定义六[客户]/index.html">
+<meta property="og:url" content="http://itjoke.com/2016/03/15/CRM接口定义六[客户]/index.html">
 <meta property="og:site_name" content="五朝元老">
 <meta property="og:description" content="12345678910111213141516获取客户列表获取单个客户信息编辑客户信息添加新客户删除客户绑定客户社交账号获取客户社交账号信息客户查重客户锁定客户分配客户深度信息客户个人信息客户个人信息编辑保存客户评估信息客户评估信息编辑保存客户设置
 
@@ -77,7 +77,7 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
 
 请求地址
 /api">
-<meta property="og:updated_time" content="2016-03-03T02:43:12.000Z">
+<meta property="og:updated_time" content="2016-03-15T01:04:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CRM接口定义六[客户]">
 <meta name="twitter:description" content="12345678910111213141516获取客户列表获取单个客户信息编辑客户信息添加新客户删除客户绑定客户社交账号获取客户社交账号信息客户查重客户锁定客户分配客户深度信息客户个人信息客户个人信息编辑保存客户评估信息客户评估信息编辑保存客户设置
@@ -272,8 +272,8 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-03-03T10:43:12+08:00" content="2016-03-03">
-              2016-03-03
+            <time itemprop="dateCreated" datetime="2016-03-15T09:04:02+08:00" content="2016-03-15">
+              2016-03-15
             </time>
           </span>
 
@@ -283,8 +283,8 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/03/CRM接口定义六[客户]/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/03/CRM接口定义六[客户]/" itemprop="commentsCount"></span>
+                <a href="/2016/03/15/CRM接口定义六[客户]/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/15/CRM接口定义六[客户]/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -924,6 +924,76 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
 </table>
 <p><strong>例子</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="17:客户搜索">17:客户搜索</h3><blockquote>
+<p>key是模糊查询，可以是名字，邮件，电话</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/search</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">key</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="18:获取需要分配的人">18:获取需要分配的人</h3><blockquote>
+<p>获取当前锁定客户的销售主管下的销售人员列表</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">请求地址</th>
+<th style="text-align:right">/api/v1/customer/distribution/list</th>
+<th style="text-align:center"></th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">请求参数</td>
+<td style="text-align:right">id</td>
+<td style="text-align:center">key</td>
+<td>String</td>
+</tr>
+<tr>
+<td style="text-align:left">返回值</td>
+<td style="text-align:right">result</td>
+<td style="text-align:center">1 操作成功   0  操作失败</td>
+<td>int</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:right">data</td>
+<td style="text-align:center"></td>
+<td>json</td>
+</tr>
+</tbody>
+</table>
+<p><strong>例子</strong></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">result</span>":<span class="value"><span class="number">0</span></span>,"<span class="attribute">data</span>":<span class="value"><span class="string">"&#123;&#125;"</span></span>&#125;</span><br></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -947,17 +1017,13 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/29/Spark介绍/" rel="next" title="Spark介绍">
-                <i class="fa fa-chevron-left"></i> Spark介绍
+              <a href="/2016/03/14/MCTS/" rel="next" title="MCTS（蒙特卡罗搜树）">
+                <i class="fa fa-chevron-left"></i> MCTS（蒙特卡罗搜树）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/03/CRM接口定义三[我的]/" rel="prev" title="CRM APP接口定义三[我的]">
-                CRM APP接口定义三[我的] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -984,8 +1050,8 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/03/CRM接口定义六[客户]/"
-           data-title="CRM接口定义六[客户]" data-url="http://itjoke.com/2016/03/03/CRM接口定义六[客户]/">
+      <div class="ds-thread" data-thread-key="2016/03/15/CRM接口定义六[客户]/"
+           data-title="CRM接口定义六[客户]" data-url="http://itjoke.com/2016/03/15/CRM接口定义六[客户]/">
       </div>
     
   </div>
@@ -1029,7 +1095,7 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-count">30</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1043,7 +1109,7 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">41</span>
+              <span class="site-state-item-count">42</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -1075,7 +1141,7 @@ CRM APP接口定义六[客户]1:获取客户列表接口说明 :获取客户列�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CRM_APP接口定义六[客户]"><span class="nav-number">1.</span> <span class="nav-text">CRM APP接口定义六[客户]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:获取客户列表"><span class="nav-number">1.1.</span> <span class="nav-text">1:获取客户列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:获取单个客户信息"><span class="nav-number">1.2.</span> <span class="nav-text">2:获取单个客户信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:编辑客户信息"><span class="nav-number">1.3.</span> <span class="nav-text">3:编辑客户信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:添加新客户"><span class="nav-number">1.4.</span> <span class="nav-text">4:添加新客户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5:删除客户"><span class="nav-number">1.5.</span> <span class="nav-text">5:删除客户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6:绑定客户社交账号"><span class="nav-number">1.6.</span> <span class="nav-text">6:绑定客户社交账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:获取客户社交账号信息"><span class="nav-number">1.7.</span> <span class="nav-text">7:获取客户社交账号信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8:客户查重"><span class="nav-number">1.8.</span> <span class="nav-text">8:客户查重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9:客户锁定"><span class="nav-number">1.9.</span> <span class="nav-text">9:客户锁定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10:客户分配"><span class="nav-number">1.10.</span> <span class="nav-text">10:客户分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11:客户深度信息"><span class="nav-number">1.11.</span> <span class="nav-text">11:客户深度信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12:客户个人信息"><span class="nav-number">1.12.</span> <span class="nav-text">12:客户个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13:客户个人信息编辑保存"><span class="nav-number">1.13.</span> <span class="nav-text">13:客户个人信息编辑保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14:客户评估信息"><span class="nav-number">1.14.</span> <span class="nav-text">14:客户评估信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15:客户评估信息编辑保存"><span class="nav-number">1.15.</span> <span class="nav-text">15:客户评估信息编辑保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16:客户设置"><span class="nav-number">1.16.</span> <span class="nav-text">16:客户设置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CRM_APP接口定义六[客户]"><span class="nav-number">1.</span> <span class="nav-text">CRM APP接口定义六[客户]</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1:获取客户列表"><span class="nav-number">1.1.</span> <span class="nav-text">1:获取客户列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2:获取单个客户信息"><span class="nav-number">1.2.</span> <span class="nav-text">2:获取单个客户信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3:编辑客户信息"><span class="nav-number">1.3.</span> <span class="nav-text">3:编辑客户信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4:添加新客户"><span class="nav-number">1.4.</span> <span class="nav-text">4:添加新客户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5:删除客户"><span class="nav-number">1.5.</span> <span class="nav-text">5:删除客户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6:绑定客户社交账号"><span class="nav-number">1.6.</span> <span class="nav-text">6:绑定客户社交账号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7:获取客户社交账号信息"><span class="nav-number">1.7.</span> <span class="nav-text">7:获取客户社交账号信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8:客户查重"><span class="nav-number">1.8.</span> <span class="nav-text">8:客户查重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9:客户锁定"><span class="nav-number">1.9.</span> <span class="nav-text">9:客户锁定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10:客户分配"><span class="nav-number">1.10.</span> <span class="nav-text">10:客户分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11:客户深度信息"><span class="nav-number">1.11.</span> <span class="nav-text">11:客户深度信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12:客户个人信息"><span class="nav-number">1.12.</span> <span class="nav-text">12:客户个人信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13:客户个人信息编辑保存"><span class="nav-number">1.13.</span> <span class="nav-text">13:客户个人信息编辑保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14:客户评估信息"><span class="nav-number">1.14.</span> <span class="nav-text">14:客户评估信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15:客户评估信息编辑保存"><span class="nav-number">1.15.</span> <span class="nav-text">15:客户评估信息编辑保存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16:客户设置"><span class="nav-number">1.16.</span> <span class="nav-text">16:客户设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17:客户搜索"><span class="nav-number">1.17.</span> <span class="nav-text">17:客户搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18:获取需要分配的人"><span class="nav-number">1.18.</span> <span class="nav-text">18:获取需要分配的人</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
