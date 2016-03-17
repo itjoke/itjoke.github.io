@@ -241,6 +241,124 @@
             
               
                 
+                <a class="post-title-link" href="/2016/01/29/第一章 随机事件及其概率/" itemprop="url">
+                  第一章 随机事件及其概率
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-29T13:45:35+08:00" content="2016-01-29">
+              2016-01-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/29/第一章 随机事件及其概率/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/29/第一章 随机事件及其概率/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">§<span class="number">1</span> 概率论的发展简史</span><br><span class="line">§<span class="number">2</span> 随机事件及其概率</span><br><span class="line">§<span class="number">3</span> 概率模型与公理化结构</span><br><span class="line">§<span class="number">4</span> 条件概率</span><br><span class="line">§<span class="number">5</span> 事件(试验)的独立性</span><br></pre></td></tr></table></figure>
+<h3 id="1_概率论的发展简史">1 概率论的发展简史</h3><p>  概率论是研究随机现象数量规律性的一门学科,它源于对机会游戏(赌博问题)的研究。</p>
+<h3 id="2_随机事件及其概率">2 随机事件及其概率</h3>
+$$自然界中的现象
+\begin{cases}
+必然(确定性)现象 \\
+随机(偶然性)现象
+\begin{cases}
+个别随机现象 \\
+大量随机现象
+\end{cases}
+\end{cases}
+$$
+
+<p><strong>【必然现象】</strong> 在一定的条件下,一定会出现(发生)的现象。<br><strong>【随机现象】</strong> 在一定的条件下,可能出现也可能不出现的现象。</p>
+<h3 id="【注1】_在概率论中,“出现”与“发生”同义。"><strong>【注1】</strong> 在概率论中,“出现”与“发生”同义。</h3><p>概率论主要研究大量随机现象(统计规律性),但是也不排斥个别随机现象。</p>
+
+$$随机性的作用
+\begin{cases}
+很小以致可以忽略 \\
+基本的,如布朗运动
+\end{cases}
+$$
+ 
+<h3 id="【注2】_随机现象中的“不确定性”有两层含义,一则指客_观结果的不确定性;一则指主观猜测的不确定性,后者融入了观察者个人的信念。"><strong>【注2】</strong> 随机现象中的“不确定性”有两层含义,一则指客 观结果的不确定性;一则指主观猜测的不确定性,后者融入了观察者个人的信念。</h3><p><strong>【统计规律性】</strong> 大量随机现象所具有的规律性,概率论主要研究此。<br>  对于随机现象,即使条件完全相同,它们的出现所产生 的结果也不尽相同,此之谓“现象的随机性”;那么随机性产生的原因是什么呢?<br>任何随机现象都是相互联系和相互影响的,它的行为受 许多因素地支配或制约;而控制所有这些因素原则上做不到,往往只限于决定该现象状态的最基􏰀因素。并且除此之 外还有许多时隐时现,转瞬即逝,无法控制的偶然因素;当 随机现象重复出现时,这些因素产生的效应是不同的,不确 定的,从而使得现象带有随机性。</p>
+<p><strong>【试验】</strong> 凡对现象的观察或为此而进行的实验。<br><strong>【决定性试验】</strong> 凡对决定性(必然)现象的观察或为此而进行的实验。<br><strong>【随机试验】</strong> 凡对随机现象的观察或为此而进行的实验,常记为E(experiment)或 $$E_i$$<br><strong>【事件(试验的结局)】</strong>试验观察的结果。<br>无论何种试验,都包含两个方面,即试验的条件和试验的 结果。随机试验的条件有的是“人为的”,如在一定的条件下观察“射击是否命中目标”;有的是“不依人的意志为转 移的”,如花粉微粒的无规则运动(布朗运动)。<br><strong>【统计规律性】</strong>大量重复试验中随机现象所呈现的固有规律。<br><strong>【随机事件】</strong>随机试验的结果,常简称为事件。</p>
+<h3 id="【注3】为以后研究方便,有时把有固有结果的试验看作是_随机试验的极端情形;有时需把几次试验作为一个整体看成_一次随机试验,如连续地掷三次骰子。同理,也将必然事件_和不可能事件视作随机事件的极端情形。"><strong>【注3】</strong>为以后研究方便,有时把有固有结果的试验看作是 随机试验的极端情形;有时需把几次试验作为一个整体看成 一次随机试验,如连续地掷三次骰子。同理,也将必然事件 和不可能事件视作随机事件的极端情形。</h3><p><strong>【必然事件】</strong>每次试验中一定会出现的事件,记作 Ω ;<br><strong>【不可能事件】</strong>每次试验中一定不会出现的事件,记作 Φ ;</p>
+<h3 id="【注4】任何随机试验都伴随有必然事件和不可能事件,"><strong>【注4】</strong>任何随机试验都伴随有必然事件和不可能事件,</h3><p>如 E:对某目标进行两次射击,“至多命中目标两次”就是必然<br>事件,“命中目标三次”就是不可能事件。常用大写英文(拉 丁)字母A,B,C等或$$A_i,B_j ,C_k$$ 等表示;有时也用{……}、“……”<br>表示事件,花括弧中和双引号下指明事件的内容。 随机试验的共同特点为;<br>1、在相同的条件下可重复进行;<br>2、每次试验的结果可能不止一个,但事先明确所有可能的 结果;<br>3、试验之前不能确定那个结果会出现。 概率论只关心在随机试验中可能会观察到的那些事件<br>以及每次具体的试验中出现了的事件;因此,与每个随机试 验相联系的有一个事件的集合,即在试验中可以观察到的事 件的全体。至于这个事件集应该具备什么性质,以后将会讨 论。既然数学本身从来不只研究那些只由孤立元素组成的集合,我们就有必要在上述事件集中定义事件之间的各种关系与运算。</p>
+<h3 id="【注_5】_自从集合论进入了概率论,概率论才真正进入了现代化门槛。">【注 5】 自从集合论进入了概率论,概率论才真正进入了现代化门槛。</h3><p><strong> 1.【包含关系】</strong>若事件 A 出现必然会导致事件 B 出现,则称 “A是B的特款”或“A包含于B”,记作$$A⊂ B$$  易见对任意事件$$A ⊂ Ω$$,这里规定$$Φ ⊂ A$$<br><strong>2 .【等价(相等)关系】</strong> 若 事 件 A , B 满 足 $$A ⊂ B$$ 且 $$B ⊂ A$$ , 则 称 事件 A, B 等价或相等</p>
+<h3 id="【注_6】在概率论中,对同一事件给出不同的等价表示是一_种主要的技巧。">【注 6】在概率论中,对同一事件给出不同的等价表示是一 种主要的技巧。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">事件的运算</span><br></pre></td></tr></table></figure>
+<p>1【事件的并运算】设 A, B 为两事件,则“ A, B 至少一个发生” 这种情况可能出现也可能不出现,其作为一个随机事件,称之为A,B的并(事件),记作$$AUB$$<br>若 A , A ,L, A 均为事件,则“ A , A ,L, A 至少一个发生”作 12n 12n<br>为事件,称之为A , A ,L, A 的并事件,记作:A U A ULU A ,简 12n 12n<br>n<br>记为:UA ; i<br>i=1<br>ijk<br>￼￼￼￼￼事件的关系<br>￼￼￼事件的运算<br>￼6<br>若A , A ,L, A ,L为一列事件,则“A , A ,L, A ,L至少一个发 12n 12n<br>生”作为事件,称之为A , A ,L, A ,L的并事件,记作: 12n<br>∞<br>A U A U L U A U L , 简 记 为 : A ;( 可 列 并 )</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/01/28/第二章-离散型随机变量/" itemprop="url">
                   第二章 离散型随机变量
                 </a>
@@ -1330,173 +1448,12 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/03/CRM原型设计讨论/" itemprop="url">
-                  原型设计讨论
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-03T15:14:44+08:00" content="2015-12-03">
-              2015-12-03
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/03/CRM原型设计讨论/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/CRM原型设计讨论/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">原型讨论地址</span><br><span class="line">https://modao.cc/app/hzayRpTPk8Vs30705sqt</span><br></pre></td></tr></table></figure>
-<h2 id="需要做多语言版"><strong>需要做多语言版</strong></h2><h2 id="im消息[done]">im消息[done]</h2><p><strong>融云im</strong> 墙内和墙外需要维护两套联系人，墙内是企业用户，墙外是联系人<br>每一个企业都需要维护一套自己的数据库，自己的联系人，自己的消息数据,此处ui需要参考其他app设计</p>
-<h3 id="联系人分类">联系人分类</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>：客户 客户由于没有登录所以是收不到im消息的</span><br><span class="line"><span class="number">2</span>：同事 同事之间可以</span><br><span class="line"><span class="number">3</span>：墙外好友也需要邀请才能够im通信</span><br></pre></td></tr></table></figure>
-<h2 id="阅读">阅读</h2><p>公司黑板-缺一个分享按钮</p>
-<h2 id="工作">工作</h2><p>创建工作的流程需要详细阐述</p>
-<h2 id="客户">客户</h2><h3 id="操作">操作</h3><ul>
-<li>客户基本信息录入</li>
-<li>客户大数据接入[个人网络信息]，接入方式有待商量</li>
-</ul>
-<p>所有上级是能看到下级的客户名片</p>
-<h2 id="我[done]">我[done]</h2><h3 id="功能">功能</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">操作名称</th>
-<th style="text-align:right">描述</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">通讯录</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">部门</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">上级</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">邀请同事</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">设置</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">Sucess</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>同事联系人可以删除吗[只有管理员可以删]</li>
-</ul>
-<h3 id="问题"><strong>问题</strong></h3><ul>
-<li>通讯录-客户 是两个概念</li>
-<li>部门是否有多个 <strong>只能有一个</strong></li>
-<li>上级是否有多个</li>
-<li>通讯录 点详细=&gt;联系人信息(?) 联系人信息和个人信息页面相同？</li>
-<li>同事通讯录只有管理员可以删除</li>
-</ul>
-<h2 id="登录注册[done]">登录注册[done]</h2><ul>
-<li>接口请求 https</li>
-</ul>
-<h3 id="登录">登录</h3><p>登录绑定手机，登录之后选择工作组， 登录需要输入验证码</p>
-<ul>
-<li>只留手机验证码</li>
-</ul>
-<h3 id="注册">注册</h3><p>注册需要发送短信验证码</p>
-<h2 id="图片服务采用7牛云">图片服务采用7牛云</h2><h2 id="问题-1">问题</h2><ul>
-<li>圈外的消息是对全体还是只针对联系人？</li>
-<li>邀请分为几种情况，如果同事未注册，是邀请注册。如果已经注册了，如何变为联系人关系（同事）</li>
-<li>想认识某人 这个功能未体现出来</li>
-<li>登录验证码不需要</li>
-</ul>
-<h2 id="2015年12月3号会议记录">2015年12月3号会议记录</h2><ul>
-<li>从墙外到墙内需要重新登录，从墙内到墙外不需要</li>
-<li>登录得时候选公司，公司和墙外数据是互通的，但是要看其他公司数据，只能退出重新登录。</li>
-</ul>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1537,7 +1494,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
