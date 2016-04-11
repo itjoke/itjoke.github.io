@@ -218,6 +218,11 @@
 
     
     
+      
+      
+
+      
+    
 
     
       
@@ -241,8 +246,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/03/CRM原型设计讨论/" itemprop="url">
-                  原型设计讨论
+                <a class="post-title-link" href="/2015/12/18/AppToken验证机制/" itemprop="url">
+                  App Api验证机制
                 </a>
               
             
@@ -252,8 +257,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-03T15:14:44+08:00" content="2015-12-03">
-              2015-12-03
+            <time itemprop="dateCreated" datetime="2015-12-18T13:16:48+08:00" content="2015-12-18">
+              2015-12-18
             </time>
           </span>
 
@@ -263,8 +268,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/12/03/CRM原型设计讨论/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/CRM原型设计讨论/" itemprop="commentsCount"></span>
+                <a href="/2015/12/18/AppToken验证机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/AppToken验证机制/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -286,80 +291,11 @@
         
           <span itemprop="articleBody">
             
-              <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">原型讨论地址</span><br><span class="line">https://modao.cc/app/hzayRpTPk8Vs30705sqt</span><br></pre></td></tr></table></figure>
-<h2 id="需要做多语言版"><strong>需要做多语言版</strong></h2><h2 id="im消息[done]">im消息[done]</h2><p><strong>融云im</strong> 墙内和墙外需要维护两套联系人，墙内是企业用户，墙外是联系人<br>每一个企业都需要维护一套自己的数据库，自己的联系人，自己的消息数据,此处ui需要参考其他app设计</p>
-<h3 id="联系人分类">联系人分类</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>：客户 客户由于没有登录所以是收不到im消息的</span><br><span class="line"><span class="number">2</span>：同事 同事之间可以</span><br><span class="line"><span class="number">3</span>：墙外好友也需要邀请才能够im通信</span><br></pre></td></tr></table></figure>
-<h2 id="阅读">阅读</h2><p>公司黑板-缺一个分享按钮</p>
-<h2 id="工作">工作</h2><p>创建工作的流程需要详细阐述</p>
-<h2 id="客户">客户</h2><h3 id="操作">操作</h3><ul>
-<li>客户基本信息录入</li>
-<li>客户大数据接入[个人网络信息]，接入方式有待商量</li>
-</ul>
-<p>所有上级是能看到下级的客户名片</p>
-<h2 id="我[done]">我[done]</h2><h3 id="功能">功能</h3><table>
-<thead>
-<tr>
-<th style="text-align:left">操作名称</th>
-<th style="text-align:right">描述</th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">通讯录</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">部门</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">上级</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">邀请同事</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">设置</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">Sucess</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>同事联系人可以删除吗[只有管理员可以删]</li>
-</ul>
-<h3 id="问题"><strong>问题</strong></h3><ul>
-<li>通讯录-客户 是两个概念</li>
-<li>部门是否有多个 <strong>只能有一个</strong></li>
-<li>上级是否有多个</li>
-<li>通讯录 点详细=&gt;联系人信息(?) 联系人信息和个人信息页面相同？</li>
-<li>同事通讯录只有管理员可以删除</li>
-</ul>
-<h2 id="登录注册[done]">登录注册[done]</h2><ul>
-<li>接口请求 https</li>
-</ul>
-<h3 id="登录">登录</h3><p>登录绑定手机，登录之后选择工作组， 登录需要输入验证码</p>
-<ul>
-<li>只留手机验证码</li>
-</ul>
-<h3 id="注册">注册</h3><p>注册需要发送短信验证码</p>
-<h2 id="图片服务采用7牛云">图片服务采用7牛云</h2><h2 id="问题-1">问题</h2><ul>
-<li>圈外的消息是对全体还是只针对联系人？</li>
-<li>邀请分为几种情况，如果同事未注册，是邀请注册。如果已经注册了，如何变为联系人关系（同事）</li>
-<li>想认识某人 这个功能未体现出来</li>
-<li>登录验证码不需要</li>
-</ul>
-<h2 id="2015年12月3号会议记录">2015年12月3号会议记录</h2><ul>
-<li>从墙外到墙内需要重新登录，从墙内到墙外不需要</li>
-<li>登录得时候选公司，公司和墙外数据是互通的，但是要看其他公司数据，只能退出重新登录。</li>
-</ul>
+              <p>1：token 验证<br>token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。</p>
+<p>设计app api的时候都会遇到安全性验证的问题，有以下几种情况<br>1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。<br>不能防外挂，重复提交的问题。</p>
+<p>2：请求参数加密<br>在客户端对提交的请求参数做对称加密，服务器做解密校验。<br>风险在于如果客户端被破解，加密key被暴露，防范机制就失效了。<br>有的是在客户端做了一个加密库，提供多种加密方式，每次随机构建，增加破解难度。</p>
+<h3 id="原型讨论（设计图需要调整部分）">原型讨论（设计图需要调整部分）</h3><p>创建工作-输入框上提<br>客户个人信息-显示错误<br>客户详情编辑-错误</p>
+<p>客户个人信息下端的 弹出框（查重，分配）</p>
 
             
           </span>
@@ -427,7 +363,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -441,7 +377,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">42</span>
+              <span class="site-state-item-count">44</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
