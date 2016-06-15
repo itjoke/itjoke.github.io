@@ -1,0 +1,755 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="TensorFlow,大数据处理," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="minst.py123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TensorFlow">
+<meta property="og:url" content="http://itjoke.com/2016/06/15/TensorFlow-MINST/index.html">
+<meta property="og:site_name" content="五朝元老">
+<meta property="og:description" content="minst.py123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100">
+<meta property="og:updated_time" content="2016-06-15T07:15:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TensorFlow">
+<meta name="twitter:description" content="minst.py123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> TensorFlow | 五朝元老 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">五朝元老</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">此心光明 亦复何言</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', '6seUnd71Lt2TSgAixeWE','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                TensorFlow
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-06-15T15:15:21+08:00" content="2016-06-15">
+              2016-06-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/15/TensorFlow-MINST/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/15/TensorFlow-MINST/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>minst.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Copyright 2015 Google Inc. All Rights Reserved.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Licensed under the Apache License, Version 2.0 (the "License");</span></span><br><span class="line"><span class="comment"># you may not use this file except in compliance with the License.</span></span><br><span class="line"><span class="comment"># You may obtain a copy of the License at</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Unless required by applicable law or agreed to in writing, software</span></span><br><span class="line"><span class="comment"># distributed under the License is distributed on an "AS IS" BASIS,</span></span><br><span class="line"><span class="comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span><br><span class="line"><span class="comment"># See the License for the specific language governing permissions and</span></span><br><span class="line"><span class="comment"># limitations under the License.</span></span><br><span class="line"><span class="comment"># ==============================================================================</span></span><br><span class="line"></span><br><span class="line"><span class="string">"""Builds the MNIST network.</span><br><span class="line"></span><br><span class="line">Implements the inference/loss/training pattern for model building.</span><br><span class="line"></span><br><span class="line">1. inference() - Builds the model as far as is required for running the network</span><br><span class="line">forward to make predictions.</span><br><span class="line">2. loss() - Adds to the inference model the layers required to generate loss.</span><br><span class="line">3. training() - Adds to the loss model the Ops required to generate and</span><br><span class="line">apply gradients.</span><br><span class="line"></span><br><span class="line">This file is used by the various "fully_connected_*.py" files and not meant to</span><br><span class="line">be run.</span><br><span class="line">"""</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> absolute_import</span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division</span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line"><span class="comment"># The MNIST dataset has 10 classes, representing the digits 0 through 9.</span></span><br><span class="line">NUM_CLASSES = <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The MNIST images are always 28x28 pixels.</span></span><br><span class="line">IMAGE_SIZE = <span class="number">28</span></span><br><span class="line">IMAGE_PIXELS = IMAGE_SIZE * IMAGE_SIZE</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inference</span><span class="params">(images, hidden1_units, hidden2_units)</span>:</span></span><br><span class="line">  <span class="string">"""Build the MNIST model up to where it may be used for inference.</span><br><span class="line"></span><br><span class="line">  Args:</span><br><span class="line">    images: Images placeholder, from inputs().</span><br><span class="line">    hidden1_units: Size of the first hidden layer.</span><br><span class="line">    hidden2_units: Size of the second hidden layer.</span><br><span class="line"></span><br><span class="line">  Returns:</span><br><span class="line">    softmax_linear: Output tensor with the computed logits.</span><br><span class="line">  """</span></span><br><span class="line">  <span class="comment"># Hidden 1</span></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'hidden1'</span>):</span><br><span class="line">    weights = tf.Variable(</span><br><span class="line">        tf.truncated_normal([IMAGE_PIXELS, hidden1_units],</span><br><span class="line">                            stddev=<span class="number">1.0</span> / math.sqrt(float(IMAGE_PIXELS))),</span><br><span class="line">        name=<span class="string">'weights'</span>)</span><br><span class="line">    biases = tf.Variable(tf.zeros([hidden1_units]),</span><br><span class="line">                         name=<span class="string">'biases'</span>)</span><br><span class="line">    hidden1 = tf.nn.relu(tf.matmul(images, weights) + biases)</span><br><span class="line">  <span class="comment"># Hidden 2</span></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'hidden2'</span>):</span><br><span class="line">    weights = tf.Variable(</span><br><span class="line">        tf.truncated_normal([hidden1_units, hidden2_units],</span><br><span class="line">                            stddev=<span class="number">1.0</span> / math.sqrt(float(hidden1_units))),</span><br><span class="line">        name=<span class="string">'weights'</span>)</span><br><span class="line">    biases = tf.Variable(tf.zeros([hidden2_units]),</span><br><span class="line">                         name=<span class="string">'biases'</span>)</span><br><span class="line">    hidden2 = tf.nn.relu(tf.matmul(hidden1, weights) + biases)</span><br><span class="line">  <span class="comment"># Linear</span></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'softmax_linear'</span>):</span><br><span class="line">    weights = tf.Variable(</span><br><span class="line">        tf.truncated_normal([hidden2_units, NUM_CLASSES],</span><br><span class="line">                            stddev=<span class="number">1.0</span> / math.sqrt(float(hidden2_units))),</span><br><span class="line">        name=<span class="string">'weights'</span>)</span><br><span class="line">    biases = tf.Variable(tf.zeros([NUM_CLASSES]),</span><br><span class="line">                         name=<span class="string">'biases'</span>)</span><br><span class="line">    logits = tf.matmul(hidden2, weights) + biases</span><br><span class="line">  <span class="keyword">return</span> logits</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loss</span><span class="params">(logits, labels)</span>:</span></span><br><span class="line">  <span class="string">"""Calculates the loss from the logits and the labels.</span><br><span class="line"></span><br><span class="line">  Args:</span><br><span class="line">    logits: Logits tensor, float - [batch_size, NUM_CLASSES].</span><br><span class="line">    labels: Labels tensor, int32 - [batch_size].</span><br><span class="line"></span><br><span class="line">  Returns:</span><br><span class="line">    loss: Loss tensor of type float.</span><br><span class="line">  """</span></span><br><span class="line">  labels = tf.to_int64(labels)</span><br><span class="line">  cross_entropy = tf.nn.sparse_softmax_cross_entropy_with_logits(</span><br><span class="line">      logits, labels, name=<span class="string">'xentropy'</span>)</span><br><span class="line">  loss = tf.reduce_mean(cross_entropy, name=<span class="string">'xentropy_mean'</span>)</span><br><span class="line">  <span class="keyword">return</span> loss</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">training</span><span class="params">(loss, learning_rate)</span>:</span></span><br><span class="line">  <span class="string">"""Sets up the training Ops.</span><br><span class="line"></span><br><span class="line">  Creates a summarizer to track the loss over time in TensorBoard.</span><br><span class="line"></span><br><span class="line">  Creates an optimizer and applies the gradients to all trainable variables.</span><br><span class="line"></span><br><span class="line">  The Op returned by this function is what must be passed to the</span><br><span class="line">  `sess.run()` call to cause the model to train.</span><br><span class="line"></span><br><span class="line">  Args:</span><br><span class="line">    loss: Loss tensor, from loss().</span><br><span class="line">    learning_rate: The learning rate to use for gradient descent.</span><br><span class="line"></span><br><span class="line">  Returns:</span><br><span class="line">    train_op: The Op for training.</span><br><span class="line">  """</span></span><br><span class="line">  <span class="comment"># Add a scalar summary for the snapshot loss.</span></span><br><span class="line">  tf.scalar_summary(loss.op.name, loss)</span><br><span class="line">  <span class="comment"># Create the gradient descent optimizer with the given learning rate.</span></span><br><span class="line">  optimizer = tf.train.GradientDescentOptimizer(learning_rate)</span><br><span class="line">  <span class="comment"># Create a variable to track the global step.</span></span><br><span class="line">  global_step = tf.Variable(<span class="number">0</span>, name=<span class="string">'global_step'</span>, trainable=<span class="keyword">False</span>)</span><br><span class="line">  <span class="comment"># Use the optimizer to apply the gradients that minimize the loss</span></span><br><span class="line">  <span class="comment"># (and also increment the global step counter) as a single training step.</span></span><br><span class="line">  train_op = optimizer.minimize(loss, global_step=global_step)</span><br><span class="line">  <span class="keyword">return</span> train_op</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">evaluation</span><span class="params">(logits, labels)</span>:</span></span><br><span class="line">  <span class="string">"""Evaluate the quality of the logits at predicting the label.</span><br><span class="line"></span><br><span class="line">  Args:</span><br><span class="line">    logits: Logits tensor, float - [batch_size, NUM_CLASSES].</span><br><span class="line">    labels: Labels tensor, int32 - [batch_size], with values in the</span><br><span class="line">      range [0, NUM_CLASSES).</span><br><span class="line"></span><br><span class="line">  Returns:</span><br><span class="line">    A scalar int32 tensor with the number of examples (out of batch_size)</span><br><span class="line">    that were predicted correctly.</span><br><span class="line">  """</span></span><br><span class="line">  <span class="comment"># For a classifier model, we can use the in_top_k Op.</span></span><br><span class="line">  <span class="comment"># It returns a bool tensor with shape [batch_size] that is true for</span></span><br><span class="line">  <span class="comment"># the examples where the label is in the top k (here k=1)</span></span><br><span class="line">  <span class="comment"># of all logits for that example.</span></span><br><span class="line">  correct = tf.nn.in_top_k(logits, labels, <span class="number">1</span>)</span><br><span class="line">  <span class="comment"># Return the number of true entries.</span></span><br><span class="line">  <span class="keyword">return</span> tf.reduce_sum(tf.cast(correct, tf.int32))</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"># Copyright 2015 Google Inc. All Rights Reserved.</span><br><span class="line">#</span><br><span class="line"># Licensed under the Apache License, Version 2.0 (the "License");</span><br><span class="line"># you may not <span class="operator"><span class="keyword">use</span> this <span class="keyword">file</span> <span class="keyword">except</span> <span class="keyword">in</span> compliance <span class="keyword">with</span> the License.</span><br><span class="line"># You may obtain a copy <span class="keyword">of</span> the License <span class="keyword">at</span></span><br><span class="line">#</span><br><span class="line">#     <span class="keyword">http</span>://www.apache.org/licenses/LICENSE-<span class="number">2.0</span></span><br><span class="line">#</span><br><span class="line"># Unless <span class="keyword">required</span> <span class="keyword">by</span> applicable law <span class="keyword">or</span> agreed <span class="keyword">to</span> <span class="keyword">in</span> writing, software</span><br><span class="line"># <span class="keyword">distributed</span> <span class="keyword">under</span> the License <span class="keyword">is</span> <span class="keyword">distributed</span> <span class="keyword">on</span> an <span class="string">"AS IS"</span> BASIS,</span><br><span class="line"># <span class="keyword">WITHOUT</span> WARRANTIES <span class="keyword">OR</span> CONDITIONS <span class="keyword">OF</span> <span class="keyword">ANY</span> KIND, either express <span class="keyword">or</span> implied.</span><br><span class="line"># See the License <span class="keyword">for</span> the specific <span class="keyword">language</span> governing permissions <span class="keyword">and</span></span><br><span class="line"># limitations <span class="keyword">under</span> the License.</span><br><span class="line"># ==============================================================================</span><br><span class="line"></span><br><span class="line"><span class="string">"""A very simple MNIST classifier.</span><br><span class="line"></span><br><span class="line">See extensive documentation at</span><br><span class="line">http://tensorflow.org/tutorials/mnist/beginners/index.md</span><br><span class="line">"""</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> absolute_import</span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division</span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"></span><br><span class="line"># <span class="keyword">Import</span> <span class="keyword">data</span></span><br><span class="line"><span class="keyword">from</span> tensorflow.examples.tutorials.mnist <span class="keyword">import</span> input_data</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">flags = tf.app.flags</span><br><span class="line">FLAGS = flags.FLAGS</span><br><span class="line">flags.DEFINE_string(<span class="string">'data_dir'</span>, <span class="string">'/tmp/data/'</span>, <span class="string">'Directory for storing data'</span>)</span><br><span class="line"></span><br><span class="line">mnist = input_data.read_data_sets(FLAGS.data_dir, one_hot=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">sess = tf.InteractiveSession()</span><br><span class="line"></span><br><span class="line"># <span class="keyword">Create</span> the <span class="keyword">model</span></span><br><span class="line">x = tf.placeholder(tf.float32, [<span class="keyword">None</span>, <span class="number">784</span>])</span><br><span class="line">W = tf.<span class="keyword">Variable</span>(tf.zeros([<span class="number">784</span>, <span class="number">10</span>]))</span><br><span class="line">b = tf.<span class="keyword">Variable</span>(tf.zeros([<span class="number">10</span>]))</span><br><span class="line">y = tf.nn.softmax(tf.matmul(x, W) + b)</span><br><span class="line"></span><br><span class="line"># <span class="keyword">Define</span> loss <span class="keyword">and</span> optimizer</span><br><span class="line">y_ = tf.placeholder(tf.float32, [<span class="keyword">None</span>, <span class="number">10</span>])</span><br><span class="line">cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.<span class="keyword">log</span>(y), reduction_indices=[<span class="number">1</span>]))</span><br><span class="line">train_step = tf.train.GradientDescentOptimizer(<span class="number">0.5</span>).minimize(cross_entropy)</span><br><span class="line"></span><br><span class="line"># Train</span><br><span class="line">tf.initialize_all_variables().run()</span><br><span class="line"><span class="keyword">for</span> <span class="keyword">i</span> <span class="keyword">in</span> <span class="keyword">range</span>(<span class="number">1000</span>):</span><br><span class="line">  batch_xs, batch_ys = mnist.train.next_batch(<span class="number">100</span>)</span><br><span class="line">  train_step.run(&#123;x: batch_xs, y_: batch_ys&#125;)</span><br><span class="line"></span><br><span class="line"># <span class="keyword">Test</span> trained <span class="keyword">model</span></span><br><span class="line">correct_prediction = tf.equal(tf.argmax(y, <span class="number">1</span>), tf.argmax(y_, <span class="number">1</span>))</span><br><span class="line">accuracy = tf.reduce_mean(tf.<span class="keyword">cast</span>(correct_prediction, tf.float32))</span><br><span class="line">print(accuracy.eval(&#123;x: mnist.<span class="keyword">test</span>.images, y_: mnist.<span class="keyword">test</span>.labels&#125;))</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Copyright 2015 Google Inc. All Rights Reserved.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Licensed under the Apache License, Version 2.0 (the 'License');</span></span><br><span class="line"><span class="comment"># you may not use this file except in compliance with the License.</span></span><br><span class="line"><span class="comment"># You may obtain a copy of the License at</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     http://www.apache.org/licenses/LICENSE-2.0</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Unless required by applicable law or agreed to in writing, software</span></span><br><span class="line"><span class="comment"># distributed under the License is distributed on an 'AS IS' BASIS,</span></span><br><span class="line"><span class="comment"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span><br><span class="line"><span class="comment"># See the License for the specific language governing permissions and</span></span><br><span class="line"><span class="comment"># limitations under the License.</span></span><br><span class="line"><span class="comment"># ==============================================================================</span></span><br><span class="line"><span class="string">"""A simple MNIST classifier which displays summaries in TensorBoard.</span><br><span class="line"></span><br><span class="line"> This is an unimpressive MNIST model, but it is a good example of using</span><br><span class="line">tf.name_scope to make a graph legible in the TensorBoard graph explorer, and of</span><br><span class="line">naming summary tags so that they are grouped meaningfully in TensorBoard.</span><br><span class="line"></span><br><span class="line">It demonstrates the functionality of every TensorBoard dashboard.</span><br><span class="line">"""</span></span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> absolute_import</span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> division</span><br><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> tensorflow.examples.tutorials.mnist <span class="keyword">import</span> input_data</span><br><span class="line"></span><br><span class="line">flags = tf.app.flags</span><br><span class="line">FLAGS = flags.FLAGS</span><br><span class="line">flags.DEFINE_boolean(<span class="string">'fake_data'</span>, <span class="keyword">False</span>, <span class="string">'If true, uses fake data '</span></span><br><span class="line">                     <span class="string">'for unit testing.'</span>)</span><br><span class="line">flags.DEFINE_integer(<span class="string">'max_steps'</span>, <span class="number">1000</span>, <span class="string">'Number of steps to run trainer.'</span>)</span><br><span class="line">flags.DEFINE_float(<span class="string">'learning_rate'</span>, <span class="number">0.001</span>, <span class="string">'Initial learning rate.'</span>)</span><br><span class="line">flags.DEFINE_float(<span class="string">'dropout'</span>, <span class="number">0.9</span>, <span class="string">'Keep probability for training dropout.'</span>)</span><br><span class="line">flags.DEFINE_string(<span class="string">'data_dir'</span>, <span class="string">'/tmp/data'</span>, <span class="string">'Directory for storing data'</span>)</span><br><span class="line">flags.DEFINE_string(<span class="string">'summaries_dir'</span>, <span class="string">'/tmp/mnist_logs'</span>, <span class="string">'Summaries directory'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">train</span><span class="params">()</span>:</span></span><br><span class="line">  <span class="comment"># Import data</span></span><br><span class="line">  mnist = input_data.read_data_sets(FLAGS.data_dir,</span><br><span class="line">                                    one_hot=<span class="keyword">True</span>,</span><br><span class="line">                                    fake_data=FLAGS.fake_data)</span><br><span class="line"></span><br><span class="line">  sess = tf.InteractiveSession()</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Create a multilayer model.</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Input placehoolders</span></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'input'</span>):</span><br><span class="line">    x = tf.placeholder(tf.float32, [<span class="keyword">None</span>, <span class="number">784</span>], name=<span class="string">'x-input'</span>)</span><br><span class="line">    image_shaped_input = tf.reshape(x, [-<span class="number">1</span>, <span class="number">28</span>, <span class="number">28</span>, <span class="number">1</span>])</span><br><span class="line">    tf.image_summary(<span class="string">'input'</span>, image_shaped_input, <span class="number">10</span>)</span><br><span class="line">    y_ = tf.placeholder(tf.float32, [<span class="keyword">None</span>, <span class="number">10</span>], name=<span class="string">'y-input'</span>)</span><br><span class="line">    keep_prob = tf.placeholder(tf.float32)</span><br><span class="line">    tf.scalar_summary(<span class="string">'dropout_keep_probability'</span>, keep_prob)</span><br><span class="line"></span><br><span class="line">  <span class="comment"># We can't initialize these variables to 0 - the network will get stuck.</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">weight_variable</span><span class="params">(shape)</span>:</span></span><br><span class="line">    <span class="string">"""Create a weight variable with appropriate initialization."""</span></span><br><span class="line">    initial = tf.truncated_normal(shape, stddev=<span class="number">0.1</span>)</span><br><span class="line">    <span class="keyword">return</span> tf.Variable(initial)</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">bias_variable</span><span class="params">(shape)</span>:</span></span><br><span class="line">    <span class="string">"""Create a bias variable with appropriate initialization."""</span></span><br><span class="line">    initial = tf.constant(<span class="number">0.1</span>, shape=shape)</span><br><span class="line">    <span class="keyword">return</span> tf.Variable(initial)</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">variable_summaries</span><span class="params">(var, name)</span>:</span></span><br><span class="line">    <span class="string">"""Attach a lot of summaries to a Tensor."""</span></span><br><span class="line">    <span class="keyword">with</span> tf.name_scope(<span class="string">'summaries'</span>):</span><br><span class="line">      mean = tf.reduce_mean(var)</span><br><span class="line">      tf.scalar_summary(<span class="string">'mean/'</span> + name, mean)</span><br><span class="line">      <span class="keyword">with</span> tf.name_scope(<span class="string">'stddev'</span>):</span><br><span class="line">        stddev = tf.sqrt(tf.reduce_sum(tf.square(var - mean)))</span><br><span class="line">      tf.scalar_summary(<span class="string">'sttdev/'</span> + name, stddev)</span><br><span class="line">      tf.scalar_summary(<span class="string">'max/'</span> + name, tf.reduce_max(var))</span><br><span class="line">      tf.scalar_summary(<span class="string">'min/'</span> + name, tf.reduce_min(var))</span><br><span class="line">      tf.histogram_summary(name, var)</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">nn_layer</span><span class="params">(input_tensor, input_dim, output_dim, layer_name, act=tf.nn.relu)</span>:</span></span><br><span class="line">    <span class="string">"""Reusable code for making a simple neural net layer.</span><br><span class="line"></span><br><span class="line">    It does a matrix multiply, bias add, and then uses relu to nonlinearize.</span><br><span class="line">    It also sets up name scoping so that the resultant graph is easy to read,</span><br><span class="line">    and adds a number of summary ops.</span><br><span class="line">    """</span></span><br><span class="line">    <span class="comment"># Adding a name scope ensures logical grouping of the layers in the graph.</span></span><br><span class="line">    <span class="keyword">with</span> tf.name_scope(layer_name):</span><br><span class="line">      <span class="comment"># This Variable will hold the state of the weights for the layer</span></span><br><span class="line">      <span class="keyword">with</span> tf.name_scope(<span class="string">'weights'</span>):</span><br><span class="line">        weights = weight_variable([input_dim, output_dim])</span><br><span class="line">        variable_summaries(weights, layer_name + <span class="string">'/weights'</span>)</span><br><span class="line">      <span class="keyword">with</span> tf.name_scope(<span class="string">'biases'</span>):</span><br><span class="line">        biases = bias_variable([output_dim])</span><br><span class="line">        variable_summaries(biases, layer_name + <span class="string">'/biases'</span>)</span><br><span class="line">      <span class="keyword">with</span> tf.name_scope(<span class="string">'Wx_plus_b'</span>):</span><br><span class="line">        preactivate = tf.matmul(input_tensor, weights) + biases</span><br><span class="line">        tf.histogram_summary(layer_name + <span class="string">'/pre_activations'</span>, preactivate)</span><br><span class="line">      activations = act(preactivate, <span class="string">'activation'</span>)</span><br><span class="line">      tf.histogram_summary(layer_name + <span class="string">'/activations'</span>, activations)</span><br><span class="line">      <span class="keyword">return</span> activations</span><br><span class="line"></span><br><span class="line">  hidden1 = nn_layer(x, <span class="number">784</span>, <span class="number">500</span>, <span class="string">'layer1'</span>)</span><br><span class="line">  dropped = tf.nn.dropout(hidden1, keep_prob)</span><br><span class="line">  y = nn_layer(dropped, <span class="number">500</span>, <span class="number">10</span>, <span class="string">'layer2'</span>, act=tf.nn.softmax)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'cross_entropy'</span>):</span><br><span class="line">    diff = y_ * tf.log(y)</span><br><span class="line">    <span class="keyword">with</span> tf.name_scope(<span class="string">'total'</span>):</span><br><span class="line">      cross_entropy = -tf.reduce_mean(diff)</span><br><span class="line">    tf.scalar_summary(<span class="string">'cross entropy'</span>, cross_entropy)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'train'</span>):</span><br><span class="line">    train_step = tf.train.AdamOptimizer(FLAGS.learning_rate).minimize(</span><br><span class="line">        cross_entropy)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">with</span> tf.name_scope(<span class="string">'accuracy'</span>):</span><br><span class="line">    <span class="keyword">with</span> tf.name_scope(<span class="string">'correct_prediction'</span>):</span><br><span class="line">      correct_prediction = tf.equal(tf.argmax(y, <span class="number">1</span>), tf.argmax(y_, <span class="number">1</span>))</span><br><span class="line">    <span class="keyword">with</span> tf.name_scope(<span class="string">'accuracy'</span>):</span><br><span class="line">      accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))</span><br><span class="line">    tf.scalar_summary(<span class="string">'accuracy'</span>, accuracy)</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Merge all the summaries and write them out to /tmp/mnist_logs (by default)</span></span><br><span class="line">  merged = tf.merge_all_summaries()</span><br><span class="line">  train_writer = tf.train.SummaryWriter(FLAGS.summaries_dir + <span class="string">'/train'</span>,</span><br><span class="line">                                        sess.graph)</span><br><span class="line">  test_writer = tf.train.SummaryWriter(FLAGS.summaries_dir + <span class="string">'/test'</span>)</span><br><span class="line">  tf.initialize_all_variables().run()</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Train the model, and also write summaries.</span></span><br><span class="line">  <span class="comment"># Every 10th step, measure test-set accuracy, and write test summaries</span></span><br><span class="line">  <span class="comment"># All other steps, run train_step on training data, &amp; add training summaries</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">feed_dict</span><span class="params">(train)</span>:</span></span><br><span class="line">    <span class="string">"""Make a TensorFlow feed_dict: maps data onto Tensor placeholders."""</span></span><br><span class="line">    <span class="keyword">if</span> train <span class="keyword">or</span> FLAGS.fake_data:</span><br><span class="line">      xs, ys = mnist.train.next_batch(<span class="number">100</span>, fake_data=FLAGS.fake_data)</span><br><span class="line">      k = FLAGS.dropout</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      xs, ys = mnist.test.images, mnist.test.labels</span><br><span class="line">      k = <span class="number">1.0</span></span><br><span class="line">    <span class="keyword">return</span> &#123;x: xs, y_: ys, keep_prob: k&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(FLAGS.max_steps):</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:  <span class="comment"># Record summaries and test-set accuracy</span></span><br><span class="line">      summary, acc = sess.run([merged, accuracy], feed_dict=feed_dict(<span class="keyword">False</span>))</span><br><span class="line">      test_writer.add_summary(summary, i)</span><br><span class="line">      print(<span class="string">'Accuracy at step %s: %s'</span> % (i, acc))</span><br><span class="line">    <span class="keyword">else</span>:  <span class="comment"># Record train set summarieis, and train</span></span><br><span class="line">      summary, _ = sess.run([merged, train_step], feed_dict=feed_dict(<span class="keyword">True</span>))</span><br><span class="line">      train_writer.add_summary(summary, i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(_)</span>:</span></span><br><span class="line">  <span class="keyword">if</span> tf.gfile.Exists(FLAGS.summaries_dir):</span><br><span class="line">    tf.gfile.DeleteRecursively(FLAGS.summaries_dir)</span><br><span class="line">  tf.gfile.MakeDirs(FLAGS.summaries_dir)</span><br><span class="line">  train()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">  tf.app.run()</span><br></pre></td></tr></table></figure></span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/TensorFlow/" rel="tag">#TensorFlow</a>
+          
+            <a href="/tags/大数据处理/" rel="tag">#大数据处理</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/15/TensorFlow-简介/" rel="next" title="TensorFlow">
+                <i class="fa fa-chevron-left"></i> TensorFlow
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/15/TensorFlow-MINST/"
+           data-title="TensorFlow" data-url="http://itjoke.com/2016/06/15/TensorFlow-MINST/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/avatar.png" alt="土布斯" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">土布斯</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">45</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">土布斯</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"itjoke"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
