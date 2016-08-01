@@ -3,7 +3,7 @@
 
     <sitemap>
         <loc>http://itjoke.com/post-sitemap.xml</loc>
-        <lastmod>2016-06-15T07:15:21.000Z</lastmod>
+        <lastmod>2016-08-01T06:00:28.000Z</lastmod>
     </sitemap>
 
     <sitemap>
@@ -13,12 +13,12 @@
 
     <sitemap>
         <loc>http://itjoke.com/category-sitemap.xml</loc>
-        <lastmod>2016-06-15T07:15:21.000Z</lastmod>
+        <lastmod>2016-08-01T06:00:28.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://itjoke.com/tag-sitemap.xml</loc>
-        <lastmod>2015-12-25T06:59:29.000Z</lastmod>
+        <lastmod>2016-08-01T06:00:28.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>
