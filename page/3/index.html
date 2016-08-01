@@ -218,1002 +218,6 @@
 
     
     
-      
-      
-
-      
-    
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/19/CRM工作计划/" itemprop="url">
-                  CRM工作计划
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-19T14:50:22+08:00" content="2016-02-19">
-              2016-02-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CRM/" itemprop="url" rel="index">
-                    <span itemprop="name">CRM</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/19/CRM工作计划/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/19/CRM工作计划/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">工作计划-启动时间<span class="number">12.14</span></span><br><span class="line">第一阶段时间点(元旦前）</span><br><span class="line">第二阶段时间点(春节前)</span><br><span class="line">第三阶段时间点(<span class="number">3.14</span>)</span><br><span class="line">第四阶段时间点(<span class="number">4.18</span>-测试迭代)</span><br><span class="line">第五阶段时间点(<span class="number">5.16</span>)</span><br><span class="line">第六阶段时间点(<span class="number">6.20</span>-<span class="number">1.0</span>正式上线测试) </span><br><span class="line"></span><br><span class="line">目前存在的问题</span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>目前以快速开发功能为主，重构放后</strong></li>
-</ul>
-<h2 id="工作计划-启动时间12-14">工作计划-启动时间12.14</h2><h2 id="第一阶段时间点(元旦前-基础工作）">第一阶段时间点(元旦前-基础工作）</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">任务安排</th>
-<th style="text-align:right">时间</th>
-<th style="text-align:center">描述</th>
-<th>负责人</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">注册验证码后端接口</td>
-<td style="text-align:right">12.14-12.19</td>
-<td style="text-align:center">需要注意的是，这里的注册是需要分库的，<br>一个企业用户一个数据库（demo代码我已经给出） ；短信验证需要接入</td>
-<td>闫 【已完成】</td>
-</tr>
-<tr>
-<td style="text-align:left">android登录注册+消息（墙外）</td>
-<td style="text-align:right">12.21-12.31</td>
-<td style="text-align:center">IM接融云</td>
-<td>杜【消息未完成】</td>
-</tr>
-<tr>
-<td style="text-align:left">圈子+我的（墙外）-后端</td>
-<td style="text-align:right">12.21-12.31</td>
-<td style="text-align:center"></td>
-<td>闫 【接口完成】</td>
-</tr>
-</tbody>
-</table>
-<h2 id="第二阶段时间点(春节前-墙外)">第二阶段时间点(春节前-墙外)</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">任务安排</th>
-<th style="text-align:right">时间</th>
-<th style="text-align:center">描述</th>
-<th>负责人</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">圈子（墙外）-android</td>
-<td style="text-align:right">1.4-1.11</td>
-<td style="text-align:center">参考其他sns客户端实现方式</td>
-<td>杜【未完成】</td>
-</tr>
-<tr>
-<td style="text-align:left">我的（墙外）-android</td>
-<td style="text-align:right">1.4-1.11</td>
-<td style="text-align:center">参考其他sns客户端实现方式</td>
-<td>大为【未完成】</td>
-</tr>
-<tr>
-<td style="text-align:left">阅读+我的（墙内）-后端</td>
-<td style="text-align:right">1.4-春节前</td>
-<td style="text-align:center">后端主要做阅读相关<br>阅读的后端数据需要写爬虫抓取，<br>阅读黑板实现实现参考feed，涉及到redis的应用 <br>前期暂时做微博和linkin</td>
-<td>闫【接口已完成】</td>
-</tr>
-<tr>
-<td style="text-align:left">阅读（墙内）-android</td>
-<td style="text-align:right">1.12-1.春节前</td>
-<td style="text-align:center">参考其他sns客户端实现方式</td>
-<td>杜【80%】</td>
-</tr>
-<tr>
-<td style="text-align:left">我的（墙内）-android</td>
-<td style="text-align:right">1.12-1.春节前</td>
-<td style="text-align:center">完成部分</td>
-<td>大为【未完成】</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p><strong> 在之前的计划中增加了墙外联系人部分，因为不做联系人是没办法做消息的</strong></p>
-</li>
-<li><p><strong>今天是1月14号，目前的完成的任务如下</strong></p>
-</li>
-</ul>
-<blockquote>
-<p>后台部分：<br>墙内阅读（11个接口）<br>用户登录注册（6个接口）<br>墙外圈子（5个接口）<br>墙外我的，联系人（11个接口）<br>前端部分：<br>墙内阅读<br>登录注册验证码<br>墙外圈子<br>墙外联系人</p>
-</blockquote>
-<ul>
-<li><strong> 春节前需要完成的（还有3周）</strong><br>墙外消息+我的（墙内外）<br>外网部署<br>年底可以跑起来</li>
-</ul>
-<h2 id="第三阶段时间点(3-14)">第三阶段时间点(3.14)</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">任务安排</th>
-<th style="text-align:right">时间</th>
-<th style="text-align:center">描述</th>
-<th>负责人</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">墙外-我的</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">创建组织-加入组织-设计多租户问题</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">墙外-圈子 上传图片</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">接入七牛图片云接口，实现九宫格展示</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">墙内-阅读 上传图片</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">同上，还需要加入客户权限机制</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">墙内-阅读 后台文章自动抓取</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">需要一个后台爬虫任务</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">墙内-客户-消息</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">融云im接入</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">墙内-我的</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">邀请同事，指定上级</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">名片扫描-工作</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">云脉通接口接入</td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">墙内工作</td>
-<td style="text-align:right"></td>
-<td style="text-align:center">暂定</td>
-<td>.</td>
-</tr>
-</tbody>
-</table>
-<p>细化-3周时间</p>
-<blockquote>
-<p>第一周<br>墙外-我的 [dawei]<br>墙外-圈子 上传图片<br>墙内-阅读 上传图片<br>墙内-客户</p>
-<p>第二周<br>名片扫描-工作[dawei]<br>墙内-我的[dawei]<br>墙内-消息<br>墙内-客户</p>
-<p>第三周<br>墙内-客户</p>
-</blockquote>
-<h2 id="第四阶段时间点(4-18-墙内)">第四阶段时间点(4.18-墙内)</h2><table>
-<thead>
-<tr>
-<th style="text-align:left">任务安排</th>
-<th style="text-align:right">时间</th>
-<th style="text-align:center">描述</th>
-<th>负责人</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">墙内工作</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-<td>.</td>
-</tr>
-<tr>
-<td style="text-align:left">服务器代码重构</td>
-<td style="text-align:right"></td>
-<td style="text-align:center"></td>
-<td>.</td>
-</tr>
-</tbody>
-</table>
-<p>##目前存在的问题<br>1:点赞需要重构-需要加入缓存<br>2:好友里的个人信息需要重构<br>3:圈子里的权限问题<br>4:后台爬虫任务<br>5:消息通知</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/19/CRM数据库设计/" itemprop="url">
-                  CRM数据库设计
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-19T13:20:14+08:00" content="2016-02-19">
-              2016-02-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/CRM/" itemprop="url" rel="index">
-                    <span itemprop="name">CRM</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/19/CRM数据库设计/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/19/CRM数据库设计/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <h2 id="墙外用户表">墙外用户表</h2><p><img src="/images/userdb.jpg" alt="这是一张图片"></p>
-<p>墙外没有社交信息字段<br>墙内和墙外 我的信息不全</p>
-<h2 id="阅读">阅读</h2><p><img src="/images/read.png" alt="这是一张图片"></p>
-<h2 id="客户">客户</h2><p><img src="/images/customer.png" alt="这是一张图片"></p>
-<p><img src="/images/user2.png" alt="这是一张图片"></p>
-<p>1：墙外的数据库叫userdb，墙内的叫crm_* 从1开始<br>2：opost点赞列表-需要做redis缓存，在用户点赞的时候需要同时操作redis和数据库，保证数据一致。获取点赞列表时直接从redis里取数据返回。<br>3：favlist 列表里就包含了 id，名字和头像的url。存储到redis缓存中<br>4：墙内我的添加同事为好友的ui没画<br>5：</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/02/R语言/" itemprop="url">
-                  R语言
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-02T15:27:22+08:00" content="2016-02-02">
-              2016-02-02
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/02/R语言/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/02/R语言/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>mydata &lt;- read.csv(‘/Applications/MAMP/htdocs/gupiao/all_trading_data/index_data/sh000001.csv’,header=T,fileEncoding = ‘UTF-8’, stringsAsFactors=F</p>
-<p>ts.get_hist_data(‘600848’) #一次性获取全部日k线数据</p>
-<p>3秒一次<br>1200*4=5w</p>
-<p>engine = create_engine(‘mysql://root:root@127.0.0.1/gupiao?charset=utf8’)</p>
-<p>夏普比率（Sharpe Ratio，投资回报与风险的比例）<br>技巧、概率和风险控制</p>
-<p>净资本收益率ROE=净利润/股东权益=销售利润<em>资产周转率</em>财务杠杆率<br>swoole,phalcon</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/01/贝叶斯决策论/" itemprop="url">
-                  贝叶斯决策论
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-01T14:30:33+08:00" content="2016-02-01">
-              2016-02-01
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/02/01/贝叶斯决策论/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/01/贝叶斯决策论/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p><strong> 先验概率 </strong></p>
-<blockquote>
-<p>是指根据以往经验和分析得到的概率，如全概率公式，它往往作为”由因求果”问题中的”因”出现的概率·</p>
-</blockquote>
-<p><strong> 后验概率 </strong></p>
-<blockquote>
-<p>条件概率</p>
-</blockquote>
-<p><strong> 示例 </strong></p>
-<blockquote>
-<p>举一个简单的例子：一口袋里有3只红球、2只白球，采用不放回方式摸取，求：<br>⑴ 第一次摸到红球（记作A）的概率；<br>⑵ 第二次摸到红球（记作B）的概率；<br>⑶ 已知第二次摸到了红球，求第一次摸到的是红球的概率。<br>解：<br>⑴ P(A)=3/5，这就是验前概率；<br>⑵ P(B)=P(A)P(B|A)+P(A逆)P(B|A逆)=3/5<br>⑶ P(A|B)=P(A)P(B|A)/P(B)=1/2，这就是后验概率。</p>
-</blockquote>
-<p><strong> 概率分布函数 </strong><br>$$ P(ω_j)$$<br><strong> 概率密度函数 </strong><br>$$p(x|ω)$$</p>
-<blockquote>
-<p>在数学中，连续型随机变量的概率密度函数（在不至于混淆时可以简称为密度函数）是一个描述这个随机变量的输出值，在某个确定的取值点附近的可能性的函数。probability density function，简称PDF。<br><strong> 联合概率密度函数 </strong></p>
-</blockquote>
-<p><strong> 贝叶斯公式 </strong></p>
-<blockquote>
-<p>贝叶斯定理由英国数学家贝叶斯 ( Thomas Bayes 1702-1761 ) 发展，用来描述两个条件概率之间的关系，比如 P(A|B) 和 P(B|A)。按照乘法法则：P(A∩B) = P(A)<em>P(B|A)=P(B)</em>P(A|B)，可以立刻导出。如上公式也可变形为：P(B|A) = P(A|B)<em>P(B) / P(A)。<br>例如：一座别墅在过去的 20 年里一共发生过 2 次被盗，别墅的主人有一条狗，狗平均每周晚上叫 3 次，在盗贼入侵时狗叫的概率被估计为 0.9，问题是：在狗叫的时候发生入侵的概率是多少？<br>我们假设 A 事件为狗在晚上叫，B 为盗贼入侵，则以天为单位统计，P(A) = 3/7，P(B) = 2/(20</em>365) = 2/7300，P(A|B) = 0.9，按照公式很容易得出结果：P(B|A) = 0.9<em>(2/7300) / (3/7) = 0.00058<br>另一个例子，现分别有 A、B 两个容器，在容器 A 里分别有 7 个红球和 3 个白球，在容器 B 里有 1 个红球和 9 个白球，现已知从这两个容器里任意抽出了一个球，且是红球，问这个红球是来自容器 A 的概率是多少?<br>假设已经抽出红球为事件 B，从容器 A 里抽出球为事件 A，则有：P(B) = 8/20，P(A) = 1/2，P(B|A) = 7/10，按照公式，则有：P(A|B) = (7/10)</em>(1/2) / (8/20) = 0.875</p>
-</blockquote>
-
-$$P(ω_j|x) = 
-\frac{p(x|ω_j)P(ω_j)}{p(x)}\qquad
-
-posterior=\frac{likelihood * prior}{evidence}\qquad
-$$
-
-<p><strong> 朴素贝叶斯分类器 </strong></p>
-<blockquote>
-<p><a href="http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2013/12/naive_bayes_classifier.html</a></p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String code;<span class="comment">//股票的代码，上证股票以sh开头，深证股票以sz开头</span></span><br><span class="line"><span class="keyword">private</span> Date date;<span class="comment">//交易日期</span></span><br><span class="line"><span class="keyword">private</span> Double open;<span class="comment">//开盘价</span></span><br><span class="line"><span class="keyword">private</span> Double high;<span class="comment">//最高价</span></span><br><span class="line"><span class="keyword">private</span> Double low;<span class="comment">//最低价</span></span><br><span class="line"><span class="keyword">private</span> Double close;<span class="comment">//收盘价</span></span><br><span class="line"><span class="keyword">private</span> Double change;<span class="comment">//涨跌幅，复权之后的真实涨跌幅，保证准确</span></span><br><span class="line"><span class="keyword">private</span> Double volume;<span class="comment">//成交量</span></span><br><span class="line"><span class="keyword">private</span> Double money;<span class="comment">//成交额</span></span><br><span class="line"><span class="keyword">private</span> Double traded_market_value;<span class="comment">//流通市值</span></span><br><span class="line"><span class="keyword">private</span> Double market_value;<span class="comment">//总市值</span></span><br><span class="line"><span class="keyword">private</span> Double turnover;<span class="comment">//换手率，成交量/流通股本</span></span><br><span class="line"><span class="keyword">private</span> Double adjust_price;<span class="comment">//后复权价，复权开始时间为股票上市日，精确到小数点后10位</span></span><br><span class="line"><span class="keyword">private</span> Double report_type;<span class="comment">//最近一期财务报告实际发布的日期</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> Double report_date;<span class="comment">//最近一期财务报告的类型，3-31对应一季报，6-30对应半年报，9-30对应三季报，12-31对应年报</span></span><br><span class="line"><span class="keyword">private</span> Double PE_TTM;<span class="comment">//最近12个月市盈率，股价 / 最近12个月归属母公司的每股收益TTM</span></span><br><span class="line"><span class="keyword">private</span> Double PS_TTM;<span class="comment">//最近12个月市销率， 股价 / 最近12个月每股营业收入</span></span><br><span class="line"><span class="keyword">private</span> Double PC_TTM;<span class="comment">//最近12个月市现率， 股价 / 最近12个月每股经营现金流</span></span><br><span class="line"><span class="keyword">private</span> Double PB;<span class="comment">//市净率，股价 / 最近期财报每股净资产</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>数据一<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">sh600000,</span><br><span class="line"><span class="number">2014</span>-<span class="number">12</span>-<span class="number">31</span>,</span><br><span class="line"><span class="number">15.45</span>,</span><br><span class="line"><span class="number">15.79</span>,</span><br><span class="line"><span class="number">15.11</span>,</span><br><span class="line"><span class="number">15.69</span>,</span><br><span class="line"><span class="number">0.021484</span>,</span><br><span class="line"><span class="number">68832339.0</span>,</span><br><span class="line"><span class="number">7271524766.0</span>,</span><br><span class="line"><span class="number">234138373200.0</span>,</span><br><span class="line"><span class="number">292672966500.0</span>,</span><br><span class="line"><span class="number">0.03141723117989956</span>,</span><br><span class="line"><span class="number">130.25464192620564</span>,</span><br><span class="line"><span class="number">2014</span>-<span class="number">09</span>-<span class="number">30</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>,</span><br><span class="line"><span class="number">2014</span>-<span class="number">10</span>-<span class="number">31</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>,</span><br><span class="line"><span class="number">6.375741989574161</span>,</span><br><span class="line"><span class="number">2.5153257795246704</span>,</span><br><span class="line"><span class="number">3.4013884077227203</span>,</span><br><span class="line"><span class="number">1.265110858861187</span></span><br></pre></td></tr></table></figure></p>
-<p>数据二<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">sh600000,</span><br><span class="line"><span class="number">2014</span>-<span class="number">12</span>-<span class="number">30</span>,</span><br><span class="line"><span class="number">14.95</span>,</span><br><span class="line"><span class="number">15.5</span>,</span><br><span class="line"><span class="number">14.83</span>,</span><br><span class="line"><span class="number">15.36</span>,</span><br><span class="line"><span class="number">0.027425</span>,</span><br><span class="line"><span class="number">443655559.0</span>,</span><br><span class="line"><span class="number">6774519460.0</span>,</span><br><span class="line"><span class="number">229213856750.0</span>,</span><br><span class="line"><span class="number">286517320930.0</span>,</span><br><span class="line"><span class="number">0.029730093471934043</span>,</span><br><span class="line"><span class="number">127.51510735969005</span>,</span><br><span class="line"><span class="number">2014</span>-<span class="number">09</span>-<span class="number">30</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>,</span><br><span class="line"><span class="number">2014</span>-<span class="number">10</span>-<span class="number">31</span> <span class="number">00</span>:<span class="number">00</span>:<span class="number">00</span>,</span><br><span class="line"><span class="number">6.241646457090039</span>,</span><br><span class="line"><span class="number">2.462423082030331</span>,</span><br><span class="line"><span class="number">3.329849912208826</span>,</span><br><span class="line"><span class="number">1.2385028633450812</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/29/意志力/" itemprop="url">
-                  意志力
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-29T16:49:45+08:00" content="2016-01-29">
-              2016-01-29
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/29/意志力/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/29/意志力/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>25岁富兰克林<br>1:节制：食不可过饱，饮不得过量<br>2:缄默：避免无聊闲扯，言谈必须对人有益处<br>3:秩序：生活物品要放置有序，工作时间要合理安排<br>4:决心：要做之事就下决心去做，决心做的事情一定要完成。<br>5:勤勉：珍惜每一刻时间，去除一切不必要之举，勤做有益之事<br>6:真诚：不损害他人，不使用欺骗手段，考虑事情要公正合理，说话要依据真实情况。<br>7:清洁<br>8:平静<br>9:贞节<br>10:谦逊<br>11：正义<br>12：中庸<br>13：节俭</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/29/第一章 随机事件及其概率/" itemprop="url">
-                  第一章 随机事件及其概率
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-29T13:45:35+08:00" content="2016-01-29">
-              2016-01-29
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/29/第一章 随机事件及其概率/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/29/第一章 随机事件及其概率/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">§<span class="number">1</span> 概率论的发展简史</span><br><span class="line">§<span class="number">2</span> 随机事件及其概率</span><br><span class="line">§<span class="number">3</span> 概率模型与公理化结构</span><br><span class="line">§<span class="number">4</span> 条件概率</span><br><span class="line">§<span class="number">5</span> 事件(试验)的独立性</span><br></pre></td></tr></table></figure>
-<h3 id="1_概率论的发展简史">1 概率论的发展简史</h3><p>  概率论是研究随机现象数量规律性的一门学科,它源于对机会游戏(赌博问题)的研究。</p>
-<h3 id="2_随机事件及其概率">2 随机事件及其概率</h3>
-$$自然界中的现象
-\begin{cases}
-必然(确定性)现象 \\
-随机(偶然性)现象
-\begin{cases}
-个别随机现象 \\
-大量随机现象
-\end{cases}
-\end{cases}
-$$
-
-<p><strong>【必然现象】</strong> 在一定的条件下,一定会出现(发生)的现象。<br><strong>【随机现象】</strong> 在一定的条件下,可能出现也可能不出现的现象。</p>
-<h3 id="【注1】_在概率论中,“出现”与“发生”同义。"><strong>【注1】</strong> 在概率论中,“出现”与“发生”同义。</h3><p>概率论主要研究大量随机现象(统计规律性),但是也不排斥个别随机现象。</p>
-
-$$随机性的作用
-\begin{cases}
-很小以致可以忽略 \\
-基本的,如布朗运动
-\end{cases}
-$$
- 
-<h3 id="【注2】_随机现象中的“不确定性”有两层含义,一则指客_观结果的不确定性;一则指主观猜测的不确定性,后者融入了观察者个人的信念。"><strong>【注2】</strong> 随机现象中的“不确定性”有两层含义,一则指客 观结果的不确定性;一则指主观猜测的不确定性,后者融入了观察者个人的信念。</h3><p><strong>【统计规律性】</strong> 大量随机现象所具有的规律性,概率论主要研究此。<br>  对于随机现象,即使条件完全相同,它们的出现所产生 的结果也不尽相同,此之谓“现象的随机性”;那么随机性产生的原因是什么呢?<br>任何随机现象都是相互联系和相互影响的,它的行为受 许多因素地支配或制约;而控制所有这些因素原则上做不到,往往只限于决定该现象状态的最基􏰀因素。并且除此之 外还有许多时隐时现,转瞬即逝,无法控制的偶然因素;当 随机现象重复出现时,这些因素产生的效应是不同的,不确 定的,从而使得现象带有随机性。</p>
-<p><strong>【试验】</strong> 凡对现象的观察或为此而进行的实验。<br><strong>【决定性试验】</strong> 凡对决定性(必然)现象的观察或为此而进行的实验。<br><strong>【随机试验】</strong> 凡对随机现象的观察或为此而进行的实验,常记为E(experiment)或 $$E_i$$<br><strong>【事件(试验的结局)】</strong>试验观察的结果。<br>无论何种试验,都包含两个方面,即试验的条件和试验的 结果。随机试验的条件有的是“人为的”,如在一定的条件下观察“射击是否命中目标”;有的是“不依人的意志为转 移的”,如花粉微粒的无规则运动(布朗运动)。<br><strong>【统计规律性】</strong>大量重复试验中随机现象所呈现的固有规律。<br><strong>【随机事件】</strong>随机试验的结果,常简称为事件。</p>
-<h3 id="【注3】为以后研究方便,有时把有固有结果的试验看作是_随机试验的极端情形;有时需把几次试验作为一个整体看成_一次随机试验,如连续地掷三次骰子。同理,也将必然事件_和不可能事件视作随机事件的极端情形。"><strong>【注3】</strong>为以后研究方便,有时把有固有结果的试验看作是 随机试验的极端情形;有时需把几次试验作为一个整体看成 一次随机试验,如连续地掷三次骰子。同理,也将必然事件 和不可能事件视作随机事件的极端情形。</h3><p><strong>【必然事件】</strong>每次试验中一定会出现的事件,记作 Ω ;<br><strong>【不可能事件】</strong>每次试验中一定不会出现的事件,记作 Φ ;</p>
-<h3 id="【注4】任何随机试验都伴随有必然事件和不可能事件,"><strong>【注4】</strong>任何随机试验都伴随有必然事件和不可能事件,</h3><p>如 E:对某目标进行两次射击,“至多命中目标两次”就是必然<br>事件,“命中目标三次”就是不可能事件。常用大写英文(拉 丁)字母A,B,C等或$$A_i,B_j ,C_k$$ 等表示;有时也用{……}、“……”<br>表示事件,花括弧中和双引号下指明事件的内容。 随机试验的共同特点为;<br>1、在相同的条件下可重复进行;<br>2、每次试验的结果可能不止一个,但事先明确所有可能的 结果;<br>3、试验之前不能确定那个结果会出现。 概率论只关心在随机试验中可能会观察到的那些事件<br>以及每次具体的试验中出现了的事件;因此,与每个随机试 验相联系的有一个事件的集合,即在试验中可以观察到的事 件的全体。至于这个事件集应该具备什么性质,以后将会讨 论。既然数学本身从来不只研究那些只由孤立元素组成的集合,我们就有必要在上述事件集中定义事件之间的各种关系与运算。</p>
-<h3 id="【注_5】_自从集合论进入了概率论,概率论才真正进入了现代化门槛。">【注 5】 自从集合论进入了概率论,概率论才真正进入了现代化门槛。</h3><p><strong> 1.【包含关系】</strong>若事件 A 出现必然会导致事件 B 出现,则称 “A是B的特款”或“A包含于B”,记作$$A⊂ B$$  易见对任意事件$$A ⊂ Ω$$,这里规定$$Φ ⊂ A$$<br><strong>2 .【等价(相等)关系】</strong> 若 事 件 A , B 满 足 $$A ⊂ B$$ 且 $$B ⊂ A$$ , 则 称 事件 A, B 等价或相等</p>
-<h3 id="【注_6】在概率论中,对同一事件给出不同的等价表示是一_种主要的技巧。">【注 6】在概率论中,对同一事件给出不同的等价表示是一 种主要的技巧。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">事件的运算</span><br></pre></td></tr></table></figure>
-<p>1【事件的并运算】设 A, B 为两事件,则“ A, B 至少一个发生” 这种情况可能出现也可能不出现,其作为一个随机事件,称之为A,B的并(事件),记作$$AUB$$<br>若 A , A ,L, A 均为事件,则“ A , A ,L, A 至少一个发生”作 12n 12n<br>为事件,称之为A , A ,L, A 的并事件,记作:A U A ULU A ,简 12n 12n<br>n<br>记为:UA ; i<br>i=1<br>ijk<br>￼￼￼￼￼事件的关系<br>￼￼￼事件的运算<br>￼6<br>若A , A ,L, A ,L为一列事件,则“A , A ,L, A ,L至少一个发 12n 12n<br>生”作为事件,称之为A , A ,L, A ,L的并事件,记作: 12n<br>∞<br>A U A U L U A U L , 简 记 为 : A ;( 可 列 并 )</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/28/第二章-离散型随机变量/" itemprop="url">
-                  第二章 离散型随机变量
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-28T16:02:02+08:00" content="2016-01-28">
-              2016-01-28
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/28/第二章-离散型随机变量/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/28/第二章-离散型随机变量/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>§1 离散型随机变量及其分布<br>已经知道,概率论是从数量的角度来研究随机现象的统<br>计规律性的;其通过建立一系列的定理和公式,借以更好地 描述处理和解决各种与随机现象有关的理论和应用问题。在 处理实际问题时,为全面研究随机试验的结果以揭示随机事 件中包含的客观存在的统计规律,常须考虑那些与试验结果 联系的某些量;对于那些不表现为数量的结果,也可通过数 量处理而得以数量化。这些量是随着试验结果的变化而变化 的,因而是“随机的”。这里的量化过程对应着一个法则, 其使样􏰀空间的“样􏰀点”与(实)数集的“数”一一对应 起来,这个“随机的数”即为随机变量。</p>
-<p>【注1】 利用随机变量(由俄国的彼得堡学派引入)可以 表示随机事件(这是随机事件的第三种表示法),可以将不 同的随机事件的规律及其相互关系进行统一处理,且有助于 研究随机事件的􏰀质规律;它也极大地丰富了概率论的研究 对象与范围,使得微积分等分析工具得以引入从而进一步地 拓宽了概率论的应用领域(可以形象地说:随机变量架起了 概率论与分析学之间的桥梁)。</p>
-<p>以下,我们举例说明试验结果的数量化处理过程; 【引例】(1)E1:掷一枚均匀的硬币;其样􏰀空间为Ω={ω1,ω2},<br>其中:ω1 -掷出正面,ω2 -掷出反面;指定1与ω1 对应,指 定0与ω2 对应,则我们建立起Ω={ω1,ω2}与{0,1}之间的一一对 应关系,不妨记之为: X ,即有: X (ω1 ) = 1, X (ω2 ) = 0 ;</p>
-<p>2)E2:掷一颗骰子;其样􏰀空间为Ω={ω1,ω2,LL,ω6},其中:<br>ωi -掷出“i”点,i =1,2,L,6;指定i与ωi 对应,则我们建立起 Ω={ω1,ω2,LL,ω6}与{1,2,LL,6}之间的一一对应关系,不妨记之<br>为 : Y , 即 有 : Y ( ω i ) = i , i = 1, 2 , …., 6 ;</p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/28/Storm介绍/" itemprop="url">
-                  Storm介绍
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-28T15:37:00+08:00" content="2016-01-28">
-              2016-01-28
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/28/Storm介绍/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/28/Storm介绍/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>  在线画图软件ProcessOn</p>
-<p>各大互联网公司架构演进之路汇总<br><a href="http://www.hollischuang.com/archives/1036?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">http://www.hollischuang.com/archives/1036?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
 
     
       
@@ -1417,12 +421,386 @@ $$
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/07/基于MyBatis的多租户实现/" itemprop="url">
+                  基于MyBatis的多租户实现
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2016-01-07T13:30:09+08:00" content="2016-01-07">
+              2016-01-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/saas/" itemprop="url" rel="index">
+                    <span itemprop="name">saas</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/07/基于MyBatis的多租户实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/07/基于MyBatis的多租户实现/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataSourceHolder</span> </span>&#123;</span><br><span class="line">    <span class="comment">//线程本地环境</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadLocal&lt;String&gt; dataSources = <span class="keyword">new</span> ThreadLocal&lt;String&gt;();</span><br><span class="line">    <span class="comment">//设置数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setDataSource</span><span class="params">(String customerType)</span> </span>&#123;</span><br><span class="line">        dataSources.set(customerType);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (String) dataSources.get();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//清除数据源</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">clearDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        dataSources.remove();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DynamicDataSource</span> <span class="keyword">extends</span> <span class="title">AbstractRoutingDataSource</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, DataSource&gt; crmDataSources = <span class="keyword">new</span> ConcurrentHashMap&lt;String, DataSource&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> Object <span class="title">determineCurrentLookupKey</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> DataSourceHolder.getDataSource();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> DataSource <span class="title">determineTargetDataSource</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String userId = DataSourceHolder.getDataSource();</span><br><span class="line">        <span class="keyword">if</span>(StringUtils.isEmpty(userId))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">super</span>.determineTargetDataSource();</span><br><span class="line">        &#125;</span><br><span class="line">        DataSource dataSource = <span class="keyword">this</span>.crmDataSources.get(userId);</span><br><span class="line">        <span class="keyword">if</span>(dataSource==<span class="keyword">null</span>)&#123;</span><br><span class="line">            DruidDataSource druidDataSource = <span class="keyword">new</span> DruidDataSource();</span><br><span class="line">            druidDataSource.setDriverClassName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">            druidDataSource.setPassword(<span class="string">"root"</span>);</span><br><span class="line">            druidDataSource.setUsername(<span class="string">"root"</span>);</span><br><span class="line">            druidDataSource.setUrl(<span class="string">"jdbc:mysql://localhost:3306/crm"</span>+userId+<span class="string">"?useUnicode=true&amp;amp;characterEncoding=utf8"</span>);</span><br><span class="line">            <span class="keyword">this</span>.crmDataSources.put(userId,druidDataSource);</span><br><span class="line">            dataSource = druidDataSource;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dataSource;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/31/ZOOKEEPER基础知识/" itemprop="url">
+                  ZOOKEEPER基础知识
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-31T10:49:08+08:00" content="2015-12-31">
+              2015-12-31
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/31/ZOOKEEPER基础知识/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/31/ZOOKEEPER基础知识/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>基础知识介绍<br><a href="http://wsztrush.github.io/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/2015/12/22/ZOOKEEPER-BASIC.html?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">http://wsztrush.github.io/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/2015/12/22/ZOOKEEPER-BASIC.html?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/25/分布式算法介绍/" itemprop="url">
+                  分布式算法介绍
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-25T14:59:29+08:00" content="2015-12-25">
+              2015-12-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/25/分布式算法介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/分布式算法介绍/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">一致性哈希(Consistent Hashing)</span><br><span class="line">Chord算法（原理）</span><br><span class="line">Paxos算法<span class="number">1</span>-算法形成理论</span><br><span class="line">Paxos算法<span class="number">2</span>-算法过程</span><br><span class="line">Paxos算法<span class="number">3</span>-实现探讨</span><br><span class="line">Viewstamps算法</span><br><span class="line">Keyspace中的paxos</span><br><span class="line">Gossip算法</span><br><span class="line">基于Lease的一致性</span><br><span class="line">φ累积失败检测算法</span><br><span class="line">层次锁</span><br><span class="line">一致性算法中的节点下限</span><br><span class="line">Fast Paxos</span><br><span class="line">Zookeeper的一致性协议：Zab</span><br><span class="line">FLP Impossibility</span><br><span class="line">CAP理论</span><br></pre></td></tr></table></figure>
+<p>基于需求做的方案才有意义，有需求才有研究的动力。至少工程上是这样。</p>
+<p>Ack 机制</p>
+<p>storm Zookeeper</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/18/AppToken验证机制/" itemprop="url">
+                  App Api验证机制
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-18T13:16:48+08:00" content="2015-12-18">
+              2015-12-18
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/18/AppToken验证机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/18/AppToken验证机制/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>1：token 验证<br>token 字面意思是令牌，及服务器在用户登录之后给用户发的门票，在门票有效期内的api请求，出示门票即可。</p>
+<p>设计app api的时候都会遇到安全性验证的问题，有以下几种情况<br>1：api的地址被暴露，攻击中模拟提交参数，由于token是每次登录之后重新生成，一个用户一个token，token有失效期。<br>不能防外挂，重复提交的问题。</p>
+<p>2：请求参数加密<br>在客户端对提交的请求参数做对称加密，服务器做解密校验。<br>风险在于如果客户端被破解，加密key被暴露，防范机制就失效了。<br>有的是在客户端做了一个加密库，提供多种加密方式，每次随机构建，增加破解难度。</p>
+<h3 id="原型讨论（设计图需要调整部分）">原型讨论（设计图需要调整部分）</h3><p>创建工作-输入框上提<br>客户个人信息-显示错误<br>客户详情编辑-错误</p>
+<p>客户个人信息下端的 弹出框（查重，分配）</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
 
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
@@ -1463,7 +841,7 @@ $$
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">36</span>
+              <span class="site-state-item-count">26</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1477,7 +855,7 @@ $$
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">45</span>
+              <span class="site-state-item-count">38</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
