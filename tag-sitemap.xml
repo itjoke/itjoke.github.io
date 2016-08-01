@@ -2,27 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://itjoke.com/tags/token/</loc>
-        <lastmod>2015-12-18T05:16:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/app/</loc>
-        <lastmod>2015-12-18T05:16:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/json/</loc>
-        <lastmod>2015-12-18T05:16:48.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/%E7%AE%97%E6%B3%95/</loc>
         <lastmod>2015-12-25T06:59:29.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -37,141 +16,8 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/tags/ZOOKEEPER/</loc>
-        <lastmod>2015-12-31T02:49:08.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/MyBatis/</loc>
-        <lastmod>2016-01-07T05:30:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E5%A4%9A%E7%A7%9F%E6%88%B7/</loc>
-        <lastmod>2016-01-07T05:30:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/hibernate/</loc>
-        <lastmod>2016-01-07T05:30:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/saas/</loc>
-        <lastmod>2016-01-07T05:30:09.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E7%A4%BE%E4%BA%A4/</loc>
-        <lastmod>2016-01-14T08:56:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/nosql/</loc>
-        <lastmod>2016-01-14T08:56:50.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/Hadoop/</loc>
-        <lastmod>2016-01-18T07:36:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/Storm%EF%BC%8C%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
-        <lastmod>2016-01-28T07:37:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E5%AF%8C%E5%85%B0%E5%85%8B%E6%9E%97/</loc>
-        <lastmod>2016-01-29T08:49:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/LaTex/</loc>
         <lastmod>2016-02-01T06:30:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/R%E8%AF%AD%E8%A8%80/</loc>
-        <lastmod>2016-02-02T07:27:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E8%82%A1%E7%A5%A8/</loc>
-        <lastmod>2016-02-23T04:40:37.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E5%BE%AE%E4%BF%A1/</loc>
-        <lastmod>2016-02-24T05:52:49.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/APP/</loc>
-        <lastmod>2016-02-25T02:10:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/Laravel/</loc>
-        <lastmod>2016-02-25T02:10:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/PHP/</loc>
-        <lastmod>2016-02-25T02:10:59.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/spark/</loc>
-        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/java/</loc>
-        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/dataform/</loc>
-        <lastmod>2016-02-29T03:01:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -198,34 +44,6 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/tags/pandas/</loc>
-        <lastmod>2016-03-08T06:25:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/sqlalchemy/</loc>
-        <lastmod>2016-03-08T06:25:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
-        <lastmod>2016-03-08T06:25:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://itjoke.com/tags/MCTS/</loc>
-        <lastmod>2016-03-14T09:00:32.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/python/</loc>
         <lastmod>2016-03-19T08:15:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -247,13 +65,6 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
-        <lastmod>2016-06-15T07:15:21.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://itjoke.com/tags/TensorFlow/</loc>
         <lastmod>2016-06-15T07:15:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -261,8 +72,8 @@
     </url>
 
     <url>
-        <loc>http://itjoke.com/tags/%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89/</loc>
-        <lastmod>2016-06-24T07:52:48.000Z</lastmod>
+        <loc>http://itjoke.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+        <lastmod>2016-06-15T07:15:21.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
